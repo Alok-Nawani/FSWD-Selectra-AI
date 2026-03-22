@@ -1,0 +1,902 @@
+[
+    {
+        "id": 1,
+        "question": "Tell me about yourself.",
+        "keywords": [
+            "Focus on journey",
+            "and impact",
+            "curiosity"
+        ],
+        "ideal_answer": "Focus on journey, curiosity, and impact."
+    },
+    {
+        "id": 2,
+        "question": "Why Google?",
+        "keywords": [
+            "Show alignment with innovation + scale + learning culture"
+        ],
+        "ideal_answer": "Show alignment with innovation + scale + learning culture."
+    },
+    {
+        "id": 3,
+        "question": "Tell me about solving a difficult problem.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Checks structured thinking."
+    },
+    {
+        "id": 4,
+        "question": "How do you approach learning new technologies?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Checks curiosity."
+    },
+    {
+        "id": 5,
+        "question": "Describe working in a team.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Checks collaboration."
+    },
+    {
+        "id": 6,
+        "question": "Tell me about failure and what you learned.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Checks growth mindset."
+    },
+    {
+        "id": 7,
+        "question": "What motivates you to build software?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Checks intrinsic drive."
+    },
+    {
+        "id": 8,
+        "question": "Describe handling ambiguity.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Checks adaptability."
+    },
+    {
+        "id": 9,
+        "question": "Tell me about taking initiative.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Checks ownership naturally (not forced like Amazon)."
+    },
+    {
+        "id": 10,
+        "question": "What\u2019s something complex you explained simply?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Checks communication."
+    },
+    {
+        "id": 11,
+        "question": "Describe receiving feedback.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Checks humility."
+    },
+    {
+        "id": 12,
+        "question": "Tell me about a time you improved something.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Checks innovation mindset."
+    },
+    {
+        "id": 13,
+        "question": "How do you prioritize tasks?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Checks structured work style."
+    },
+    {
+        "id": 14,
+        "question": "What excites you about engineering?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Checks passion authenticity."
+    },
+    {
+        "id": 15,
+        "question": "Tell me about collaboration challenges.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Checks interpersonal reasoning."
+    },
+    {
+        "id": 16,
+        "question": "How do you handle pressure?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Checks composure."
+    },
+    {
+        "id": 17,
+        "question": "Describe learning from peers.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Checks openness."
+    },
+    {
+        "id": 18,
+        "question": "Tell me about curiosity-driven exploration.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Checks self-motivation."
+    },
+    {
+        "id": 19,
+        "question": "How do you approach problem breakdown?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Checks analytical thinking."
+    },
+    {
+        "id": 20,
+        "question": "Describe a project you\u2019re proud of.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Checks ownership + explanation clarity."
+    },
+    {
+        "id": 21,
+        "question": "Tell me about adapting quickly.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Checks flexibility."
+    },
+    {
+        "id": 22,
+        "question": "What kind of work environment helps you thrive?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Checks cultural fit."
+    },
+    {
+        "id": 23,
+        "question": "Describe building something from scratch.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Checks initiative."
+    },
+    {
+        "id": 24,
+        "question": "Tell me about persistence.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Checks resilience."
+    },
+    {
+        "id": 25,
+        "question": "Why should Google hire you?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Checks value articulation."
+    },
+    {
+        "id": 26,
+        "question": "Tell me about solving a problem without clear instructions.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 27,
+        "question": "Describe a time curiosity led you to build something.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 28,
+        "question": "How do you simplify complex ideas?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 29,
+        "question": "Tell me about collaborating across skill levels.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 30,
+        "question": "Describe learning something deeply on your own.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 31,
+        "question": "How do you evaluate tradeoffs in decisions?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 32,
+        "question": "Tell me about improving an inefficient process.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 33,
+        "question": "Describe handling uncertainty constructively.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 34,
+        "question": "What does innovation mean to you personally?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 35,
+        "question": "Tell me about questioning an assumption.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 36,
+        "question": "Describe approaching a completely new domain.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 37,
+        "question": "Tell me about persistence in solving a hard challenge.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 38,
+        "question": "How do you balance perfection vs delivery?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 39,
+        "question": "Describe working with limited information.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 40,
+        "question": "Tell me about an analytical decision you made.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 41,
+        "question": "How do you build clarity when things are vague?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 42,
+        "question": "Describe learning from experimentation.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 43,
+        "question": "Tell me about a meaningful side project.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 44,
+        "question": "How do you stay adaptable in fast-changing tech?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 45,
+        "question": "Describe working on something intellectually difficult.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 46,
+        "question": "Tell me about constructive disagreement.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 47,
+        "question": "How do you measure impact of your work?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 48,
+        "question": "Describe explaining technical ideas simply.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 49,
+        "question": "Tell me about continuous improvement.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 50,
+        "question": "What excites you about solving problems at scale?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 51,
+        "question": "Tell me about solving something intellectually challenging.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 52,
+        "question": "Describe building something from curiosity.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 53,
+        "question": "How do you evaluate success beyond completion?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 54,
+        "question": "Tell me about questioning a design decision.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 55,
+        "question": "Describe learning through experimentation.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 56,
+        "question": "How do you deal with uncertainty creatively?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 57,
+        "question": "Tell me about improving something small but meaningful.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 58,
+        "question": "Describe thinking differently from others.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 59,
+        "question": "How do you approach open-ended problems?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 60,
+        "question": "Tell me about persistence in research-like work.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 61,
+        "question": "Describe simplifying complexity for others.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 62,
+        "question": "How do you test assumptions?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 63,
+        "question": "Tell me about adapting your thinking.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 64,
+        "question": "Describe solving a problem collaboratively.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 65,
+        "question": "How do you stay curious long-term?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 66,
+        "question": "Tell me about a technical insight you discovered.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 67,
+        "question": "Describe balancing experimentation and delivery.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 68,
+        "question": "How do you challenge yourself intellectually?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 69,
+        "question": "Tell me about improving a design iteratively.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 70,
+        "question": "Describe exploring beyond requirements.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 71,
+        "question": "How do you approach innovation responsibly?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 72,
+        "question": "Tell me about an unconventional solution.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 73,
+        "question": "Describe solving ambiguity with structure.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 74,
+        "question": "How do you ensure clarity when things are complex?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 75,
+        "question": "Tell me about a moment of insight.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 76,
+        "question": "Describe improving system thinking.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 77,
+        "question": "How do you handle long discovery phases?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 78,
+        "question": "Tell me about refining an idea repeatedly.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 79,
+        "question": "Describe collaboration that changed your thinking.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 80,
+        "question": "How do you approach lifelong learning?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 81,
+        "question": "Tell me about solving something at scale conceptually.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 82,
+        "question": "Describe a project that taught you the most.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 83,
+        "question": "How do you balance depth vs breadth?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 84,
+        "question": "Tell me about understanding user impact deeply.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 85,
+        "question": "Describe analytical curiosity in action.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 86,
+        "question": "How do you validate solutions?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 87,
+        "question": "Tell me about building something meaningful.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 88,
+        "question": "Describe solving without precedent.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 89,
+        "question": "How do you approach innovation sustainably?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 90,
+        "question": "Tell me about learning through failure constructively.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 91,
+        "question": "Describe intellectual humility.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 92,
+        "question": "How do you adapt knowledge across domains?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 93,
+        "question": "Tell me about understanding systems holistically.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 94,
+        "question": "Describe building with long-term thinking.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 95,
+        "question": "How do you approach open research-style questions?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 96,
+        "question": "Tell me about refining complexity into clarity.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 97,
+        "question": "Describe pushing beyond your comfort zone intellectually.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 98,
+        "question": "How do you align technical work with impact?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 99,
+        "question": "Tell me about contributing to something bigger than yourself.",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    },
+    {
+        "id": 100,
+        "question": "Why Google?",
+        "keywords": [
+            "Behavioral",
+            "Google Culture"
+        ],
+        "ideal_answer": "Reflect on your personal experience and answer using the STAR method."
+    }
+]

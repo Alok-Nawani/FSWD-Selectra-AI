@@ -1,0 +1,242 @@
+[
+    {
+        "id": 1,
+        "question": "Tell me about a time you took ownership.",
+        "keywords": [
+            "Leadership Principle",
+            "STAR",
+            "Responsibility"
+        ],
+        "ideal_answer": "Focus on a situation where you went above and beyond your assigned duties to ensure a successful outcome."
+    },
+    {
+        "id": 2,
+        "question": "Describe a failure you experienced.",
+        "keywords": [
+            "Learning",
+            "Growth",
+            "Mistake"
+        ],
+        "ideal_answer": "Be honest about the mistake, but focus heavily on what you learned and how you improved your process afterwards."
+    },
+    {
+        "id": 3,
+        "question": "How do you handle tight deadlines?",
+        "keywords": [
+            "Prioritization",
+            "Stress",
+            "Delivery"
+        ],
+        "ideal_answer": "Discuss how you prioritize critical tasks, communicate with stakeholders, and perhaps cut non-essential scope to meet the date."
+    },
+    {
+        "id": 4,
+        "question": "Tell me about a conflict in a team.",
+        "keywords": [
+            "Resolution",
+            "Teamwork",
+            "Communication"
+        ],
+        "ideal_answer": "Focus on how you addressed the issue professionally, listened to the other side, and found a data-driven or compromise solution."
+    },
+    {
+        "id": 5,
+        "question": "Why Amazon?",
+        "keywords": [
+            "Customer Obsession",
+            "Innovation",
+            "Scale"
+        ],
+        "ideal_answer": "Mention specific Leadership Principles, the scale of technical challenges, or the customer-centric approach."
+    },
+    {
+        "id": 6,
+        "question": "Give an example of problem-solving using data.",
+        "keywords": [
+            "Metrics",
+            "Analysis",
+            "Decision"
+        ],
+        "ideal_answer": "Show how you used quantitative evidence to guide your decision rather than just intuition."
+    },
+    {
+        "id": 7,
+        "question": "Describe a time you improved a process.",
+        "keywords": [
+            "Efficiency",
+            "Optimization",
+            "Invent and Simplify"
+        ],
+        "ideal_answer": "explain the 'before' state, the inefficiency, your specific change, and the measurable 'after' result."
+    },
+    {
+        "id": 8,
+        "question": "When did you go beyond expectations?",
+        "keywords": [
+            "Ownership",
+            "Delivering Results",
+            "Excellence"
+        ],
+        "ideal_answer": "Highlight a task where you delivered more value or quality than was strictly asked for."
+    },
+    {
+        "id": 9,
+        "question": "A time you disagreed with a leader.",
+        "keywords": [
+            "backbone",
+            "disagree and commit",
+            "respect"
+        ],
+        "ideal_answer": "Show that you respectfully challenged with data, but once a decision was made, you fully supported it."
+    },
+    {
+        "id": 10,
+        "question": "How do you prioritize tasks?",
+        "keywords": [
+            "Time Management",
+            "Impact",
+            "Urgency"
+        ],
+        "ideal_answer": "Discuss frameworks like Eisenhower Matrix or focusing on high-impact vs high-effort."
+    },
+    {
+        "id": 11,
+        "question": "Situation where you handled ambiguity.",
+        "keywords": [
+            "Uncertainty",
+            "Leadership",
+            "Clarity"
+        ],
+        "ideal_answer": "Describe a situation with unclear requirements and how you proactively sought clarity or made reasonable assumptions to move forward."
+    },
+    {
+        "id": 12,
+        "question": "Describe a leadership experience.",
+        "keywords": [
+            "Mentorship",
+            "Direction",
+            "Influence"
+        ],
+        "ideal_answer": "Leadership isn't just management. Talk about leading a project, mentoring a junior, or driving a technical decision."
+    },
+    {
+        "id": 13,
+        "question": "When did you learn something quickly?",
+        "keywords": [
+            "Learning",
+            "Adaptability",
+            "Speed"
+        ],
+        "ideal_answer": "Focus on your learning strategy: diving into docs, building prototypes, asking experts."
+    },
+    {
+        "id": 14,
+        "question": "Hardest technical concept you learned?",
+        "keywords": [
+            "Complexity",
+            "Understanding",
+            "Growth"
+        ],
+        "ideal_answer": "Explain the concept simply to prove you understand it, and discuss the resources you used."
+    },
+    {
+        "id": 15,
+        "question": "Time you helped a struggling teammate.",
+        "keywords": [
+            "Empathy",
+            "Teamwork",
+            "Support"
+        ],
+        "ideal_answer": "Show how you identified the struggle and provided constructive support or mentorship without taking over their work."
+    },
+    {
+        "id": 51,
+        "question": "Describe a time you handled pressure from multiple stakeholders.",
+        "keywords": [
+            "Stakeholders",
+            "Pressure",
+            "Communication"
+        ],
+        "ideal_answer": "Focus on communication, setting expectations, and finding potential compromises."
+    },
+    {
+        "id": 52,
+        "question": "Tell me about a decision you made without enough data.",
+        "keywords": [
+            "Risk",
+            "Intuition",
+            "Bias for Action"
+        ],
+        "ideal_answer": "Explain how you weighed the risks and made a calculated decision to avoid paralysis."
+    },
+    {
+        "id": 53,
+        "question": "When did you automate something manually repetitive?",
+        "keywords": [
+            "Automation",
+            "Efficiency",
+            "Scripting"
+        ],
+        "ideal_answer": "Quantify the time saved by your automation."
+    },
+    {
+        "id": 55,
+        "question": "A time you received tough feedback.",
+        "keywords": [
+            "Feedback",
+            "Growth",
+            "Resilience"
+        ],
+        "ideal_answer": "Don't be defensive. Show how you accepted it and used it to improve."
+    },
+    {
+        "id": 61,
+        "question": "What’s the hardest bug you solved?",
+        "keywords": [
+            "Debugging",
+            "Problem Solving",
+            "Persistence"
+        ],
+        "ideal_answer": "Walk through your debugging process: hypothesis, testing, isolation, fix."
+    },
+    {
+        "id": 63,
+        "question": "Example of prioritizing customer impact.",
+        "keywords": [
+            "Customer Obsession",
+            "Prioritization",
+            "Value"
+        ],
+        "ideal_answer": "Show how you chose a task that directly benefited the user over something that might have been technically interesting but less valuable."
+    },
+    {
+        "id": 65,
+        "question": "Describe delivering results despite constraints.",
+        "keywords": [
+            "Resourcefulness",
+            "Constraints",
+            "Delivery"
+        ],
+        "ideal_answer": "Focus on creativity and finding workarounds to meet goals with limited resources."
+    },
+    {
+        "id": 75,
+        "question": "Tell me about adapting to change quickly.",
+        "keywords": [
+            "Adaptability",
+            "Flexibility",
+            "Change"
+        ],
+        "ideal_answer": "Describe a sudden shift in requirements or technology and how you pivoted without losing momentum."
+    },
+    {
+        "id": 100,
+        "question": "Why Amazon over other companies?",
+        "keywords": [
+            "Cultural Fit",
+            "Specifics",
+            "Passion"
+        ],
+        "ideal_answer": "Be specific about Amazon's unique culture (Builder culture, Writing culture) or specific products you admire."
+    }
+]

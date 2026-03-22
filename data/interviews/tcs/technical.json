@@ -1,0 +1,856 @@
+[
+    {
+        "id": 1,
+        "question": "What is programming?",
+        "keywords": [
+            "programming?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 2,
+        "question": "Difference between compiler and interpreter.",
+        "keywords": [
+            "Difference",
+            "between",
+            "compiler",
+            "interpreter."
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 3,
+        "question": "What is a variable?",
+        "keywords": [
+            "variable?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 4,
+        "question": "What are data types?",
+        "keywords": [
+            "types?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 5,
+        "question": "Difference between procedural and OOP programming.",
+        "keywords": [
+            "Difference",
+            "between",
+            "procedural",
+            "programming."
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 6,
+        "question": "What is a loop?",
+        "keywords": [
+            "loop?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 7,
+        "question": "What is a function?",
+        "keywords": [
+            "function?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 8,
+        "question": "What is recursion?",
+        "keywords": [
+            "recursion?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 9,
+        "question": "What is debugging?",
+        "keywords": [
+            "debugging?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 10,
+        "question": "What is an algorithm?",
+        "keywords": [
+            "algorithm?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 11,
+        "question": "What is Object-Oriented Programming?",
+        "keywords": [
+            "Object-Oriented",
+            "Programming?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 12,
+        "question": "What is a class and object?",
+        "keywords": [
+            "class",
+            "object?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 13,
+        "question": "Explain encapsulation.",
+        "keywords": [
+            "Explain",
+            "encapsulation."
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 14,
+        "question": "Explain inheritance.",
+        "keywords": [
+            "Explain",
+            "inheritance."
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 15,
+        "question": "Explain polymorphism.",
+        "keywords": [
+            "Explain",
+            "polymorphism."
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 16,
+        "question": "Explain abstraction.",
+        "keywords": [
+            "Explain",
+            "abstraction."
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 17,
+        "question": "What is method overloading?",
+        "keywords": [
+            "method",
+            "overloading?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 18,
+        "question": "What is method overriding?",
+        "keywords": [
+            "method",
+            "overriding?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 19,
+        "question": "What is constructor?",
+        "keywords": [
+            "constructor?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 20,
+        "question": "Why is OOP useful?",
+        "keywords": [
+            "useful?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 21,
+        "question": "What is an array?",
+        "keywords": [
+            "array?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 22,
+        "question": "Difference between array and linked list.",
+        "keywords": [
+            "Difference",
+            "between",
+            "array",
+            "linked",
+            "list."
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 23,
+        "question": "What is stack?",
+        "keywords": [
+            "stack?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 24,
+        "question": "What is queue?",
+        "keywords": [
+            "queue?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 25,
+        "question": "What is a tree?",
+        "keywords": [
+            "tree?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 26,
+        "question": "What is searching?",
+        "keywords": [
+            "searching?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 27,
+        "question": "What is sorting?",
+        "keywords": [
+            "sorting?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 28,
+        "question": "What is time complexity (basic idea)?",
+        "keywords": [
+            "complexity",
+            "(basic",
+            "idea)?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 29,
+        "question": "What is Big-O notation?",
+        "keywords": [
+            "Big-O",
+            "notation?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 30,
+        "question": "Why do we use data structures?",
+        "keywords": [
+            "structures?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 31,
+        "question": "What is DBMS?",
+        "keywords": [
+            "DBMS?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 32,
+        "question": "What is SQL?",
+        "keywords": [],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 33,
+        "question": "What is a table?",
+        "keywords": [
+            "table?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 34,
+        "question": "What is a primary key?",
+        "keywords": [
+            "primary"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 35,
+        "question": "What is normalization?",
+        "keywords": [
+            "normalization?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 36,
+        "question": "What is a join?",
+        "keywords": [
+            "join?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 37,
+        "question": "Difference between WHERE and HAVING.",
+        "keywords": [
+            "Difference",
+            "between",
+            "WHERE",
+            "HAVING."
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 38,
+        "question": "What is indexing?",
+        "keywords": [
+            "indexing?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 39,
+        "question": "What is a transaction?",
+        "keywords": [
+            "transaction?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 40,
+        "question": "What are ACID properties?",
+        "keywords": [
+            "properties?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 41,
+        "question": "What is an Operating System?",
+        "keywords": [
+            "Operating",
+            "System?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 42,
+        "question": "What is a process?",
+        "keywords": [
+            "process?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 43,
+        "question": "What is a thread?",
+        "keywords": [
+            "thread?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 44,
+        "question": "Difference between process and thread.",
+        "keywords": [
+            "Difference",
+            "between",
+            "process",
+            "thread."
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 45,
+        "question": "What is scheduling?",
+        "keywords": [
+            "scheduling?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 46,
+        "question": "What is deadlock?",
+        "keywords": [
+            "deadlock?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 47,
+        "question": "What is memory management?",
+        "keywords": [
+            "memory",
+            "management?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 48,
+        "question": "What is virtual memory?",
+        "keywords": [
+            "virtual",
+            "memory?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 49,
+        "question": "What is context switching?",
+        "keywords": [
+            "context",
+            "switching?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 50,
+        "question": "Why do we need an OS?",
+        "keywords": [],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 51,
+        "question": "What is a computer network?",
+        "keywords": [
+            "computer",
+            "network?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 52,
+        "question": "What is an IP address?",
+        "keywords": [
+            "address?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 53,
+        "question": "Difference between TCP and UDP.",
+        "keywords": [
+            "Difference",
+            "between"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 54,
+        "question": "What is DNS?",
+        "keywords": [],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 55,
+        "question": "What is HTTP?",
+        "keywords": [
+            "HTTP?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 56,
+        "question": "What is HTTPS?",
+        "keywords": [
+            "HTTPS?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 57,
+        "question": "What is a router?",
+        "keywords": [
+            "router?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 58,
+        "question": "What is bandwidth?",
+        "keywords": [
+            "bandwidth?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 59,
+        "question": "What is latency?",
+        "keywords": [
+            "latency?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 60,
+        "question": "What is a firewall?",
+        "keywords": [
+            "firewall?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 61,
+        "question": "What is SDLC?",
+        "keywords": [
+            "SDLC?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 62,
+        "question": "What are SDLC phases?",
+        "keywords": [
+            "phases?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 63,
+        "question": "What is Agile methodology?",
+        "keywords": [
+            "Agile",
+            "methodology?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 64,
+        "question": "What is testing?",
+        "keywords": [
+            "testing?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 65,
+        "question": "What is unit testing?",
+        "keywords": [
+            "testing?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 66,
+        "question": "What is debugging vs testing?",
+        "keywords": [
+            "debugging",
+            "testing?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 67,
+        "question": "What is version control?",
+        "keywords": [
+            "version",
+            "control?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 68,
+        "question": "What is Git used for?",
+        "keywords": [],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 69,
+        "question": "What is deployment?",
+        "keywords": [
+            "deployment?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 70,
+        "question": "Why documentation is important?",
+        "keywords": [
+            "documentation",
+            "important?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 71,
+        "question": "What is cloud computing?",
+        "keywords": [
+            "cloud",
+            "computing?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 72,
+        "question": "What is SaaS?",
+        "keywords": [
+            "SaaS?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 73,
+        "question": "What is virtualization?",
+        "keywords": [
+            "virtualization?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 74,
+        "question": "What is API?",
+        "keywords": [],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 75,
+        "question": "What is JSON?",
+        "keywords": [
+            "JSON?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 76,
+        "question": "What is automation?",
+        "keywords": [
+            "automation?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 77,
+        "question": "What is DevOps (basic idea)?",
+        "keywords": [
+            "DevOps",
+            "(basic",
+            "idea)?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 78,
+        "question": "What is a web application?",
+        "keywords": [
+            "application?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 79,
+        "question": "Difference between frontend and backend.",
+        "keywords": [
+            "Difference",
+            "between",
+            "frontend",
+            "backend."
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 80,
+        "question": "What is scalability (simple explanation)?",
+        "keywords": [
+            "scalability",
+            "(simple",
+            "explanation)?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 81,
+        "question": "What happens when you enter a URL?",
+        "keywords": [
+            "happens",
+            "enter"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 82,
+        "question": "What is caching?",
+        "keywords": [
+            "caching?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 83,
+        "question": "What is load balancing?",
+        "keywords": [
+            "balancing?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 84,
+        "question": "What is backup?",
+        "keywords": [
+            "backup?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 85,
+        "question": "What is logging?",
+        "keywords": [
+            "logging?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 86,
+        "question": "How do you debug a program?",
+        "keywords": [
+            "debug",
+            "program?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 87,
+        "question": "How do you improve performance?",
+        "keywords": [
+            "improve",
+            "performance?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 88,
+        "question": "What is maintainable code?",
+        "keywords": [
+            "maintainable",
+            "code?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 89,
+        "question": "Why is testing important?",
+        "keywords": [
+            "testing",
+            "important?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 90,
+        "question": "What is software reliability?",
+        "keywords": [
+            "software",
+            "reliability?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 91,
+        "question": "Explain your project architecture.",
+        "keywords": [
+            "Explain",
+            "project",
+            "architecture."
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 92,
+        "question": "What technologies did you use and why?",
+        "keywords": [
+            "technologies"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 93,
+        "question": "What challenges did you face?",
+        "keywords": [
+            "challenges",
+            "face?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 94,
+        "question": "What would you improve in your project?",
+        "keywords": [
+            "would",
+            "improve",
+            "project?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 95,
+        "question": "How did you test your project?",
+        "keywords": [
+            "project?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 96,
+        "question": "What was your role in the team?",
+        "keywords": [
+            "team?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 97,
+        "question": "How does your project solve a real problem?",
+        "keywords": [
+            "project",
+            "solve",
+            "problem?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 98,
+        "question": "What did you learn from this project?",
+        "keywords": [
+            "learn",
+            "project?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 99,
+        "question": "How would you scale your project?",
+        "keywords": [
+            "would",
+            "scale",
+            "project?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 100,
+        "question": "If given time, what features would you add?",
+        "keywords": [
+            "given",
+            "time,",
+            "features",
+            "would"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    }
+]

@@ -1,0 +1,374 @@
+[
+    {
+        "id": 1,
+        "question": "Explain CAP Theorem.",
+        "keywords": [
+            "Consistency",
+            "Availability",
+            "Partition Tolerance",
+            "Distributed"
+        ],
+        "ideal_answer": "In a distributed system, you can only guarantee two out of three: Consistency, Availability, and Partition Tolerance."
+    },
+    {
+        "id": 2,
+        "question": "What is the difference between a Process and a Thread?",
+        "keywords": [
+            "Memory Space",
+            "Context Switching",
+            "Shared Memory"
+        ],
+        "ideal_answer": "A process is an independent execution unit with its own memory space, while threads are lighter units that share the same memory space within a process."
+    },
+    {
+        "id": 3,
+        "question": "What happens when you type a URL in a browser?",
+        "keywords": [
+            "DNS",
+            "IP Address",
+            "TCP Handshake",
+            "HTTP Request",
+            "Rendering"
+        ],
+        "ideal_answer": "Browser checks cache, DNS lookup resolves IP, TCP handshake establishes connection, HTTP request sent, Server processes and returns response, Browser renders HTML."
+    },
+    {
+        "id": 4,
+        "question": "Explain Virtual Memory.",
+        "keywords": [
+            "Paging",
+            "Swap Space",
+            "RAM",
+            "Abstraction"
+        ],
+        "ideal_answer": "It is a memory management technique that provides an abstraction of the storage resources that are actually available on a given machine, using disk space to extend RAM."
+    },
+    {
+        "id": 5,
+        "question": "What is Load Balancing?",
+        "keywords": [
+            "Distribution",
+            "Traffic",
+            "Availability",
+            "Scalability"
+        ],
+        "ideal_answer": "The process of distributing network traffic across multiple servers to ensure no single server bears too much demand, improving availability and scalability."
+    },
+    {
+        "id": 6,
+        "question": "Difference between SQL and NoSQL?",
+        "keywords": [
+            "Structured",
+            "Schema",
+            "ACID",
+            "Scaling"
+        ],
+        "ideal_answer": "SQL databases are relational, table-based, and follow ACID properties. NoSQL databases are non-relational, document/key-value based, and offer flexible schemas and horizontal scaling."
+    },
+    {
+        "id": 7,
+        "question": "What is Indexing in Databases?",
+        "keywords": [
+            "B-Tree",
+            "Hash",
+            "Performance",
+            "Retrieval"
+        ],
+        "ideal_answer": "A data structure technique used to quickly locate and access the data in a database table without searching every row."
+    },
+    {
+        "id": 8,
+        "question": "Explain ACID Properties.",
+        "keywords": [
+            "Atomicity",
+            "Consistency",
+            "Isolation",
+            "Durability"
+        ],
+        "ideal_answer": "Set of properties that guarantee database transactions are processed reliably: Atomicity, Consistency, Isolation, Durability."
+    },
+    {
+        "id": 9,
+        "question": "What is a Deadlock?",
+        "keywords": [
+            "Circular Wait",
+            "Resource Locking",
+            "Process"
+        ],
+        "ideal_answer": "A situation where a set of processes are blocked because each process is holding a resource and waiting for another resource acquired by some other process."
+    },
+    {
+        "id": 10,
+        "question": "How does Garbage Collection work?",
+        "keywords": [
+            "Memory Management",
+            "Mark and Sweep",
+            "Reference Counting"
+        ],
+        "ideal_answer": "Automatic memory management that reclaims memory occupied by objects that are no longer in use by the program."
+    },
+    {
+        "id": 11,
+        "question": "Difference between REST and SOAP?",
+        "keywords": [
+            "Stateless",
+            "XML",
+            "JSON",
+            "Protocol"
+        ],
+        "ideal_answer": "REST is an architectural style using standard HTTP, stateless and lightweight (JSON). SOAP is a protocol with strict standards, using XML and supporting ACID explicitly."
+    },
+    {
+        "id": 12,
+        "question": "What is Caching?",
+        "keywords": [
+            "Latency",
+            "Performance",
+            "Temporary Storage"
+        ],
+        "ideal_answer": "Storing copies of files or data in a temporary storage location (cache) so that they can be accessed more quickly."
+    },
+    {
+        "id": 13,
+        "question": "Horizontal vs Vertical Scaling?",
+        "keywords": [
+            "Scaling Out",
+            "Scaling Up",
+            "Hardware",
+            "Instances"
+        ],
+        "ideal_answer": "Vertical scaling means adding more power (CPU, RAM) to an existing machine. Horizontal scaling means adding more machines to the pool of resources."
+    },
+    {
+        "id": 14,
+        "question": "Explain Microservices Architecture.",
+        "keywords": [
+            "Decoupled",
+            "Independent",
+            "Services",
+            "Communication"
+        ],
+        "ideal_answer": "An architectural style that structures an application as a collection of services that are highly maintainable and independently deployable."
+    },
+    {
+        "id": 15,
+        "question": "What is Eventual Consistency?",
+        "keywords": [
+            "Distributed",
+            "Latency",
+            "Consistency"
+        ],
+        "ideal_answer": "A consistency model used in distributed computing that informally guarantees that, if no new updates are made to a given data item, eventually all accesses to that item will return the last updated value."
+    },
+    {
+        "id": 16,
+        "question": "What is a CDN?",
+        "keywords": [
+            "Content Delivery Network",
+            "Edge Servers",
+            "Latency"
+        ],
+        "ideal_answer": "A system of distributed servers that deliver pages and other web content to a user based on the geographic locations of the user, the origin of the webpage, and the content delivery server."
+    },
+    {
+        "id": 17,
+        "question": "Explain Mutex vs Semaphore.",
+        "keywords": [
+            "Locking",
+            "Synchronization",
+            "Signaling"
+        ],
+        "ideal_answer": "A Mutex is a locking mechanism used to synchronize access to a resource. A Semaphore is a signaling mechanism to control access to a common resource by multiple processes."
+    },
+    {
+        "id": 18,
+        "question": "What is Sharding?",
+        "keywords": [
+            " partitioning",
+            "Database",
+            "Scalability"
+        ],
+        "ideal_answer": "A database architecture pattern related to horizontal partitioning – splitting a large database into smaller, faster, more easily managed parts."
+    },
+    {
+        "id": 19,
+        "question": "Difference between Authentication and Authorization?",
+        "keywords": [
+            "Identity",
+            "Access Control",
+            "Permission"
+        ],
+        "ideal_answer": "Authentication validates who you are (Identity). Authorization determines what you are allowed to do (Permissions)."
+    },
+    {
+        "id": 20,
+        "question": "What is a Reverse Proxy?",
+        "keywords": [
+            "Gateway",
+            "Security",
+            "Load Balancing"
+        ],
+        "ideal_answer": "A server that sits in front of web servers and forwards client requests to those web servers. It is implemented to increase security, performance, and reliability."
+    },
+    {
+        "id": 21,
+        "question": "What is Latency vs Throughput?",
+        "keywords": [
+            "Speed",
+            "Volume",
+            "Time"
+        ],
+        "ideal_answer": "Latency is the time it takes for a packet of data to get from one designated point to another. Throughput is the amount of data moved successfully from one place to another in a given time period."
+    },
+    {
+        "id": 22,
+        "question": "Explain Containerization (Docker).",
+        "keywords": [
+            "Isolation",
+            "Packaging",
+            "Dependencies"
+        ],
+        "ideal_answer": "Packaging software code with just the OS libraries and dependencies required to run the code to create a single lightweight executable—called a container."
+    },
+    {
+        "id": 23,
+        "question": "What is Idempotency?",
+        "keywords": [
+            "Reliability",
+            "Duplicates",
+            "Side Effects"
+        ],
+        "ideal_answer": "A property of certain operations in mathematics and computer science whereby they can be applied multiple times without changing the result beyond the initial application."
+    },
+    {
+        "id": 24,
+        "question": "What is a Message Queue?",
+        "keywords": [
+            "Asynchronous",
+            "Decoupling",
+            "Kafka",
+            "RabbitMQ"
+        ],
+        "ideal_answer": "A form of asynchronous service-to-service communication used in serverless and microservices architectures."
+    },
+    {
+        "id": 25,
+        "question": "What is Rate Limiting?",
+        "keywords": [
+            "Throttling",
+            "Protection",
+            "API"
+        ],
+        "ideal_answer": "A strategy for limiting network traffic. It sets a limit on how many requests a client can make in a given period of time."
+    },
+    {
+        "id": 51,
+        "question": "What is Consistent Hashing?",
+        "keywords": [
+            "Distribution",
+            "Hashing",
+            "Rebalancing"
+        ],
+        "ideal_answer": "A distributed hashing scheme that operates independently of the number of servers or objects in a distributed hash table."
+    },
+    {
+        "id": 52,
+        "question": "How does DNS work internally?",
+        "keywords": [
+            "Root Server",
+            "TLD",
+            "Authoritative"
+        ],
+        "ideal_answer": "It uses a hierarchical structure where a resolver queries Root servers, then TLD servers, and finally Authoritative Name Servers to find the IP address."
+    },
+    {
+        "id": 53,
+        "question": "What is a Thread Pool?",
+        "keywords": [
+            "Concurrency",
+            "Performance",
+            "Reuse"
+        ],
+        "ideal_answer": "A software design pattern for achieving concurrency: maintaining a pool of threads that can be reused to execute tasks."
+    },
+    {
+        "id": 55,
+        "question": "What is Write-Ahead Logging?",
+        "keywords": [
+            "Database",
+            "Recovery",
+            "Durability"
+        ],
+        "ideal_answer": "A standard method for ensuring data integrity where modifications are written to a log before they are applied."
+    },
+    {
+        "id": 57,
+        "question": "What is an API Gateway?",
+        "keywords": [
+            "Routing",
+            "Authentication",
+            "Rate Limiting"
+        ],
+        "ideal_answer": "An API management tool that sits between a client and a collection of backend services."
+    },
+    {
+        "id": 61,
+        "question": "Explain Backpressure in Systems.",
+        "keywords": [
+            "Flow Control",
+            "Overload",
+            "Streaming"
+        ],
+        "ideal_answer": "Resistance or force opposing the desired flow of data through software. It builds up when data is produced faster than it can be processed."
+    },
+    {
+        "id": 62,
+        "question": "What is a Circuit Breaker Pattern?",
+        "keywords": [
+            "Fault Tolerance",
+            "Resilience",
+            "Fail Fast"
+        ],
+        "ideal_answer": "A design pattern used in software development to detect failures and encapsulate the logic of preventing a failure from constantly recurring."
+    },
+    {
+        "id": 64,
+        "question": "Difference Between Monolith and Microservices?",
+        "keywords": [
+            "Architecture",
+            "Deployment",
+            "Complexity"
+        ],
+        "ideal_answer": "A monolithic application is built as a single unified unit, while a microservices architecture is a collection of smaller, independently deployable services."
+    },
+    {
+        "id": 65,
+        "question": "What is a Race Condition?",
+        "keywords": [
+            "Concurrency",
+            "Timing",
+            "Bug"
+        ],
+        "ideal_answer": "An undesirable situation that occurs when a device or system attempts to perform two or more operations at the same time, but because of the nature of the device or system, the operations must be done in the proper sequence key."
+    },
+    {
+        "id": 68,
+        "question": "What is Leader Election?",
+        "keywords": [
+            "Consensus",
+            "Distributed",
+            "Coordinator"
+        ],
+        "ideal_answer": "The process of designating a single process as the organizer of some task distributed among several computers."
+    },
+    {
+        "id": 71,
+        "question": "Difference Between OLTP and OLAP?",
+        "keywords": [
+            "Transactions",
+            "Analytics",
+            "Database"
+        ],
+        "ideal_answer": "OLTP is designed for transaction-oriented applications, while OLAP is designed for analytical processing."
+    }
+]

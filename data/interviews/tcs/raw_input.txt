@@ -1,0 +1,447 @@
+✅ TCS — CORE TECHNICAL (100 Questions)
+🧠 Programming Fundamentals
+
+What is programming?
+
+Difference between compiler and interpreter.
+
+What is a variable?
+
+What are data types?
+
+Difference between procedural and OOP programming.
+
+What is a loop?
+
+What is a function?
+
+What is recursion?
+
+What is debugging?
+
+What is an algorithm?
+
+🖥️ OOP Concepts (Very Important for TCS)
+
+What is Object-Oriented Programming?
+
+What is a class and object?
+
+Explain encapsulation.
+
+Explain inheritance.
+
+Explain polymorphism.
+
+Explain abstraction.
+
+What is method overloading?
+
+What is method overriding?
+
+What is constructor?
+
+Why is OOP useful?
+
+💾 Data Structures Basics
+
+What is an array?
+
+Difference between array and linked list.
+
+What is stack?
+
+What is queue?
+
+What is a tree?
+
+What is searching?
+
+What is sorting?
+
+What is time complexity (basic idea)?
+
+What is Big-O notation?
+
+Why do we use data structures?
+
+🗄️ DBMS Fundamentals
+
+What is DBMS?
+
+What is SQL?
+
+What is a table?
+
+What is a primary key?
+
+What is normalization?
+
+What is a join?
+
+Difference between WHERE and HAVING.
+
+What is indexing?
+
+What is a transaction?
+
+What are ACID properties?
+
+⚙️ Operating Systems Basics
+
+What is an Operating System?
+
+What is a process?
+
+What is a thread?
+
+Difference between process and thread.
+
+What is scheduling?
+
+What is deadlock?
+
+What is memory management?
+
+What is virtual memory?
+
+What is context switching?
+
+Why do we need an OS?
+
+🌐 Networking Basics
+
+What is a computer network?
+
+What is an IP address?
+
+Difference between TCP and UDP.
+
+What is DNS?
+
+What is HTTP?
+
+What is HTTPS?
+
+What is a router?
+
+What is bandwidth?
+
+What is latency?
+
+What is a firewall?
+
+🛠️ Software Engineering Concepts
+
+What is SDLC?
+
+What are SDLC phases?
+
+What is Agile methodology?
+
+What is testing?
+
+What is unit testing?
+
+What is debugging vs testing?
+
+What is version control?
+
+What is Git used for?
+
+What is deployment?
+
+Why documentation is important?
+
+☁️ Modern IT Awareness (TCS checks basics)
+
+What is cloud computing?
+
+What is SaaS?
+
+What is virtualization?
+
+What is API?
+
+What is JSON?
+
+What is automation?
+
+What is DevOps (basic idea)?
+
+What is a web application?
+
+Difference between frontend and backend.
+
+What is scalability (simple explanation)?
+
+🔎 Practical Understanding
+
+What happens when you enter a URL?
+
+What is caching?
+
+What is load balancing?
+
+What is backup?
+
+What is logging?
+
+How do you debug a program?
+
+How do you improve performance?
+
+What is maintainable code?
+
+Why is testing important?
+
+What is software reliability?
+
+🎯 Project-Based Questions (TCS LOVES THESE)
+
+Explain your project architecture.
+
+What technologies did you use and why?
+
+What challenges did you face?
+
+What would you improve in your project?
+
+How did you test your project?
+
+What was your role in the team?
+
+How does your project solve a real problem?
+
+What did you learn from this project?
+
+How would you scale your project?
+
+If given time, what features would you add?
+
+✅ TCS — HR / MR (Managerial Round) — 100 Questions
+
+TCS HR checks:
+✔ Stability
+✔ Trainability
+✔ Team fit
+✔ Communication
+✔ Willingness to work long-term
+
+👤 Personal Background
+
+Tell me about yourself.
+
+Why did you choose engineering?
+
+Why TCS?
+
+What do you know about TCS?
+
+What are your strengths?
+
+What are your weaknesses?
+
+What motivates you?
+
+Where do you see yourself in 5 years?
+
+Why should we hire you?
+
+What makes you unique?
+
+🎓 Academic & Learning
+
+Favorite subject and why.
+
+Explain your final-year project.
+
+What did you learn from college?
+
+How do you learn new technology?
+
+How do you handle academic stress?
+
+Example of solving a problem.
+
+What did you learn outside syllabus?
+
+How do you manage deadlines?
+
+Describe a challenging situation.
+
+What skills are you improving now?
+
+🤝 Team & Workplace Behavior
+
+Tell me about teamwork experience.
+
+Have you led a team?
+
+How do you resolve conflicts?
+
+What role do you take in teams?
+
+How do you handle criticism?
+
+How do you support teammates?
+
+Describe leadership experience.
+
+How do you communicate clearly?
+
+Example of collaboration success.
+
+What does teamwork mean to you?
+
+📈 Work Ethics & Adaptability
+
+Are you willing to relocate?
+
+Can you work in shifts?
+
+How do you handle pressure?
+
+How do you adapt to change?
+
+Are you comfortable learning new tech?
+
+Describe persistence in work.
+
+What is professionalism?
+
+How do you stay productive?
+
+Example of overcoming difficulty.
+
+What is your biggest achievement?
+
+💼 Corporate Fit
+
+Why service-based industry?
+
+What are your career goals?
+
+What do you expect from TCS?
+
+How will you contribute to TCS?
+
+How do you handle feedback?
+
+Describe responsibility you handled.
+
+What is your work style?
+
+Are you ready for training?
+
+Why should we invest in you?
+
+What does corporate culture mean to you?
+
+🌱 Personality & Values
+
+What inspires you?
+
+Describe a failure you learned from.
+
+How do you manage stress?
+
+What are your hobbies?
+
+What values guide you?
+
+How do you stay disciplined?
+
+Describe yourself in 3 words.
+
+What motivates you long-term?
+
+How do you handle uncertainty?
+
+What does success mean to you?
+
+🧠 Situational Questions
+
+If assigned unfamiliar technology?
+
+If project deadline is tight?
+
+If teammate underperforms?
+
+If requirements change suddenly?
+
+If you make a mistake?
+
+If workload increases?
+
+If client is unhappy?
+
+If project fails?
+
+If you must learn quickly?
+
+If you disagree with manager?
+
+🎯 Final Fit Evaluation
+
+Why should we choose you?
+
+What skills will you bring to TCS?
+
+How do you ensure quality work?
+
+How do you stay consistent?
+
+What is accountability?
+
+What does integrity mean?
+
+How do you build trust?
+
+What is reliability at work?
+
+Why discipline matters?
+
+What does commitment mean?
+
+🔚 Closing Questions
+
+Do you have questions for us?
+
+Expectations from first year?
+
+How quickly can you adapt?
+
+How do you stay motivated?
+
+What defines a good employee?
+
+What excites you about this role?
+
+How do you measure progress?
+
+How will you handle transition to corporate life?
+
+What are you most proud of?
+
+How do you stay positive?
+
+What challenges are you ready to face?
+
+What does growth mean to you?
+
+How do you handle long-term commitments?
+
+Why stability matters in career?
+
+What will make you proud working at TCS?
+
+How do you handle routine work?
+
+What is your learning philosophy?
+
+How do you stay curious?
+
+What drives your work ethic?
+
+Why TCS — final answer?

@@ -1,0 +1,878 @@
+[
+    {
+        "id": 1,
+        "question": "Tell me about a time you learned something quickly.",
+        "keywords": [
+            "Growth mindset"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 2,
+        "question": "Describe a challenging technical problem you solved.",
+        "keywords": [
+            "Analytical thinking"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 3,
+        "question": "How do you approach teamwork?",
+        "keywords": [
+            "Collaboration culture"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 4,
+        "question": "Tell me about receiving constructive criticism.",
+        "keywords": [
+            "Coachability"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 5,
+        "question": "Why Microsoft?",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Impact, innovation, inclusive engineering culture."
+    },
+    {
+        "id": 6,
+        "question": "Describe working with diverse perspectives.",
+        "keywords": [
+            "Inclusivity mindset"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 7,
+        "question": "How do you handle ambiguity?",
+        "keywords": [
+            "Adaptability"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 8,
+        "question": "Tell me about improving an existing solution.",
+        "keywords": [
+            "Engineering refinement"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 9,
+        "question": "What motivates you to build software?",
+        "keywords": [
+            "Passion authenticity"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 10,
+        "question": "Describe managing priorities.",
+        "keywords": [
+            "Organization skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 11,
+        "question": "When did you ask for help?",
+        "keywords": [
+            "Humility + collaboration"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 12,
+        "question": "Example of overcoming a learning curve.",
+        "keywords": [
+            "Persistence"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 13,
+        "question": "Tell me about debugging something difficult.",
+        "keywords": [
+            "Logical breakdown ability"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 14,
+        "question": "How do you keep your skills updated?",
+        "keywords": [
+            "Continuous learning"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 15,
+        "question": "Describe working under pressure.",
+        "keywords": [
+            "Emotional balance"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 16,
+        "question": "Example of improving team communication.",
+        "keywords": [
+            "Leadership traits"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 17,
+        "question": "What does innovation mean to you?",
+        "keywords": [
+            "Creative thinking"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 18,
+        "question": "Tell me about a time you failed.",
+        "keywords": [
+            "Reflection ability"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 19,
+        "question": "Describe delivering a project end-to-end.",
+        "keywords": [
+            "Ownership"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 20,
+        "question": "How do you approach problem-solving?",
+        "keywords": [
+            "Structured thinking"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 21,
+        "question": "What\u2019s your biggest strength as an engineer?",
+        "keywords": [
+            "Self-awareness"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 22,
+        "question": "Describe working across different skill levels.",
+        "keywords": [
+            "Adaptability"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 23,
+        "question": "Tell me about explaining tech to non-tech people.",
+        "keywords": [
+            "Communication clarity"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 24,
+        "question": "How do you handle feedback loops?",
+        "keywords": [
+            "Iterative mindset"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 25,
+        "question": "Where do you see yourself growing technically?",
+        "keywords": [
+            "Vision alignment"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 26,
+        "question": "Tell me about adapting to a new technology quickly.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 27,
+        "question": "Describe working with a difficult bug.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 28,
+        "question": "How do you handle disagreements in design?",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 29,
+        "question": "Tell me about improving a process.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 30,
+        "question": "Describe collaborating remotely.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 31,
+        "question": "Example of meeting a tight deadline.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 32,
+        "question": "How do you manage learning alongside delivery?",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 33,
+        "question": "Tell me about mentoring someone.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 34,
+        "question": "How do you prioritize quality vs speed?",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 35,
+        "question": "Describe a technical decision you made.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 36,
+        "question": "What excites you about building products?",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 37,
+        "question": "Tell me about working with limited resources.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 38,
+        "question": "How do you approach documentation?",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 39,
+        "question": "Describe receiving feedback from peers.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 40,
+        "question": "How do you debug systematically?",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 41,
+        "question": "Tell me about solving something outside your comfort zone.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 42,
+        "question": "Describe working in a cross-functional team.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 43,
+        "question": "How do you handle uncertainty in requirements?",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 44,
+        "question": "Tell me about improving code maintainability.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 45,
+        "question": "How do you approach long-term learning?",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 46,
+        "question": "Example of persistence through difficulty.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 47,
+        "question": "Describe communicating complex ideas simply.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 48,
+        "question": "How do you evaluate tradeoffs?",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 49,
+        "question": "Tell me about taking initiative.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 50,
+        "question": "Why do you want to grow at Microsoft?",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Great \ud83d\udc4d Let\u2019s finish Microsoft - final batch of conceptual + behavioral questions."
+    },
+    {
+        "id": 51,
+        "question": "Tell me about adapting to a changing requirement.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 52,
+        "question": "Describe improving collaboration.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 53,
+        "question": "How do you handle long-term projects?",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 54,
+        "question": "Tell me about managing expectations.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 55,
+        "question": "Example of simplifying complexity.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 56,
+        "question": "Describe balancing learning and delivery.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 57,
+        "question": "Tell me about handling uncertainty.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 58,
+        "question": "Example of improving code quality.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 59,
+        "question": "Describe your approach to teamwork.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 60,
+        "question": "How do you build trust quickly?",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 61,
+        "question": "Tell me about solving a non-technical challenge.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 62,
+        "question": "Example of persistence.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 63,
+        "question": "Describe a time you learned from failure.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 64,
+        "question": "How do you handle multiple responsibilities?",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 65,
+        "question": "Tell me about contributing beyond your role.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 66,
+        "question": "Describe explaining an idea to stakeholders.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 67,
+        "question": "How do you approach new challenges?",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 68,
+        "question": "Example of cross-team collaboration.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 69,
+        "question": "Tell me about continuous improvement.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 70,
+        "question": "Describe a time you received recognition.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 71,
+        "question": "What motivates your work?",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 72,
+        "question": "How do you measure success?",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 73,
+        "question": "Tell me about solving ambiguity.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 74,
+        "question": "Example of improving efficiency.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 75,
+        "question": "Describe mentoring someone.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 76,
+        "question": "How do you stay curious?",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 77,
+        "question": "Tell me about taking initiative.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 78,
+        "question": "Example of balancing priorities.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 79,
+        "question": "Describe handling feedback.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 80,
+        "question": "Tell me about achieving a difficult goal.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 81,
+        "question": "How do you maintain productivity?",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 82,
+        "question": "Example of learning independently.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 83,
+        "question": "Describe teamwork under pressure.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 84,
+        "question": "Tell me about building something impactful.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 85,
+        "question": "How do you approach decision-making?",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 86,
+        "question": "Example of overcoming obstacles.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 87,
+        "question": "Describe handling disagreement constructively.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 88,
+        "question": "Tell me about improving communication.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 89,
+        "question": "Example of solving a user problem.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 90,
+        "question": "How do you approach growth?",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 91,
+        "question": "Tell me about delivering quality work.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 92,
+        "question": "Describe your collaboration style.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 93,
+        "question": "Example of resilience.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 94,
+        "question": "Tell me about achieving clarity in confusion.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 95,
+        "question": "How do you adapt to feedback?",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 96,
+        "question": "Describe contributing to innovation.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 97,
+        "question": "Tell me about working across cultures.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 98,
+        "question": "Example of responsibility taken voluntarily.",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 99,
+        "question": "What does success at Microsoft mean to you?",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    },
+    {
+        "id": 100,
+        "question": "Why should Microsoft hire you?",
+        "keywords": [
+            "Behavioral",
+            "Soft Skills"
+        ],
+        "ideal_answer": "Use the STAR method (Situation, Task, Action, Result) to structure your response. Focus on your specific contribution and the impact."
+    }
+]

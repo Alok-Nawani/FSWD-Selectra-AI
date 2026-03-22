@@ -1,0 +1,909 @@
+[
+    {
+        "id": 1,
+        "question": "Tell me about yourself.",
+        "keywords": [
+            "about",
+            "yourself."
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 2,
+        "question": "Why did you choose engineering?",
+        "keywords": [
+            "choose",
+            "engineering?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 3,
+        "question": "Why Infosys?",
+        "keywords": [
+            "Infosys?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 4,
+        "question": "What do you know about Infosys?",
+        "keywords": [
+            "about",
+            "Infosys?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 5,
+        "question": "What are your strengths?",
+        "keywords": [
+            "strengths?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 6,
+        "question": "What are your weaknesses?",
+        "keywords": [
+            "weaknesses?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 7,
+        "question": "What motivates you?",
+        "keywords": [
+            "motivates"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 8,
+        "question": "Where do you see yourself in 5 years?",
+        "keywords": [
+            "Where",
+            "yourself",
+            "years?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 9,
+        "question": "Why should we hire you?",
+        "keywords": [
+            "should"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 10,
+        "question": "What makes you different?",
+        "keywords": [
+            "makes",
+            "different?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 11,
+        "question": "Favorite subject and why.",
+        "keywords": [
+            "Favorite",
+            "subject"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 12,
+        "question": "Explain your final-year project.",
+        "keywords": [
+            "Explain",
+            "final-year",
+            "project."
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 13,
+        "question": "What challenges did you face in project?",
+        "keywords": [
+            "challenges",
+            "project?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 14,
+        "question": "How do you learn new technologies?",
+        "keywords": [
+            "learn",
+            "technologies?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 15,
+        "question": "Tell me about a technical mistake you made.",
+        "keywords": [
+            "about",
+            "technical",
+            "mistake",
+            "made."
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 16,
+        "question": "How do you handle academic pressure?",
+        "keywords": [
+            "handle",
+            "academic",
+            "pressure?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 17,
+        "question": "How do you manage time?",
+        "keywords": [
+            "manage",
+            "time?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 18,
+        "question": "How do you prepare for deadlines?",
+        "keywords": [
+            "prepare",
+            "deadlines?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 19,
+        "question": "Example of solving a difficult problem.",
+        "keywords": [
+            "Example",
+            "solving",
+            "difficult",
+            "problem."
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 20,
+        "question": "What did you learn outside syllabus?",
+        "keywords": [
+            "learn",
+            "outside",
+            "syllabus?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 21,
+        "question": "Tell me about working in a team.",
+        "keywords": [
+            "about",
+            "working",
+            "team."
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 22,
+        "question": "Describe a conflict you handled.",
+        "keywords": [
+            "Describe",
+            "conflict",
+            "handled."
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 23,
+        "question": "How do you adapt to team environments?",
+        "keywords": [
+            "adapt",
+            "environments?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 24,
+        "question": "Have you led a group?",
+        "keywords": [
+            "group?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 25,
+        "question": "How do you handle criticism?",
+        "keywords": [
+            "handle",
+            "criticism?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 26,
+        "question": "How do you help teammates?",
+        "keywords": [
+            "teammates?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 27,
+        "question": "Describe a leadership experience.",
+        "keywords": [
+            "Describe",
+            "leadership",
+            "experience."
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 28,
+        "question": "What role do you take in teams?",
+        "keywords": [
+            "teams?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 29,
+        "question": "How do you ensure communication clarity?",
+        "keywords": [
+            "ensure",
+            "communication",
+            "clarity?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 30,
+        "question": "Example of collaboration success.",
+        "keywords": [
+            "Example",
+            "collaboration",
+            "success."
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 31,
+        "question": "Are you willing to relocate?",
+        "keywords": [
+            "willing",
+            "relocate?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 32,
+        "question": "Can you work under pressure?",
+        "keywords": [
+            "under",
+            "pressure?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 33,
+        "question": "How do you handle repetitive work?",
+        "keywords": [
+            "handle",
+            "repetitive",
+            "work?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 34,
+        "question": "Describe adaptability to change.",
+        "keywords": [
+            "Describe",
+            "adaptability",
+            "change."
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 35,
+        "question": "How do you stay productive?",
+        "keywords": [
+            "productive?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 36,
+        "question": "What does professionalism mean to you?",
+        "keywords": [
+            "professionalism"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 37,
+        "question": "How do you deal with failure?",
+        "keywords": [
+            "failure?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 38,
+        "question": "Example of persistence.",
+        "keywords": [
+            "Example",
+            "persistence."
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 39,
+        "question": "What is your biggest achievement?",
+        "keywords": [
+            "biggest",
+            "achievement?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 40,
+        "question": "What is your biggest challenge?",
+        "keywords": [
+            "biggest",
+            "challenge?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 41,
+        "question": "Why IT industry?",
+        "keywords": [
+            "industry?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 42,
+        "question": "Why service-based company?",
+        "keywords": [
+            "service-based",
+            "company?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 43,
+        "question": "What are your career goals?",
+        "keywords": [
+            "career",
+            "goals?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 44,
+        "question": "How will you contribute to Infosys?",
+        "keywords": [
+            "contribute",
+            "Infosys?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 45,
+        "question": "What do you expect from Infosys?",
+        "keywords": [
+            "expect",
+            "Infosys?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 46,
+        "question": "How do you handle feedback?",
+        "keywords": [
+            "handle",
+            "feedback?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 47,
+        "question": "Describe a responsibility you handled.",
+        "keywords": [
+            "Describe",
+            "responsibility",
+            "handled."
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 48,
+        "question": "What is your work style?",
+        "keywords": [
+            "style?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 49,
+        "question": "Are you comfortable with training phases?",
+        "keywords": [
+            "comfortable",
+            "training",
+            "phases?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 50,
+        "question": "Why should we invest in you?",
+        "keywords": [
+            "should",
+            "invest"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 51,
+        "question": "What inspires you?",
+        "keywords": [
+            "inspires"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 52,
+        "question": "Describe a failure you learned from.",
+        "keywords": [
+            "Describe",
+            "failure",
+            "learned",
+            "from."
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 53,
+        "question": "How do you manage stress?",
+        "keywords": [
+            "manage",
+            "stress?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 54,
+        "question": "What are your hobbies?",
+        "keywords": [
+            "hobbies?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 55,
+        "question": "What values guide you?",
+        "keywords": [
+            "values",
+            "guide"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 56,
+        "question": "How do you stay disciplined?",
+        "keywords": [
+            "disciplined?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 57,
+        "question": "Describe your personality in 3 words.",
+        "keywords": [
+            "Describe",
+            "personality",
+            "words."
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 58,
+        "question": "What keeps you motivated long-term?",
+        "keywords": [
+            "keeps",
+            "motivated",
+            "long-term?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 59,
+        "question": "How do you handle uncertainty?",
+        "keywords": [
+            "handle",
+            "uncertainty?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 60,
+        "question": "What does success mean to you?",
+        "keywords": [
+            "success"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 61,
+        "question": "If assigned unfamiliar tech, what will you do?",
+        "keywords": [
+            "assigned",
+            "unfamiliar",
+            "tech,"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 62,
+        "question": "If project deadline is tight?",
+        "keywords": [
+            "project",
+            "deadline",
+            "tight?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 63,
+        "question": "If teammate underperforms?",
+        "keywords": [
+            "teammate",
+            "underperforms?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 64,
+        "question": "If requirements change suddenly?",
+        "keywords": [
+            "requirements",
+            "change",
+            "suddenly?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 65,
+        "question": "If you make a mistake?",
+        "keywords": [
+            "mistake?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 66,
+        "question": "If you disagree with manager?",
+        "keywords": [
+            "disagree",
+            "manager?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 67,
+        "question": "If workload increases unexpectedly?",
+        "keywords": [
+            "workload",
+            "increases",
+            "unexpectedly?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 68,
+        "question": "If you must learn quickly?",
+        "keywords": [
+            "learn",
+            "quickly?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 69,
+        "question": "If client is unhappy?",
+        "keywords": [
+            "client",
+            "unhappy?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 70,
+        "question": "If project fails?",
+        "keywords": [
+            "project",
+            "fails?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 71,
+        "question": "Why teamwork matters in IT services?",
+        "keywords": [
+            "teamwork",
+            "matters",
+            "services?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 72,
+        "question": "How do you ensure client satisfaction?",
+        "keywords": [
+            "ensure",
+            "client",
+            "satisfaction?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 73,
+        "question": "Why discipline is important in delivery?",
+        "keywords": [
+            "discipline",
+            "important",
+            "delivery?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 74,
+        "question": "What is ethical behavior?",
+        "keywords": [
+            "ethical",
+            "behavior?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 75,
+        "question": "How do you maintain accountability?",
+        "keywords": [
+            "maintain",
+            "accountability?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 76,
+        "question": "What does integrity mean to you?",
+        "keywords": [
+            "integrity"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 77,
+        "question": "How do you build trust?",
+        "keywords": [
+            "build",
+            "trust?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 78,
+        "question": "Describe reliability in work.",
+        "keywords": [
+            "Describe",
+            "reliability",
+            "work."
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 79,
+        "question": "Why consistency matters?",
+        "keywords": [
+            "consistency",
+            "matters?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 80,
+        "question": "What does commitment mean?",
+        "keywords": [
+            "commitment",
+            "mean?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 81,
+        "question": "Are you open to learning continuously?",
+        "keywords": [
+            "learning",
+            "continuously?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 82,
+        "question": "What skills do you want to develop?",
+        "keywords": [
+            "skills",
+            "develop?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 83,
+        "question": "How do you balance quality and speed?",
+        "keywords": [
+            "balance",
+            "quality",
+            "speed?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 84,
+        "question": "What does customer focus mean?",
+        "keywords": [
+            "customer",
+            "focus",
+            "mean?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 85,
+        "question": "Why should we choose you over others?",
+        "keywords": [
+            "should",
+            "choose",
+            "others?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 86,
+        "question": "What are your long-term aspirations?",
+        "keywords": [
+            "long-term",
+            "aspirations?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 87,
+        "question": "How will you handle corporate life transition?",
+        "keywords": [
+            "handle",
+            "corporate",
+            "transition?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 88,
+        "question": "What does growth mean to you?",
+        "keywords": [
+            "growth"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 89,
+        "question": "Are you ready for challenges?",
+        "keywords": [
+            "ready",
+            "challenges?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 90,
+        "question": "What defines a good employee?",
+        "keywords": [
+            "defines",
+            "employee?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 91,
+        "question": "Do you have questions for us?",
+        "keywords": [
+            "questions"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 92,
+        "question": "What are your expectations from first year?",
+        "keywords": [
+            "expectations",
+            "first",
+            "year?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 93,
+        "question": "How quickly can you adapt to new environments?",
+        "keywords": [
+            "quickly",
+            "adapt",
+            "environments?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 94,
+        "question": "How do you maintain learning discipline?",
+        "keywords": [
+            "maintain",
+            "learning",
+            "discipline?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 95,
+        "question": "What does responsibility mean to you?",
+        "keywords": [
+            "responsibility"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 96,
+        "question": "How do you measure your progress?",
+        "keywords": [
+            "measure",
+            "progress?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 97,
+        "question": "What will make you proud working here?",
+        "keywords": [
+            "proud",
+            "working",
+            "here?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 98,
+        "question": "How do you stay positive?",
+        "keywords": [
+            "positive?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    },
+    {
+        "id": 99,
+        "question": "What excites you about starting your career?",
+        "keywords": [
+            "excites",
+            "about",
+            "starting",
+            "career?"
+        ],
+        "ideal_answer": "Explain fully. Focus on key concepts."
+    }
+]

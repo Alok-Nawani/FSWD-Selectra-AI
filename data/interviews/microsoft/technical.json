@@ -1,0 +1,802 @@
+[
+    {
+        "id": 1,
+        "question": "What happens inside the OS when a process is created?",
+        "keywords": [
+            "OS internals"
+        ],
+        "ideal_answer": "OS allocates memory, assigns PID, initializes PCB, loads program into memory, schedules execution."
+    },
+    {
+        "id": 2,
+        "question": "Explain Context Switching.",
+        "keywords": [
+            "Scheduling understanding"
+        ],
+        "ideal_answer": "Saving state of one process and loading another for CPU execution."
+    },
+    {
+        "id": 3,
+        "question": "What is the difference between Stack and Heap memory?",
+        "keywords": [
+            "Memory model clarity"
+        ],
+        "ideal_answer": "Stack \u2192 function calls, automatic. Heap \u2192 dynamic allocation, manual control."
+    },
+    {
+        "id": 4,
+        "question": "How does a Compiler differ from an Interpreter?",
+        "keywords": [
+            "Language fundamentals"
+        ],
+        "ideal_answer": "Compiler translates entire code before execution; interpreter executes line-by-line."
+    },
+    {
+        "id": 5,
+        "question": "Explain Paging in Operating Systems.",
+        "keywords": [
+            "Virtual memory concepts"
+        ],
+        "ideal_answer": "Divides memory into fixed-size frames/pages to avoid fragmentation."
+    },
+    {
+        "id": 6,
+        "question": "What is Multithreading?",
+        "keywords": [
+            "Concurrency basics"
+        ],
+        "ideal_answer": "Concurrent execution of multiple threads sharing same resources."
+    },
+    {
+        "id": 7,
+        "question": "Explain Synchronization.",
+        "keywords": [
+            "Race condition prevention"
+        ],
+        "ideal_answer": "Mechanism to control access to shared resources using locks/semaphores."
+    },
+    {
+        "id": 8,
+        "question": "Difference between TCP and UDP?",
+        "keywords": [
+            "Networking fundamentals"
+        ],
+        "ideal_answer": "TCP reliable + ordered; UDP fast + connectionless."
+    },
+    {
+        "id": 9,
+        "question": "What is DNS Caching?",
+        "keywords": [
+            "Performance understanding"
+        ],
+        "ideal_answer": "Storing resolved domain-IP mappings locally to reduce lookup time."
+    },
+    {
+        "id": 10,
+        "question": "Explain Normalization in Databases.",
+        "keywords": [
+            "DB design basics"
+        ],
+        "ideal_answer": "Organizing tables to reduce redundancy and improve integrity."
+    },
+    {
+        "id": 11,
+        "question": "What is a Transaction?",
+        "keywords": [
+            "ACID awareness"
+        ],
+        "ideal_answer": "Logical unit of work executed completely or not at all."
+    },
+    {
+        "id": 12,
+        "question": "Explain Deadlock Prevention.",
+        "keywords": [
+            "Resource management"
+        ],
+        "ideal_answer": "Break one of the four necessary conditions like circular wait."
+    },
+    {
+        "id": 13,
+        "question": "What is a Kernel?",
+        "keywords": [
+            "System-level understanding"
+        ],
+        "ideal_answer": "Core of OS managing hardware, memory, processes."
+    },
+    {
+        "id": 14,
+        "question": "Difference between User Mode and Kernel Mode?",
+        "keywords": [
+            "Security model"
+        ],
+        "ideal_answer": "User mode restricted; kernel mode full hardware access."
+    },
+    {
+        "id": 15,
+        "question": "What is an API?",
+        "keywords": [
+            "Software architecture"
+        ],
+        "ideal_answer": "Contract allowing communication between software components."
+    },
+    {
+        "id": 16,
+        "question": "Explain REST Principles.",
+        "keywords": [
+            "Web architecture"
+        ],
+        "ideal_answer": "Stateless, resource-based, HTTP-driven communication."
+    },
+    {
+        "id": 17,
+        "question": "What is a Load Balancer?",
+        "keywords": [
+            "Scalability thinking"
+        ],
+        "ideal_answer": "Distributes incoming requests to multiple servers."
+    },
+    {
+        "id": 18,
+        "question": "Explain Caching Strategy.",
+        "keywords": [
+            "Optimization knowledge"
+        ],
+        "ideal_answer": "Store frequent data closer to application to reduce DB load."
+    },
+    {
+        "id": 19,
+        "question": "What is Horizontal Partitioning?",
+        "keywords": [
+            "Scaling data"
+        ],
+        "ideal_answer": "Splitting rows across multiple database servers."
+    },
+    {
+        "id": 20,
+        "question": "What is a Thread-Safe Application?",
+        "keywords": [
+            "Concurrency design"
+        ],
+        "ideal_answer": "Ensures safe execution under concurrent access."
+    },
+    {
+        "id": 21,
+        "question": "Explain DNS Resolution Steps.",
+        "keywords": [
+            "Networking flow"
+        ],
+        "ideal_answer": "Recursive resolver queries hierarchy until IP found."
+    },
+    {
+        "id": 22,
+        "question": "What is Serialization?",
+        "keywords": [
+            "Data interchange"
+        ],
+        "ideal_answer": "Transforming object state into transferable format."
+    },
+    {
+        "id": 23,
+        "question": "What is a Distributed System?",
+        "keywords": [
+            "Systems thinking"
+        ],
+        "ideal_answer": "Multiple machines working together as one logical system."
+    },
+    {
+        "id": 24,
+        "question": "Explain Failover Mechanism.",
+        "keywords": [
+            "Reliability design"
+        ],
+        "ideal_answer": "Backup system takes over automatically during failure."
+    },
+    {
+        "id": 25,
+        "question": "What is Virtualization?",
+        "keywords": [
+            "Cloud fundamentals"
+        ],
+        "ideal_answer": "Running multiple OS environments on same hardware."
+    },
+    {
+        "id": 26,
+        "question": "What is the difference between Scalability and Performance?",
+        "keywords": [
+            "Architecture thinking"
+        ],
+        "ideal_answer": "Performance improves speed of a single system; scalability allows handling increased load by expanding resources."
+    },
+    {
+        "id": 27,
+        "question": "Explain Process Scheduling.",
+        "keywords": [
+            "OS design"
+        ],
+        "ideal_answer": "OS selects which process executes next using algorithms like Round Robin or Priority Scheduling."
+    },
+    {
+        "id": 28,
+        "question": "What is Thrashing?",
+        "keywords": [
+            "Memory pressure understanding"
+        ],
+        "ideal_answer": "Excessive paging causing CPU to spend more time swapping than executing."
+    },
+    {
+        "id": 29,
+        "question": "Difference between Primary Key and Unique Key?",
+        "keywords": [
+            "Database fundamentals"
+        ],
+        "ideal_answer": "Primary key uniquely identifies rows and cannot be NULL; unique key also enforces uniqueness but may allow NULL."
+    },
+    {
+        "id": 30,
+        "question": "What is Denormalization?",
+        "keywords": [
+            "Tradeoff awareness"
+        ],
+        "ideal_answer": "Intentional redundancy to improve read performance."
+    },
+    {
+        "id": 31,
+        "question": "Explain Client-Server Architecture.",
+        "keywords": [
+            "System basics"
+        ],
+        "ideal_answer": "Clients request services, servers respond with resources."
+    },
+    {
+        "id": 32,
+        "question": "What is an Operating System Scheduler?",
+        "keywords": [
+            "OS core role"
+        ],
+        "ideal_answer": "Component deciding process execution order."
+    },
+    {
+        "id": 33,
+        "question": "Explain Mutex Locking.",
+        "keywords": [
+            "Concurrency safety"
+        ],
+        "ideal_answer": "Ensures only one thread accesses critical section."
+    },
+    {
+        "id": 34,
+        "question": "What is Starvation?",
+        "keywords": [
+            "Fairness issues"
+        ],
+        "ideal_answer": "Process never receives CPU due to scheduling bias."
+    },
+    {
+        "id": 35,
+        "question": "Explain Connection Pooling.",
+        "keywords": [
+            "Backend optimization"
+        ],
+        "ideal_answer": "Reusing database connections to reduce overhead."
+    },
+    {
+        "id": 36,
+        "question": "What is a Schema?",
+        "keywords": [
+            "Data modeling"
+        ],
+        "ideal_answer": "Logical structure defining tables, relationships, constraints."
+    },
+    {
+        "id": 37,
+        "question": "Difference between Compile-Time and Run-Time Errors?",
+        "keywords": [
+            "Debugging maturity"
+        ],
+        "ideal_answer": "Compile-time detected before execution; runtime occurs during execution."
+    },
+    {
+        "id": 38,
+        "question": "What is API Latency?",
+        "keywords": [
+            "Real-world metrics awareness"
+        ],
+        "ideal_answer": "Time between request and response."
+    },
+    {
+        "id": 39,
+        "question": "Explain Stateless Protocol.",
+        "keywords": [
+            "Web fundamentals"
+        ],
+        "ideal_answer": "Each request independent (e.g., HTTP)."
+    },
+    {
+        "id": 40,
+        "question": "What is Data Integrity?",
+        "keywords": [
+            "Database reliability"
+        ],
+        "ideal_answer": "Accuracy and consistency of stored data."
+    },
+    {
+        "id": 41,
+        "question": "Explain Garbage Collection Advantages.",
+        "keywords": [
+            "Runtime management"
+        ],
+        "ideal_answer": "Prevents memory leaks and simplifies development."
+    },
+    {
+        "id": 42,
+        "question": "What is a Deadlock Detection Strategy?",
+        "keywords": [
+            "Resource control"
+        ],
+        "ideal_answer": "System periodically checks for circular wait and resolves it."
+    },
+    {
+        "id": 43,
+        "question": "What is Virtualization used for in Cloud?",
+        "keywords": [
+            "Cloud basics"
+        ],
+        "ideal_answer": "Efficient resource sharing across multiple environments."
+    },
+    {
+        "id": 44,
+        "question": "Explain CDN Benefits.",
+        "keywords": [
+            "Distributed delivery"
+        ],
+        "ideal_answer": "Reduces latency by serving content closer to user."
+    },
+    {
+        "id": 45,
+        "question": "What is Data Redundancy?",
+        "keywords": [
+            "Storage tradeoffs"
+        ],
+        "ideal_answer": "Duplicate storage of same data."
+    },
+    {
+        "id": 46,
+        "question": "Explain Fault Tolerance.",
+        "keywords": [
+            "Reliability engineering"
+        ],
+        "ideal_answer": "System continues working even when components fail."
+    },
+    {
+        "id": 47,
+        "question": "What is Request Throttling?",
+        "keywords": [
+            "API protection"
+        ],
+        "ideal_answer": "Limiting number of incoming requests to protect system."
+    },
+    {
+        "id": 48,
+        "question": "What is Logging?",
+        "keywords": [
+            "Observability basics"
+        ],
+        "ideal_answer": "Recording events for debugging and monitoring."
+    },
+    {
+        "id": 49,
+        "question": "Explain Version Control Importance.",
+        "keywords": [
+            "Engineering workflow"
+        ],
+        "ideal_answer": "Tracks code changes and enables collaboration."
+    },
+    {
+        "id": 50,
+        "question": "What is Continuous Integration?",
+        "keywords": [
+            "DevOps awareness"
+        ],
+        "ideal_answer": "Automated building/testing of code changes."
+    },
+    {
+        "id": 51,
+        "question": "What is a Distributed Database?",
+        "keywords": [
+            "Data scaling"
+        ],
+        "ideal_answer": "Database spread across multiple locations but appears as one system."
+    },
+    {
+        "id": 52,
+        "question": "Explain Data Consistency Models.",
+        "keywords": [
+            "Distributed systems understanding"
+        ],
+        "ideal_answer": "Strong, Eventual, and Causal consistency define how updates propagate."
+    },
+    {
+        "id": 53,
+        "question": "What is a Reverse Index?",
+        "keywords": [
+            "Data retrieval concepts"
+        ],
+        "ideal_answer": "Maps values \u2192 keys for faster lookups (used in search engines)."
+    },
+    {
+        "id": 54,
+        "question": "What is Network Latency?",
+        "keywords": [
+            "Performance awareness"
+        ],
+        "ideal_answer": "Delay in data transmission across network."
+    },
+    {
+        "id": 55,
+        "question": "Explain OSI Model.",
+        "keywords": [
+            "Networking fundamentals"
+        ],
+        "ideal_answer": "7-layer networking abstraction from physical to application."
+    },
+    {
+        "id": 56,
+        "question": "What is a Service-Oriented Architecture?",
+        "keywords": [
+            "Architecture evolution"
+        ],
+        "ideal_answer": "Applications built using reusable services communicating over network."
+    },
+    {
+        "id": 57,
+        "question": "What is Resource Allocation?",
+        "keywords": [
+            "System efficiency"
+        ],
+        "ideal_answer": "OS distributing CPU, memory, IO among processes."
+    },
+    {
+        "id": 58,
+        "question": "Explain DNS Load Distribution.",
+        "keywords": [
+            "Traffic distribution"
+        ],
+        "ideal_answer": "DNS resolves same domain to multiple IPs for balancing."
+    },
+    {
+        "id": 59,
+        "question": "What is Application Scaling?",
+        "keywords": [
+            "System growth planning"
+        ],
+        "ideal_answer": "Expanding capacity to handle growth in users/workload."
+    },
+    {
+        "id": 60,
+        "question": "What is a Kernel Thread?",
+        "keywords": [
+            "Thread models"
+        ],
+        "ideal_answer": "Thread managed directly by OS kernel."
+    },
+    {
+        "id": 61,
+        "question": "Explain RPC (Remote Procedure Call).",
+        "keywords": [
+            "Distributed communication"
+        ],
+        "ideal_answer": "Calling function on remote machine as if local."
+    },
+    {
+        "id": 62,
+        "question": "What is Backward Compatibility?",
+        "keywords": [
+            "Software evolution"
+        ],
+        "ideal_answer": "New versions supporting old clients/interfaces."
+    },
+    {
+        "id": 63,
+        "question": "What is Checkpoint Recovery?",
+        "keywords": [
+            "Fault tolerance"
+        ],
+        "ideal_answer": "Saving state periodically to recover after crash."
+    },
+    {
+        "id": 64,
+        "question": "What is Memory Fragmentation?",
+        "keywords": [
+            "Memory allocation understanding"
+        ],
+        "ideal_answer": "Unused gaps in memory causing inefficiency."
+    },
+    {
+        "id": 65,
+        "question": "Explain Priority Scheduling.",
+        "keywords": [
+            "Scheduling tradeoffs"
+        ],
+        "ideal_answer": "Processes executed based on priority value."
+    },
+    {
+        "id": 66,
+        "question": "What is Network Throughput?",
+        "keywords": [
+            "Performance metrics"
+        ],
+        "ideal_answer": "Amount of data transmitted successfully per time unit."
+    },
+    {
+        "id": 67,
+        "question": "What is a Stateful Application?",
+        "keywords": [
+            "Application design"
+        ],
+        "ideal_answer": "Stores session data between requests."
+    },
+    {
+        "id": 68,
+        "question": "Explain Web Server Role.",
+        "keywords": [
+            "Web infrastructure basics"
+        ],
+        "ideal_answer": "Handles HTTP requests and serves resources."
+    },
+    {
+        "id": 69,
+        "question": "What is a Bottleneck?",
+        "keywords": [
+            "Optimization thinking"
+        ],
+        "ideal_answer": "Component limiting system performance."
+    },
+    {
+        "id": 70,
+        "question": "What is Container Orchestration?",
+        "keywords": [
+            "Modern deployment awareness"
+        ],
+        "ideal_answer": "Managing containers using systems like Kubernetes."
+    },
+    {
+        "id": 71,
+        "question": "Explain Data Pipeline.",
+        "keywords": [
+            "Data engineering basics"
+        ],
+        "ideal_answer": "Flow of data from ingestion to processing to storage."
+    },
+    {
+        "id": 72,
+        "question": "What is Parallel Computing?",
+        "keywords": [
+            "Performance scaling"
+        ],
+        "ideal_answer": "Multiple computations running simultaneously."
+    },
+    {
+        "id": 73,
+        "question": "What is Software Maintainability?",
+        "keywords": [
+            "Code quality thinking"
+        ],
+        "ideal_answer": "Ease of modifying and extending codebase."
+    },
+    {
+        "id": 74,
+        "question": "What is API Contract?",
+        "keywords": [
+            "Interface clarity"
+        ],
+        "ideal_answer": "Defined structure of request/response between services."
+    },
+    {
+        "id": 75,
+        "question": "What is Monitoring?",
+        "keywords": [
+            "Production readiness"
+        ],
+        "ideal_answer": "Tracking system health using metrics and alerts."
+    },
+    {
+        "id": 76,
+        "question": "What is Data Migration?",
+        "keywords": [
+            "Real-world deployment"
+        ],
+        "ideal_answer": "Moving data between systems safely."
+    },
+    {
+        "id": 77,
+        "question": "Explain Distributed Caching.",
+        "keywords": [
+            "Scalability design"
+        ],
+        "ideal_answer": "Cache shared across multiple nodes."
+    },
+    {
+        "id": 78,
+        "question": "What is Network Reliability?",
+        "keywords": [
+            "Infrastructure resilience"
+        ],
+        "ideal_answer": "Ensuring consistent connectivity and delivery."
+    },
+    {
+        "id": 79,
+        "question": "What is Elastic Load Scaling?",
+        "keywords": [
+            "Cloud-native understanding"
+        ],
+        "ideal_answer": "Automatically adjusting resources based on demand."
+    },
+    {
+        "id": 80,
+        "question": "What is Service Downtime?",
+        "keywords": [
+            "Availability awareness"
+        ],
+        "ideal_answer": "Period when service unavailable."
+    },
+    {
+        "id": 81,
+        "question": "What is a Deployment Pipeline?",
+        "keywords": [
+            "DevOps fundamentals"
+        ],
+        "ideal_answer": "Automated steps to release software."
+    },
+    {
+        "id": 82,
+        "question": "What is Log Rotation?",
+        "keywords": [
+            "Operational hygiene"
+        ],
+        "ideal_answer": "Managing log file size by archiving old logs."
+    },
+    {
+        "id": 83,
+        "question": "Explain Blue-Green Deployment.",
+        "keywords": [
+            "Safe release strategies"
+        ],
+        "ideal_answer": "Switching traffic between two identical environments."
+    },
+    {
+        "id": 84,
+        "question": "What is Access Control?",
+        "keywords": [
+            "Security awareness"
+        ],
+        "ideal_answer": "Restricting resource usage based on permissions."
+    },
+    {
+        "id": 85,
+        "question": "What is Data Backup Strategy?",
+        "keywords": [
+            "Disaster recovery"
+        ],
+        "ideal_answer": "Periodic replication to recover from failures."
+    },
+    {
+        "id": 86,
+        "question": "What is Horizontal Scaling Challenge?",
+        "keywords": [
+            "Tradeoff reasoning"
+        ],
+        "ideal_answer": "Maintaining consistency across distributed nodes."
+    },
+    {
+        "id": 87,
+        "question": "What is Software Versioning?",
+        "keywords": [
+            "Lifecycle management"
+        ],
+        "ideal_answer": "Tracking releases using semantic versions."
+    },
+    {
+        "id": 88,
+        "question": "What is Debugging Workflow?",
+        "keywords": [
+            "Problem-solving structure"
+        ],
+        "ideal_answer": "Reproduce \u2192 isolate \u2192 analyze \u2192 fix \u2192 verify."
+    },
+    {
+        "id": 89,
+        "question": "What is Performance Testing?",
+        "keywords": [
+            "Reliability testing"
+        ],
+        "ideal_answer": "Evaluating system under expected load."
+    },
+    {
+        "id": 90,
+        "question": "What is Security Patch?",
+        "keywords": [
+            "Software maintenance"
+        ],
+        "ideal_answer": "Update fixing vulnerabilities."
+    },
+    {
+        "id": 91,
+        "question": "What is Request Lifecycle?",
+        "keywords": [
+            "System flow clarity"
+        ],
+        "ideal_answer": "Journey from client \u2192 server \u2192 processing \u2192 response."
+    },
+    {
+        "id": 92,
+        "question": "What is Configuration Management?",
+        "keywords": [
+            "DevOps maturity"
+        ],
+        "ideal_answer": "Controlling environment settings across deployments."
+    },
+    {
+        "id": 93,
+        "question": "What is Fail-Safe Design?",
+        "keywords": [
+            "Reliability engineering"
+        ],
+        "ideal_answer": "System defaults to safe state during failure."
+    },
+    {
+        "id": 94,
+        "question": "What is Cloud Region?",
+        "keywords": [
+            "Cloud architecture"
+        ],
+        "ideal_answer": "Geographic location of data center cluster."
+    },
+    {
+        "id": 95,
+        "question": "What is Network Security Group?",
+        "keywords": [
+            "Security fundamentals"
+        ],
+        "ideal_answer": "Rules controlling inbound/outbound traffic."
+    },
+    {
+        "id": 96,
+        "question": "What is Data Synchronization?",
+        "keywords": [
+            "Distributed state"
+        ],
+        "ideal_answer": "Keeping data consistent across systems."
+    },
+    {
+        "id": 97,
+        "question": "What is Application Lifecycle?",
+        "keywords": [
+            "Engineering workflow"
+        ],
+        "ideal_answer": "Development \u2192 Testing \u2192 Deployment \u2192 Maintenance."
+    },
+    {
+        "id": 98,
+        "question": "What is DevOps Culture?",
+        "keywords": [
+            "Modern engineering mindset"
+        ],
+        "ideal_answer": "Collaboration between development and operations teams."
+    },
+    {
+        "id": 99,
+        "question": "What is Root Cause Analysis?",
+        "keywords": [
+            "Analytical depth"
+        ],
+        "ideal_answer": "Identifying fundamental reason for failure."
+    },
+    {
+        "id": 100,
+        "question": "What Defines Reliable Software?",
+        "keywords": [
+            "End-to-end engineering maturity"
+        ],
+        "ideal_answer": "Consistency, fault tolerance, scalability, observability."
+    }
+]
