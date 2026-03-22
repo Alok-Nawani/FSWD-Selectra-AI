@@ -1,0 +1,292 @@
+[
+    {
+        "question": "AI stands for?",
+        "options": [
+            "Artificial Intelligence",
+            "Automated Intelligence",
+            "Advanced Intelligence",
+            "Active Interference"
+        ],
+        "answerIndex": 0
+    },
+    {
+        "question": "Goal of AI?",
+        "options": [
+            "Speed up hardware",
+            "Simulate human intelligence",
+            "Store data",
+            "Create websites"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "AI is used in?",
+        "options": [
+            "Word processing",
+            "Automation",
+            "Manual labor",
+            "Basic calculation"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Expert system mimics?",
+        "options": [
+            "Child",
+            "Human decision-making",
+            "Robot",
+            "Database"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "NLP stands for?",
+        "options": [
+            "Natural Language Processing",
+            "Neural Language Program",
+            "New Learning Process",
+            "Native Logic Protocol"
+        ],
+        "answerIndex": 0
+    },
+    {
+        "question": "Computer vision deals with?",
+        "options": [
+            "Sound",
+            "Text",
+            "Images/Video",
+            "Numbers"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "AI requires?",
+        "options": [
+            "Only code",
+            "Data + Algorithms",
+            "Only hardware",
+            "Internet only"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Chatbots use which technology?",
+        "options": [
+            "Database",
+            "NLP",
+            "Operating System",
+            "Networking"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "AI decision-making is based on?",
+        "options": [
+            "Randomness",
+            "Patterns/Logic",
+            "Luck",
+            "Time"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Robotics uses AI for?",
+        "options": [
+            "Strength",
+            "Automation/Reasoning",
+            "Speed",
+            "Design"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Knowledge representation is used in?",
+        "options": [
+            "Gaming",
+            "Reasoning",
+            "Sorting",
+            "Searching"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "AI learning improves via?",
+        "options": [
+            "Time",
+            "Experience/Data",
+            "Coding",
+            "Hardware"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Search algorithms are used in?",
+        "options": [
+            "Problem solving",
+            "Data entry",
+            "Graphics",
+            "Networking"
+        ],
+        "answerIndex": 0
+    },
+    {
+        "question": "AI models are trained using?",
+        "options": [
+            "Textbooks",
+            "Datasets",
+            "Manual input",
+            "Guesswork"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Ethics in AI ensures?",
+        "options": [
+            "Profit",
+            "Responsible usage",
+            "Speed",
+            "Control"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Recommendation systems use?",
+        "options": [
+            "AI/ML",
+            "SQL",
+            "Networking",
+            "Hardware"
+        ],
+        "answerIndex": 0
+    },
+    {
+        "question": "AI in healthcare helps with?",
+        "options": [
+            "Surgery only",
+            "Diagnosis/Predictions",
+            "Billing",
+            "Staffing"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Autonomous vehicles rely on?",
+        "options": [
+            "GPS only",
+            "AI Perception",
+            "Driver",
+            "Maps only"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "AI improves productivity by?",
+        "options": [
+            "Adding work",
+            "Automation",
+            "Complicating tasks",
+            "Slowing down"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "AI works using?",
+        "options": [
+            "Magic",
+            "Data-driven models",
+            "Simple rules",
+            "Human intervention"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "AI enables machines to?",
+        "options": [
+            "Think/Decide",
+            "Sleep",
+            "Eat",
+            "Feel"
+        ],
+        "answerIndex": 0
+    },
+    {
+        "question": "Vision AI deals with?",
+        "options": [
+            "Audio",
+            "Images",
+            "Text",
+            "Touch"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "AI improves via?",
+        "options": [
+            "Age",
+            "Training/Data",
+            "Rest",
+            "Design"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "AI predictions are based on?",
+        "options": [
+            "Guess",
+            "Patterns",
+            "Luck",
+            "Stars"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "AI in banking helps with?",
+        "options": [
+            "Counting cash",
+            "Fraud detection",
+            "Printing",
+            "Cleaning"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Automation reduces?",
+        "options": [
+            "Efficiency",
+            "Human effort",
+            "Quality",
+            "Speed"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Self-driving cars use?",
+        "options": [
+            "Manual control",
+            "AI",
+            "Remote control",
+            "Tracks"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "AI solves?",
+        "options": [
+            "Simple math",
+            "Complex tasks",
+            "Nothing",
+            "Everything"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "AI output improves with?",
+        "options": [
+            "Less data",
+            "More quality data",
+            "Time",
+            "Hardware"
+        ],
+        "answerIndex": 1
+    }
+]
