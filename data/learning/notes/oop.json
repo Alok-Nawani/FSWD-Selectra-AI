@@ -1,0 +1,5 @@
+{
+    "id": "oop",
+    "title": "Object Oriented Programming",
+    "content": "<h3>The 4 Pillars of OOP</h3><ul><li><strong>Encapsulation:</strong> Bundling data and methods that operate on that data within a single unit (class).</li><li><strong>Abstraction:</strong> Hiding complex implementation details and showing only the necessary features of an object.</li><li><strong>Inheritance:</strong> Mechanism where a new class inherits properties and behavior from an existing class.</li><li><strong>Polymorphism:</strong> Ability of a message to be displayed in more than one form (Overloading vs Overriding).</li></ul>"
+}

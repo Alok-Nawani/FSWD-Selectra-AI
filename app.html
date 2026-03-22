@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectra AI | Prepare Smart. Get Selected.</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/ai_avatar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CodeMirror -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/dracula.min.css">
+    <link rel="stylesheet" href="css/leetcode_theme.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h2>Selectra AI</h2>
+                <button id="sidebar-close-btn" class="sidebar-close-btn">
+                    <i class="fa-solid fa-angles-left"></i>
+                </button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fa-solid fa-home"></i> Home</a></li>
+                <li class="active"><a href="#dashboard"><i class="fa-solid fa-chart-pie"></i> Dashboard</a></li>
+                <li><a href="#mock-interview"><i class="fa-solid fa-user-tie"></i> Mock Interview</a></li>
+            </ul>
+            <div class="user-profile" id="user-profile-section">
+                <div class="avatar">
+                    <img src="https://ui-avatars.com/api/?name=User&background=random" alt="User Avatar"
+                        id="user-avatar-img">
+                </div>
+                <div class="user-info">
+                    <h4 id="user-name-display">Student</h4>
+                    <p>B.Tech CSE</p>
+                </div>
+                <button id="btn-logout" class="btn-micro"
+                    style="margin-left: auto; background: transparent; border: none; color: #ef4444; cursor: pointer; font-size: 1.2rem;"
+                    title="Logout">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <button class="desktop-nav-toggle" id="desktop-nav-toggle" title="Toggle Sidebar">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </button>
+            <div class="mobile-top-bar">
+                <button class="nav-toggle" id="nav-toggle">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </button>
+                <span class="mobile-logo">Selectra AI</span>
+            </div>
+
+            <!-- Analytics Dashboard -->
+            <section id="dashboard" class="dashboard-grid-analytics">
+                <header class="dashboard-header">
+                    <div class="header-title">
+                        <h1>Performance <span class="highlight">Analytics</span></h1>
+                        <p>Track your growth and readiness for placement season.</p>
+                    </div>
+                    <div class="header-actions">
+                        <span class="last-updated">Last updated: Just now</span>
+                        <div class="theme-toggle">
+                            <i class="fa-solid fa-moon"></i>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Top Row: Score & Chart -->
+                <div class="analytics-row-top">
+                    <!-- Readiness Score -->
+                    <div class="card readiness-card">
+                        <h3>Placement Readiness</h3>
+                        <div class="circular-chart" style="--percentage: 72">
+                            <svg viewBox="0 0 36 36" class="circular-progress">
+                                <path class="circle-bg" d="M18 2.0845
+                                    a 15.9155 15.9155 0 0 1 0 31.831
+                                    a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <path class="circle" stroke-dasharray="72, 100" d="M18 2.0845
+                                    a 15.9155 15.9155 0 0 1 0 31.831
+                                    a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <text x="18" y="20.35" class="percentage">72%</text>
+                            </svg>
+                        </div>
+                        <p class="readiness-label">You are doing great! Focus on <strong>System Design</strong> to
+                            improve.</p>
+                    </div>
+
+                    <!-- Subject Performance Chart -->
+                    <div class="card performance-chart-card">
+                        <h3>Subject Performance</h3>
+                        <div class="chart-container">
+                            <canvas id="subjectChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Middle Row: Heatmap & AI Recs -->
+                <div class="analytics-row-middle">
+                    <!-- Skill Heatmap -->
+                    <div class="card heatmap-card">
+                        <h3>Skill Heatmap</h3>
+                        <div class="skill-grid">
+                            <div class="skill-item strong">
+                                <span class="skill-name">Arrays</span>
+                                <span class="skill-badge">Strong</span>
+                            </div>
+                            <div class="skill-item moderate">
+                                <span class="skill-name">Trees</span>
+                                <span class="skill-badge">Moderate</span>
+                            </div>
+                            <div class="skill-item weak">
+                                <span class="skill-name">Graphs</span>
+                                <span class="skill-badge">Weak</span>
+                            </div>
+                            <div class="skill-item strong">
+                                <span class="skill-name">SQL</span>
+                                <span class="skill-badge">Strong</span>
+                            </div>
+                            <div class="skill-item weak">
+                                <span class="skill-name">DP</span>
+                                <span class="skill-badge">Weak</span>
+                            </div>
+                            <div class="skill-item moderate">
+                                <span class="skill-name">OS</span>
+                                <span class="skill-badge">Moderate</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AI Recommendations -->
+                    <div class="card ai-recs-card">
+                        <h3><i class="fa-solid fa-robot"></i> AI Recommended Focus</h3>
+                        <ul class="recs-list">
+                            <li>
+                                <div class="rec-icon"><i class="fa-solid fa-code"></i></div>
+                                <div class="rec-content">
+                                    <h4>Dynamic Programming</h4>
+                                    <p>Solve 5 "Medium" level DP problems.</p>
+                                </div>
+                                <button class="btn-micro">Go</button>
+                            </li>
+                            <li>
+                                <div class="rec-icon"><i class="fa-solid fa-database"></i></div>
+                                <div class="rec-content">
+                                    <h4>Database Normalization</h4>
+                                    <p>Review 3NF and BCNF concepts.</p>
+                                </div>
+                                <button class="btn-micro">Review</button>
+                            </li>
+                            <li>
+                                <div class="rec-icon"><i class="fa-solid fa-microphone"></i></div>
+                                <div class="rec-content">
+                                    <h4>Behavioral Interview</h4>
+                                    <p>Practice "Tell me about yourself".</p>
+                                </div>
+                                <button class="btn-micro">Practice</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bottom Row: History Table -->
+                <div class="analytics-row-bottom">
+                    <div class="card history-card">
+                        <h3>Recent Attempt History</h3>
+                        <table class="styled-table">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Problem / Module</th>
+                                    <th>Type</th>
+                                    <th>Result / Score</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Today, 10:30 AM</td>
+                                    <td>Two Sum</td>
+                                    <td>Coding</td>
+                                    <td>100%</td>
+                                    <td><span class="status-pill success">Pass</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Yesterday</td>
+                                    <td>Normal Forms Quiz</td>
+                                    <td>Quiz</td>
+                                    <td>8/10</td>
+                                    <td><span class="status-pill success">Good</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Feb 12</td>
+                                    <td>Mock Interview #3</td>
+                                    <td>Interview</td>
+                                    <td>Needs Improvement</td>
+                                    <td><span class="status-pill warning">Review</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Feb 10</td>
+                                    <td>Graph Traversal</td>
+                                    <td>Coding</td>
+                                    <td>Runtime Error</td>
+                                    <td><span class="status-pill error">Fail</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Placeholder for other sections (hidden by default via JS) -->
+            <!-- Learning Hub Section -->
+            <section id="learning" class="hidden">
+                <div class="section-header">
+                    <h2>Learning Hub</h2>
+                    <p>Select a track to start your structured preparation.</p>
+                </div>
+
+                <!-- Learning Hub Grid -->
+                <div class="module-grid">
+                    <!-- DSA Module -->
+                    <div class="module-card">
+                        <div class="card-header">
+                            <h3>Data Structures</h3>
+                            <span class="badge">Track 1</span>
+                        </div>
+                        <div class="module-info">
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="fill" style="width: 45%"></div>
+                                </div>
+                                <span class="progress-text">45% Completed</span>
+                            </div>
+                        </div>
+                        <button class="btn-secondary w-100" onclick="openModule('dsa')">Continue Learning</button>
+                    </div>
+
+                    <!-- DBMS Module -->
+                    <div class="module-card">
+                        <div class="card-header">
+                            <h3>DBMS</h3>
+                            <span class="badge">Track 2</span>
+                        </div>
+                        <div class="module-info">
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="fill" style="width: 10%"></div>
+                                </div>
+                                <span class="progress-text">10% Completed</span>
+                            </div>
+                        </div>
+                        <button class="btn-secondary w-100" onclick="openModule('dbms')">Start Module</button>
+                    </div>
+
+                    <!-- OS Module -->
+                    <div class="module-card">
+                        <div class="card-header">
+                            <h3>Operating Systems</h3>
+                            <span class="badge">Track 3</span>
+                        </div>
+                        <div class="module-info">
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="fill" style="width: 0%"></div>
+                                </div>
+                                <span class="progress-text">0% Completed</span>
+                            </div>
+                        </div>
+                        <button class="btn-secondary w-100" onclick="openModule('os')">Start Module</button>
+                    </div>
+
+                    <!-- CN Module -->
+                    <div class="module-card">
+                        <div class="card-header">
+                            <h3>Computer Networks</h3>
+                            <span class="badge">Track 4</span>
+                        </div>
+                        <div class="module-info">
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="fill" style="width: 0%"></div>
+                                </div>
+                                <span class="progress-text">0% Completed</span>
+                            </div>
+                        </div>
+                        <button class="btn-secondary w-100" onclick="openModule('cn')">Start Module</button>
+                    </div>
+
+                    <!-- OOP Module -->
+                    <div class="module-card">
+                        <div class="card-header">
+                            <h3>OOP</h3>
+                            <span class="badge">Track 5</span>
+                        </div>
+                        <div class="module-info">
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="fill" style="width: 80%"></div>
+                                </div>
+                                <span class="progress-text">80% Completed</span>
+                            </div>
+                        </div>
+                        <button class="btn-secondary w-100" onclick="openModule('oop')">Continue Learning</button>
+                    </div>
+
+                    <!-- AI/ML Module -->
+                    <div class="module-card">
+                        <div class="card-header">
+                            <h3>AI/ML Basics</h3>
+                            <span class="badge">Track 6</span>
+                        </div>
+                        <div class="module-info">
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="fill" style="width: 0%"></div>
+                                </div>
+                                <span class="progress-text">0% Completed</span>
+                            </div>
+                        </div>
+                        <button class="btn-secondary w-100" onclick="openModule('ai')">Start Module</button>
+                    </div>
+
+                    <!-- Aptitude Module -->
+                    <div class="module-card">
+                        <div class="card-header">
+                            <h3>Aptitude & Reasoning</h3>
+                            <span class="badge">Track 7</span>
+                        </div>
+                        <div class="module-info">
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="fill" style="width: 0%"></div>
+                                </div>
+                                <span class="progress-text">0% Completed</span>
+                            </div>
+                        </div>
+                        <button class="btn-secondary w-100" onclick="openModule('aptitude')">Start Practice</button>
+                    </div>
+
+                    <!-- Grammar Module -->
+                    <div class="module-card">
+                        <div class="card-header">
+                            <h3>Verbal & Grammar</h3>
+                            <span class="badge">Track 8</span>
+                        </div>
+                        <div class="module-info">
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="fill" style="width: 0%"></div>
+                                </div>
+                                <span class="progress-text">0% Completed</span>
+                            </div>
+                        </div>
+                        <button class="btn-secondary w-100" onclick="openModule('grammar')">Start Practice</button>
+                    </div>
+
+                    <!-- Machine Learning -->
+                    <div class="module-card">
+                        <div class="card-header">
+                            <h3>Machine Learning</h3>
+                            <span class="badge">Track 9</span>
+                        </div>
+                        <div class="module-info">
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="fill" style="width: 0%"></div>
+                                </div>
+                                <span class="progress-text">0% Completed</span>
+                            </div>
+                        </div>
+                        <button class="btn-secondary w-100" onclick="openModule('ml')">Start Module</button>
+                    </div>
+
+                    <!-- Web Development -->
+                    <div class="module-card">
+                        <div class="card-header">
+                            <h3>Web Development</h3>
+                            <span class="badge">Track 10</span>
+                        </div>
+                        <div class="module-info">
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="fill" style="width: 0%"></div>
+                                </div>
+                                <span class="progress-text">0% Completed</span>
+                            </div>
+                        </div>
+                        <button class="btn-secondary w-100" onclick="openModule('webdev')">Start Module</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Module Detail Section (Dynamic) -->
+            <!-- Module Detail Section (Sidebar Layout) -->
+            <section id="module-detail" class="hidden">
+                <div class="module-layout">
+                    <!-- Left Sidebar: Module List -->
+                    <aside class="module-sidebar">
+                        <button class="btn-back" id="back-to-hub"><i class="fa-solid fa-arrow-left"></i>
+                            Back</button>
+                        <h3 id="module-sidebar-title">Module Content</h3>
+                        <ul class="module-topic-list">
+                            <li class="active"><i class="fa-solid fa-circle-play"></i> Introduction</li>
+                            <li><i class="fa-solid fa-lock"></i> Core Concepts</li>
+                            <li><i class="fa-solid fa-lock"></i> Advanced Topics</li>
+                            <li><i class="fa-solid fa-lock"></i> Practice Problems</li>
+                        </ul>
+                    </aside>
+
+                    <!-- Main Content -->
+                    <div class="module-main">
+                        <div class="module-header-content">
+                            <h2 id="module-title">Module Title</h2>
+                            <p id="module-desc">Description</p>
+                        </div>
+
+                        <div class="video-wrapper">
+                            <div class="video-placeholder">
+                                <i class="fa-brands fa-youtube"></i>
+                                <span>Video Player Placeholder</span>
+                                <iframe id="module-video" src="" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                        <div class="module-actions">
+                            <button class="btn-primary" id="generate-assignment-btn"><i
+                                    class="fa-solid fa-file-pen"></i>
+                                Generate Notes</button>
+                            <button class="btn-secondary" id="take-quiz-btn"><i class="fa-solid fa-bolt"></i> Take
+                                Quiz</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Quiz Interface (Hidden) -->
+            <section id="quiz-interface" class="hidden">
+                <div class="quiz-container card">
+                    <div class="quiz-header">
+                        <h3 id="quiz-topic">Topic Name</h3>
+                        <span class="quiz-progress" id="quiz-progress">Question 1/30</span>
+                    </div>
+                    <div class="question-box">
+                        <p id="quiz-question">Question text will appear here?</p>
+                    </div>
+                    <div class="options-grid" id="quiz-options">
+                        <!-- Options generated by JS -->
+                    </div>
+                    <div class="quiz-footer">
+                        <button class="btn-primary hidden" id="next-question">Next Question <i
+                                class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resume Analyzer Section -->
+            <section id="resume-analyzer" class="hidden">
+                <div class="section-header">
+                    <h2>Resume & JD Analyzer</h2>
+                    <p>Optimize your resume for specific job roles using AI.</p>
+                </div>
+
+                <div class="analyzer-grid">
+                    <!-- Input Zone -->
+                    <div class="card upload-card">
+                        <h3>1. Upload Resume</h3>
+                        <div class="drop-zone" id="drop-zone"
+                            onclick="document.getElementById('resume-upload').click()">
+                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                            <p>Drag & drop your PDF/Text here or <span class="highlight">browse</span></p>
+                            <input type="file" id="resume-upload" accept=".pdf,.txt" hidden>
+                        </div>
+                        <div id="file-name" class="file-name hidden"></div>
+
+                        <h3 class="mt-2">2. Job Description</h3>
+                        <textarea id="jd-input" placeholder="Paste the Job Description (JD) here..."
+                            rows="6"></textarea>
+
+                        <button class="btn-primary w-100" id="analyze-btn">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> Analyze Resume
+                        </button>
+                    </div>
+
+                    <!-- Analysis Result (Initially Hidden) -->
+                    <div class="card result-card hidden" id="analysis-result">
+                        <h3>Analysis Report</h3>
+                        <div class="score-box">
+                            <div class="score-circle">
+                                <span id="match-score">0%</span>
+                            </div>
+                            <p>Match Score</p>
+                        </div>
+
+                        <div class="analysis-details">
+                            <div class="detail-item">
+                                <h4><i class="fa-solid fa-check-circle text-green"></i> Strong Matches</h4>
+                                <ul id="strong-matches"></ul>
+                            </div>
+                            <div class="detail-item">
+                                <h4><i class="fa-solid fa-exclamation-circle text-orange"></i> Missing Keywords
+                                </h4>
+                                <ul id="missing-keywords"></ul>
+                            </div>
+                            <div class="detail-item">
+                                <h4><i class="fa-solid fa-list-check text-blue"></i> Improvements</h4>
+                                <div id="ai-improvements"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mock Interview Section -->
+            <section id="mock-interview" class="hidden">
+                <!-- Step 1: Configuration -->
+                <div id="interview-setup" class="interview-setup-card">
+                    <div class="setup-header">
+                        <h2><i class="fa-solid fa-user-tie"></i> Configure Interview</h2>
+                        <p>Select your target role and company to simulate a real interview experience.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Company</label>
+                        <div class="company-grid">
+                            <button class="company-btn active" data-company="amazon"><i class="fa-brands fa-amazon"></i>
+                                Amazon</button>
+                            <button class="company-btn" data-company="google"><i class="fa-brands fa-google"></i>
+                                Google</button>
+                            <button class="company-btn" data-company="microsoft"><i class="fa-brands fa-microsoft"></i>
+                                Microsoft</button>
+                            <button class="company-btn" data-company="infosys"><i class="fa-solid fa-building"></i>
+                                Infosys</button>
+                            <button class="company-btn" data-company="tcs"><i class="fa-solid fa-briefcase"></i>
+                                TCS</button>
+
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Interview Type</label>
+                        <div class="type-grid">
+                            <button class="type-btn active" data-type="technical"><i class="fa-solid fa-code"></i>
+                                Technical</button>
+                            <button class="type-btn" data-type="hr"><i class="fa-solid fa-users"></i> HR /
+                                Behavioral</button>
+                        </div>
+                    </div>
+
+                    <button id="btn-begin-interview" class="btn-primary w-100 btn-lg">Start Interview Session <i
+                            class="fa-solid fa-arrow-right"></i></button>
+                </div>
+
+                <!-- Step 2: Active Interview -->
+                <div id="interview-active" class="hidden">
+                    <div class="interview-header-bar">
+                        <div class="interview-meta">
+                            <span class="badge" id="interview-meta-company">Amazon</span>
+                            <span class="badge" id="interview-meta-type">Technical</span>
+                        </div>
+                        <div class="timer-display" id="interview-timer">00:00</div>
+                        <button class="btn-secondary-sm" onclick="endInterviewEarly()">End Session</button>
+                    </div>
+
+                    <div class="interview-layout">
+                        <!-- Top: AI Avatar -->
+                        <div class="interview-avatar-container">
+                            <img src="assets/ai_avatar.png" alt="AI Interviewer" class="ai-avatar" id="ai-avatar-viz">
+                            <span class="ai-status-indicator" id="interview-status">Initializing...</span>
+                        </div>
+
+                        <div class="interview-panels">
+                            <!-- Left: AI Question -->
+                            <div class="panel ai-panel">
+                                <h3><i class="fa-solid fa-robot"></i> AI Interviewer</h3>
+                                <div class="question-display">
+                                    <p id="ai-question">Initializing...</p>
+                                </div>
+                            </div>
+
+                            <!-- Right: Live Transcript -->
+                            <div class="panel user-panel">
+                                <h3><i class="fa-solid fa-user"></i> Your Answer</h3>
+                                <div class="transcript-display" id="live-transcript">
+                                    <p class="placeholder-text">Speak clearly into your microphone...</p>
+                                </div>
+
+                                <!-- Embedded Code Editor (Initially Hidden/Collapsed) -->
+                                <div id="interview-code-panel" class="hidden mt-4 border-t border-glass pt-2">
+                                    <div class="flex justify-between items-center mb-2">
+                                        <h4 class="text-sm text-gray-400">Code Scratchpad</h4>
+                                        <select id="interview-lang-select"
+                                            class="bg-gray-800 text-xs p-1 rounded border border-gray-700">
+                                            <option value="javascript">JavaScript</option>
+                                            <option value="python">Python</option>
+                                            <option value="java">Java</option>
+                                            <option value="cpp">C++</option>
+                                        </select>
+                                    </div>
+                                    <textarea id="interview-editor"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Controls -->
+                        <div class="interview-controls">
+                            <button id="toggle-code-btn" class="btn-secondary-sm mr-2" title="Toggle Code Editor">
+                                <i class="fa-solid fa-code"></i> Code
+                            </button>
+                            <button id="start-answer-btn" class="btn-control start"><i
+                                    class="fa-solid fa-microphone"></i>
+                                Answer</button>
+                            <button id="stop-answer-btn" class="btn-control stop" disabled><i
+                                    class="fa-solid fa-stop"></i>
+                                Stop</button>
+                            <!-- Next button removed as per request -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Feedback/Result -->
+                <div id="interview-feedback" class="hidden">
+                    <div class="feedback-card">
+                        <div class="feedback-header">
+                            <h2>Interview Complete!</h2>
+                            <div class="score-circle-lg">
+                                <span id="final-score">85</span>
+                                <small>Score</small>
+                            </div>
+                        </div>
+
+                        <div class="feedback-stats">
+                            <div class="stat-item">
+                                <span class="label">Duration</span>
+                                <span class="value" id="final-time">15:30</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="label">Questions</span>
+                                <span class="value" id="final-q-count">5</span>
+                            </div>
+                        </div>
+
+                        <div class="feedback-details">
+                            <h3><i class="fa-solid fa-wand-magic-sparkles"></i> AI Analysis</h3>
+                            <p id="feedback-text">Great job! You showed strong problem-solving skills. However, try to
+                                be more concise in behavioral questions.</p>
+                        </div>
+
+                        <button class="btn-primary w-100" onclick="resetInterview()">Start New Interview</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Coding Arena Section -->
+            <section id="coding-arena" class="hidden">
+                <!-- Arena Navigation (Top Bar) -->
+                <div class="arena-header">
+                    <div class="streak-bar">
+                        <div class="streak-item fire"><i class="fa-solid fa-fire"></i> <span id="arena-streak">0 Day
+                                Streak</span></div>
+                        <div class="streak-item xp"><i class="fa-solid fa-bolt"></i> <span id="arena-xp">Level 1 (0
+                                XP)</span></div>
+                    </div>
+                    <div class="arena-filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <select id="arena-topic-filter" class="filter-dropdown">
+                            <option value="all">All Topics</option>
+                            <option value="array">Array</option>
+                            <option value="string">String</option>
+                            <option value="dp">DP</option>
+                            <option value="graph">Graph</option>
+                            <option value="tree">Tree</option>
+                            <option value="linkedlist">Linked List</option>
+                            <option value="recursion">Recursion</option>
+                            <option value="stack">Stack</option>
+                            <option value="queue">Queue</option>
+                            <option value="greedy">Greedy</option>
+                            <option value="backtracking">Backtracking</option>
+                            <option value="trie">Trie</option>
+                            <option value="heap">Heap</option>
+                            <option value="bst">BST</option>
+                        </select>
+                        <button class="filter-btn" data-filter="easy">Easy</button>
+                        <button class="filter-btn" data-filter="medium">Medium</button>
+                        <button class="filter-btn" data-filter="hard">Hard</button>
+                    </div>
+                </div>
+
+                <!-- View 1: Problem List (Grid) -->
+                <div id="arena-list-view" class="arena-list-view">
+                    <div class="problem-grid" id="problem-list-container">
+                        <!-- Dynamically Populated -->
+                    </div>
+                </div>
+
+                <!-- View 2: Editor (Hidden Initially) -->
+                <!-- View 2: LeetCode-style Editor Workspace -->
+                <div id="arena-editor-view" class="arena-workspace hidden">
+                    <!-- Top Navigation for Problem (Back button etc) -->
+                    <div class="workspace-header">
+                        <div class="header-left">
+                            <button class="btn-icon-text" id="back-to-arena" title="All Problems">
+                                <i class="fa-solid fa-list-ul"></i> Problem List
+                            </button>
+                            <span class="divider-vertical"></span>
+                            <button class="btn-icon"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button class="btn-icon"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                        <div class="header-center">
+                            <!-- Optional Title Here -->
+                        </div>
+                        <div class="header-right">
+                            <button class="btn-icon" title="Settings"><i class="fa-solid fa-gear"></i></button>
+                            <div class="user-avatar-sm">TU</div>
+                        </div>
+                    </div>
+
+                    <!-- Split Panes -->
+                    <div class="arena-split-pane">
+                        <!-- LEFT PANE: Problem Description -->
+                        <div class="arena-pane left-pane">
+                            <div class="pane-tabs">
+                                <button class="pane-tab active" data-tab="desc"><i class="fa-regular fa-file-lines"></i>
+                                    Description</button>
+                                <button class="pane-tab" data-tab="editorial"><i class="fa-solid fa-flask"></i>
+                                    Editorial</button>
+                                <button class="pane-tab" data-tab="solutions"><i class="fa-solid fa-beaker"></i>
+                                    Solutions</button>
+                                <button class="pane-tab" data-tab="submissions"><i class="fa-regular fa-clock"></i>
+                                    Submissions</button>
+                            </div>
+
+                            <div class="pane-content scrollable custom-scrollbar" id="tab-desc">
+                                <div class="problem-content-wrapper">
+                                    <div class="problem-title-header">
+                                        <h2 id="p-title">Problem Title</h2>
+                                    </div>
+                                    <div class="problem-meta-badges">
+                                        <span class="badge diff-badge" id="p-difficulty">Easy</span>
+                                        <span class="badge tag-badge"><i class="fa-solid fa-clock"></i> <span
+                                                id="p-time">30m</span></span>
+                                        <span class="badge tag-badge"><i class="fa-solid fa-trophy"></i> <span
+                                                id="p-points">50 pts</span></span>
+                                    </div>
+
+                                    <div class="problem-text" id="p-desc">
+                                        <!-- Dynamic Content -->
+                                    </div>
+
+                                    <div class="problem-examples">
+                                        <h4>Example:</h4>
+                                        <pre id="p-example" class="code-block">Input: ... Output: ...</pre>
+                                    </div>
+
+                                    <div class="problem-constraints">
+                                        <h4>Constraints:</h4>
+                                        <div class="constraint-list">
+                                            <ul>
+                                                <li><code>0 <= n <= 10^5</code></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Placeholders for other tabs -->
+                            <div class="pane-content hidden" id="tab-editorial">
+                                <div class="empty-state">
+                                    <i class="fa-solid fa-lock text-yellow-500"></i>
+                                    <h3>Editorial Locked</h3>
+                                    <p>Solve the problem or subscribe to Premium to unlock.</p>
+                                </div>
+                            </div>
+                            <div class="pane-content hidden" id="tab-solutions">
+                                <div class="empty-state">
+                                    <i class="fa-solid fa-code text-blue-400"></i>
+                                    <h3>Community Solutions</h3>
+                                    <p>See how others solved this problem.</p>
+                                </div>
+                            </div>
+                            <div class="pane-content hidden" id="tab-submissions">
+                                <div class="empty-state">
+                                    <i class="fa-regular fa-clock text-gray-400"></i>
+                                    <h3>No Submissions</h3>
+                                    <p>You haven't submitted this problem yet.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- RIGHT PANE: Editor & Console -->
+                        <div class="arena-pane right-pane">
+                            <!-- Editor Header -->
+                            <div class="editor-header">
+                                <div class="lang-selector-group">
+                                    <select id="language-select" class="lc-select">
+                                        <option value="cpp">C++</option>
+                                        <option value="java">Java</option>
+                                        <option value="python">Python</option>
+                                        <option value="javascript">JavaScript</option>
+                                    </select>
+                                </div>
+                                <div class="editor-actions">
+                                    <button class="btn-icon-sm" title="Reset Code"><i
+                                            class="fa-solid fa-rotate-right"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- Code Editor -->
+                            <div class="editor-container" id="editor-wrapper">
+                                <div id="editor"></div>
+                            </div>
+
+                            <!-- Bottom Console (Collapsible) -->
+                            <div class="arena-console collapsed" id="arena-console">
+                                <div class="console-header-tabs">
+                                    <div class="console-left">
+                                        <button class="console-tab active"
+                                            onclick="switchConsoleTab('testcase')">Testcase</button>
+                                        <button class="console-tab" onclick="switchConsoleTab('result')">Result</button>
+                                    </div>
+                                    <button class="console-close-btn" id="console-toggle-btn"><i
+                                            class="fa-solid fa-chevron-down"></i></button>
+                                </div>
+
+                                <div class="console-body custom-scrollbar">
+                                    <div class="console-content" id="console-testcase">
+                                        <div class="testcase-input-group">
+                                            <p class="text-xs text-gray-400 mb-2">Test Case 1</p>
+                                            <div class="tc-box" id="tc-input-display">
+                                                input = ...
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="console-content hidden" id="console-result">
+                                        <div id="console-output">
+                                            <div class="result-placeholder">
+                                                Run your code to see results.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sticky Action Bar -->
+                            <div class="arena-action-bar">
+                                <button class="btn-console-toggle" id="btn-console-toggle">
+                                    <i class="fa-solid fa-terminal"></i> Console
+                                </button>
+                                <div class="action-buttons-right">
+                                    <button class="btn-run" id="run-code"><i class="fa-solid fa-play"></i> Run</button>
+                                    <button class="btn-submit" id="submit-code">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- CodeMirror CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/python/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/addon/edit/closebrackets.min.js"></script>
+    <!-- PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    </script>
+
+    <script type="module" src="js/main.js?v=4"></script>
+</body>
+
+</html>

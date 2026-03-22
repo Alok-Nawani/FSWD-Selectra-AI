@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Selectra AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --text-primary: #f8fafc;
+            --accent-blue: #3b82f6;
+            --accent-cyan: #06b6d4;
+            --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+            --bg-card: rgba(30, 41, 59, 0.4);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+        }
+
+        .login-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border: var(--glass-border);
+            padding: 3rem;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        .brand {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .brand i {
+            color: var(--accent-cyan);
+        }
+
+        .input-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: white;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        button {
+            width: 100%;
+            padding: 0.75rem;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+        }
+
+        .divider {
+            margin: 1.5rem 0;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-text {
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+        
+        .team-badge {
+            display: inline-block;
+            background: rgba(6, 182, 212, 0.1);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            color: var(--accent-cyan);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-card">
+        <div class="team-badge">Team Member 3 - Learning Hub</div>
+        <div class="brand">
+            <i class="fa-solid fa-book"></i> Selectra AI
+        </div>
+
+        <form id="login-form">
+            <div class="input-group">
+                <label for="username">Student Name</label>
+                <input type="text" id="username" placeholder="Enter your name" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Student ID (Email)</label>
+                <input type="email" id="email" placeholder="student@example.com" required>
+            </div>
+
+            <button type="submit">Start Learning</button>
+        </form>
+
+        <div class="divider"></div>
+        <p class="footer-text">Progress is saved locally for this device.</p>
+    </div>
+
+    <script type="module">
+        import { login } from './js/modules/auth.js';
+
+        document.getElementById('login-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+
+            if (name && email) {
+                login(name, email);
+                window.location.href = 'app.html';
+            }
+        });
+    </script>
+</body>
+
+</html>

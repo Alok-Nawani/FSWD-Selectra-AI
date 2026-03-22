@@ -1,0 +1,80 @@
+/* AI Avatar & Interview Enhancements */
+.interview-avatar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.ai-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(6, 182, 212, 0.3);
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+/* Pulsing effect when AI is speaking */
+.ai-avatar.speaking {
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 30px rgba(6, 182, 212, 0.6), inset 0 0 20px rgba(6, 182, 212, 0.4);
+    animation: pulsews 1.5s infinite;
+}
+
+@keyframes pulsews {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 30px rgba(6, 182, 212, 0.6);
+    }
+
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 50px rgba(6, 182, 212, 0.8);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 30px rgba(6, 182, 212, 0.6);
+    }
+}
+
+.ai-status-indicator {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--accent-cyan);
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.ai-status-indicator.visible {
+    opacity: 1;
+}
+
+/* Enhancing the Interview Panel Layout */
+.interview-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 900px) {
+    .interview-layout {
+        grid-template-columns: 300px 1fr;
+        /* Sidebar for AI Avatar, Main area for transcript/question */
+    }
+
+    .interview-sidebar {
+        background: rgba(15, 23, 42, 0.5);
+        border-radius: var(--border-radius);
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

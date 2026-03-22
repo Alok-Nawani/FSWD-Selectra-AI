@@ -1,0 +1,5 @@
+{
+    "id": "os",
+    "title": "Operating Systems",
+    "content": "<h3>Process Management</h3><p>A process is a program in execution.</p><ul><li><strong>Scheduling Algorithms:</strong> FCFS, SJF, Round Robin.</li><li><strong>Deadlock:</strong> A situation where a set of processes are blocked because each process is holding a resource and waiting for another.</li><li><strong>Conditions for Deadlock:</strong> Mutual Exclusion, Hold and Wait, No Preemption, Circular Wait.</li></ul><h3>Memory Management</h3><p>Paging, Segmentation, and Virtual Memory allow efficient use of RAM.</p>"
+}
