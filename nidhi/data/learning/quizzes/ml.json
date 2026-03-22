@@ -1,0 +1,502 @@
+[
+    {
+        "question": "ML stands for?",
+        "options": [
+            "Machine Learning",
+            "Manual Learning",
+            "Mechanical Learning",
+            "Meta Learning"
+        ],
+        "answerIndex": 0
+    },
+    {
+        "question": "Supervised learning uses?",
+        "options": [
+            "Unlabeled data",
+            "Labeled data",
+            "No data",
+            "Random data"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Unsupervised learning finds?",
+        "options": [
+            "Labels",
+            "Patterns/Structure",
+            "Errors",
+            "Time"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Regression predicts?",
+        "options": [
+            "Categories",
+            "Continuous values",
+            "Images",
+            "Text"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Classification predicts?",
+        "options": [
+            "Numbers",
+            "Categories/Classes",
+            "Time",
+            "Distance"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Overfitting means?",
+        "options": [
+            "Learning nothing",
+            "Memorizing noise/training data",
+            "Generalizing well",
+            "Underlearning"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Underfitting means?",
+        "options": [
+            "Too complex",
+            "Poor learning/Too simple",
+            "Perfect learning",
+            "High accuracy"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Feature is?",
+        "options": [
+            "Output",
+            "Input variable",
+            "Error",
+            "Model"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Label is?",
+        "options": [
+            "Input",
+            "Output variable",
+            "Code",
+            "Server"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Loss function measures?",
+        "options": [
+            "Speed",
+            "Error/Difference",
+            "Accuracy",
+            "Memory"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Accuracy measures?",
+        "options": [
+            "Speed",
+            "Correct predictions",
+            "Training time",
+            "Data size"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Neural network is inspired by?",
+        "options": [
+            "Computer chip",
+            "Human brain",
+            "Solar system",
+            "Ant colony"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Epoch means?",
+        "options": [
+            "One step",
+            "One full pass of dataset",
+            "One hour",
+            "One error"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Gradient descent is used for?",
+        "options": [
+            "Sorting",
+            "Optimization",
+            "Searching",
+            "Storing"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Learning rate controls?",
+        "options": [
+            "Speed of training",
+            "Step size of update",
+            "Memory usage",
+            "Dataset size"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Clustering groups?",
+        "options": [
+            "Labeled data",
+            "Similar data points",
+            "Random data",
+            "Files"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "K-means is a?",
+        "options": [
+            "Classification algo",
+            "Clustering algorithm",
+            "Regression algo",
+            "Database"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Decision tree is used for?",
+        "options": [
+            "Only Regression",
+            "Classification & Regression",
+            "Only Clustering",
+            "Storage"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Random Forest is?",
+        "options": [
+            "Single tree",
+            "Ensemble of trees",
+            "Linear model",
+            "Neural network"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "SVM stands for?",
+        "options": [
+            "Simple Vector Machine",
+            "Support Vector Machine",
+            "Super Vector Model",
+            "Standard Value Model"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Confusion matrix evaluates?",
+        "options": [
+            "Regression",
+            "Classification model",
+            "Clustering",
+            "Reinforcement learning"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Precision measures?",
+        "options": [
+            "Total correct",
+            "Correct positive predictions",
+            "Coverage",
+            "Speed"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Recall measures?",
+        "options": [
+            "Accuracy",
+            "Sensitivity/Coverage",
+            "Speed",
+            "Error"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "F1-score balances?",
+        "options": [
+            "Speed & Memory",
+            "Precision & Recall",
+            "Bias & Variance",
+            "Train & Test"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Dataset rows are called?",
+        "options": [
+            "Features",
+            "Samples",
+            "Labels",
+            "Models"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Dataset columns are called?",
+        "options": [
+            "Samples",
+            "Features",
+            "Errors",
+            "Nodes"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "PCA is used for?",
+        "options": [
+            "Add features",
+            "Dimensionality reduction",
+            "Clustering",
+            "Classification"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Training requires?",
+        "options": [
+            "No data",
+            "Data",
+            "Only code",
+            "User input"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Inference means?",
+        "options": [
+            "Training phase",
+            "Prediction phase",
+            "Testing",
+            "Coding"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Regularization prevents?",
+        "options": [
+            "Underfitting",
+            "Overfitting",
+            "Learning",
+            "Deployment"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Data preprocessing includes?",
+        "options": [
+            "Cleaning/Normalization",
+            "Nothing",
+            "Deleting data",
+            "Hiding data"
+        ],
+        "answerIndex": 0
+    },
+    {
+        "question": "Missing values handled using?",
+        "options": [
+            "Ignoring",
+            "Imputation",
+            "Deleting column",
+            "Guessing"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Feature engineering improves?",
+        "options": [
+            "Speed",
+            "Model accuracy",
+            "Data size",
+            "RAM"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Training data should be?",
+        "options": [
+            "Biased",
+            "Representative",
+            "Small",
+            "Random"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Validation set used for?",
+        "options": [
+            "Final testing",
+            "Hyperparameter tuning",
+            "Training",
+            "Deployment"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Logistic regression used for?",
+        "options": [
+            "Regression",
+            "Classification",
+            "Both",
+            "Neither"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Linear regression predicts?",
+        "options": [
+            "Class",
+            "Continuous value",
+            "Image",
+            "Sound"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Activation function adds?",
+        "options": [
+            "Speed",
+            "Non-linearity",
+            "Linearity",
+            "Memory"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "ReLU stands for?",
+        "options": [
+            "Real Linear Unit",
+            "Rectified Linear Unit",
+            "Random Logic Unit",
+            "Rapid Learning Unit"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Sigmoid outputs range?",
+        "options": [
+            "-1 to 1",
+            "0 to 1",
+            "0 to 100",
+            "Negative infinity to positive infinity"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Softmax used for?",
+        "options": [
+            "Binary classification",
+            "Multi-class classification",
+            "Regression",
+            "Clustering"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Ensemble learning combines?",
+        "options": [
+            "Data",
+            "Multiple models",
+            "Features",
+            "Errors"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Bagging reduces?",
+        "options": [
+            "Bias",
+            "Variance",
+            "Data",
+            "Speed"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Boosting reduces?",
+        "options": [
+            "Variance",
+            "Bias",
+            "Noise",
+            "Data"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "k-NN works based on?",
+        "options": [
+            "Probability",
+            "Distance",
+            "Tree",
+            "Neural Network"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Deep learning uses?",
+        "options": [
+            "One layer",
+            "Multi-layer neural networks",
+            "Trees",
+            "Rules"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "CNN used for?",
+        "options": [
+            "Text",
+            "Image tasks",
+            "Audio",
+            "Numbers"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "RNN used for?",
+        "options": [
+            "Static data",
+            "Sequential data",
+            "Images",
+            "Tables"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Transfer learning reuses?",
+        "options": [
+            "Data",
+            "Pre-trained model",
+            "Code",
+            "Hardware"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Main goal of ML?",
+        "options": [
+            "Store data",
+            "Learn patterns from data",
+            "Create data",
+            "Encrypt data"
+        ],
+        "answerIndex": 1
+    }
+]
