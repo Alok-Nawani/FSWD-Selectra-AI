@@ -1,0 +1,402 @@
+[
+    {
+        "question": "OS manages?",
+        "options": [
+            "Hardware & processes",
+            "Internet",
+            "Applications only",
+            "Users only"
+        ],
+        "answerIndex": 0
+    },
+    {
+        "question": "A Process is?",
+        "options": [
+            "Static code",
+            "Program in execution",
+            "A thread",
+            "A core"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "A Thread is?",
+        "options": [
+            "Heavy process",
+            "Lightweight process",
+            "System call",
+            "Interrupt"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Context switching means?",
+        "options": [
+            "User switching",
+            "CPU switching tasks",
+            "Disk switching",
+            "Memory switching"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Deadlock requires?",
+        "options": [
+            "Preemption",
+            "Mutual exclusion",
+            "Throughput",
+            "Latency"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Paging avoids?",
+        "options": [
+            "Internal fragmentation",
+            "External fragmentation",
+            "Thrashing",
+            "Swapping"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Virtual memory uses?",
+        "options": [
+            "RAM",
+            "Cache",
+            "Disk space",
+            "Registers"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Kernel is?",
+        "options": [
+            "User interface",
+            "Core of OS",
+            "Application",
+            "Driver"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Scheduler decides?",
+        "options": [
+            "Memory allocation",
+            "Next process",
+            "Disk layout",
+            "Network route"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Multithreading improves?",
+        "options": [
+            "Security",
+            "Responsiveness",
+            "Storage",
+            "Complexity"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Semaphore is used for?",
+        "options": [
+            "Paging",
+            "Synchronization",
+            "Scheduling",
+            "Booting"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "PCB stores?",
+        "options": [
+            "File data",
+            "Process info",
+            "Memory map",
+            "User data"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Thrashing occurs due to?",
+        "options": [
+            "High CPU load",
+            "Excess paging",
+            "Deadlock",
+            "Interrupts"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "System call connects?",
+        "options": [
+            "User & Kernel",
+            "CPU & RAM",
+            "Web & Server",
+            "App & DB"
+        ],
+        "answerIndex": 0
+    },
+    {
+        "question": "Ready queue stores?",
+        "options": [
+            "Blocked processes",
+            "Waiting processes",
+            "Running processes",
+            "Terminated processes"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Swapping moves process between?",
+        "options": [
+            "CPU & Cache",
+            "RAM & Disk",
+            "Disk & Network",
+            "Core & Thread"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Interrupt signals?",
+        "options": [
+            "User request",
+            "CPU event",
+            "Memory error",
+            "Disk full"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "File system manages?",
+        "options": [
+            "Networking",
+            "Storage",
+            "Processing",
+            "Display"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Time sharing improves?",
+        "options": [
+            "Security",
+            "CPU utilization",
+            "Storage",
+            "Boot time"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "OS abstraction hides?",
+        "options": [
+            "Software errors",
+            "Hardware complexity",
+            "Network speed",
+            "User data"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "CPU executes instructions from?",
+        "options": [
+            "Disk",
+            "Memory (RAM)",
+            "Network",
+            "Cache Only"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Process state includes?",
+        "options": [
+            "Open/Closed",
+            "Ready/Running",
+            "Active/Inactive",
+            "Up/Down"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Scheduler improves?",
+        "options": [
+            "Graphics",
+            "Efficiency",
+            "Storage",
+            "Sound"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Paging divides memory into?",
+        "options": [
+            "Segments",
+            "Pages",
+            "Blocks",
+            "Files"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Deadlock prevention avoids?",
+        "options": [
+            "Wait",
+            "Circular wait",
+            "Hold",
+            "Release"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "OS handles IO via?",
+        "options": [
+            "Applications",
+            "Drivers",
+            "Users",
+            "Web"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Multitasking allows?",
+        "options": [
+            "Single program",
+            "Multiple programs",
+            "No programs",
+            "One thread"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "System call requests?",
+        "options": [
+            "User permission",
+            "OS service",
+            "Network access",
+            "Hardware info"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Kernel mode allows?",
+        "options": [
+            "Restricted access",
+            "Full hardware access",
+            "User access",
+            "Network access"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Cache uses?",
+        "options": [
+            "High speed memory",
+            "Disk space",
+            "Tape drive",
+            "Cloud"
+        ],
+        "answerIndex": 0
+    },
+    {
+        "question": "Time quantum used in?",
+        "options": [
+            "FCFS",
+            "SJF",
+            "Round Robin",
+            "Priority Scheduling"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Interrupt handled by?",
+        "options": [
+            "User",
+            "CPU",
+            "Disk",
+            "Network"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "OS protects memory using?",
+        "options": [
+            "Encryption",
+            "Isolation",
+            "Compression",
+            "Defragmentation"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Swap space located on?",
+        "options": [
+            "RAM",
+            "Disk",
+            "Cache",
+            "Register"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Resource allocation managed by?",
+        "options": [
+            "User",
+            "OS",
+            "Application",
+            "BIOS"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "File system organizes?",
+        "options": [
+            "Processes",
+            "Files",
+            "Networking",
+            "Memory"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Threads share?",
+        "options": [
+            "Nothing",
+            "Memory space",
+            "CPU registers",
+            "Stack"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Process owns?",
+        "options": [
+            "Address space",
+            "CPU",
+            "Disk",
+            "Network"
+        ],
+        "answerIndex": 0
+    },
+    {
+        "question": "OS ensures?",
+        "options": [
+            "Profit",
+            "Security",
+            "Good UI",
+            "Marketing"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Scheduling algorithm example?",
+        "options": [
+            "Quick Sort",
+            "FCFS",
+            "Binary Search",
+            "DFS"
+        ],
+        "answerIndex": 1
+    }
+]
