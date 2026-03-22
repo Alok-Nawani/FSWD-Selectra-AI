@@ -1,0 +1,402 @@
+[
+    {
+        "question": "DBMS stands for?",
+        "options": [
+            "Database Management System",
+            "Data Backup Management System",
+            "Data Basic Management System",
+            "Database Master System"
+        ],
+        "answerIndex": 0
+    },
+    {
+        "question": "SQL is used for?",
+        "options": [
+            "Styling pages",
+            "Querying data",
+            "Building APIs",
+            "Compiling code"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Primary key allows?",
+        "options": [
+            "Duplicate values",
+            "Null values",
+            "Unique values",
+            "Any value"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Foreign key ensures?",
+        "options": [
+            "Uniqueness",
+            "Referential integrity",
+            "Nullability",
+            "Indexing"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "ACID property 'A' stands for?",
+        "options": [
+            "Availability",
+            "Accuracy",
+            "Atomicity",
+            "Access"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "JOIN is used to?",
+        "options": [
+            "Delete tables",
+            "create tables",
+            "Combine tables",
+            "Update tables"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Normalization reduces?",
+        "options": [
+            "Security",
+            "Redundancy",
+            "Performance",
+            "Complexity"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Index improves?",
+        "options": [
+            "Insert speed",
+            "Update speed",
+            "Search speed",
+            "Delete speed"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "DELETE removes?",
+        "options": [
+            "Table structure",
+            "Selected rows",
+            "Database",
+            "Index"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "TRUNCATE does what?",
+        "options": [
+            "Deletes table",
+            "Removes all rows quickly",
+            "Removes specific rows",
+            "Updates rows"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "WHERE clause is used for?",
+        "options": [
+            "Sorting",
+            "Grouping",
+            "Filtering",
+            "Joining"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "GROUP BY is used for?",
+        "options": [
+            "Ordering",
+            "Aggregation",
+            "Filtering",
+            "Selecting"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "A View is?",
+        "options": [
+            "Physical table",
+            "Virtual table",
+            "Stored procedure",
+            "Index"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Transaction is?",
+        "options": [
+            "Physical unit",
+            "Logical unit of work",
+            "Database file",
+            "Backup"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Candidate key is?",
+        "options": [
+            "Foreign key",
+            "Primary key",
+            "Possible primary key",
+            "Super key"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Schema defines?",
+        "options": [
+            "Data",
+            "Structure",
+            "Users",
+            "Permissions"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "NULL in database means?",
+        "options": [
+            "Zero",
+            "Empty string",
+            "Unknown value",
+            "False"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Stored procedure is?",
+        "options": [
+            "Table",
+            "View",
+            "Precompiled SQL",
+            "Trigger"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Deadlock occurs due to?",
+        "options": [
+            "High load",
+            "Circular wait",
+            "Memory full",
+            "Disk error"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Denormalization improves?",
+        "options": [
+            "Write performance",
+            "Read performance",
+            "Storage",
+            "Consistency"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "SQL stands for?",
+        "options": [
+            "Structured Query Language",
+            "Standard Query Logic",
+            "Simple Query Language",
+            "System Query Logic"
+        ],
+        "answerIndex": 0
+    },
+    {
+        "question": "Table row is called?",
+        "options": [
+            "Attribute",
+            "Tuple",
+            "Field",
+            "Key"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Column is called?",
+        "options": [
+            "Tuple",
+            "Attribute",
+            "Record",
+            "Entity"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Unique constraint ensures?",
+        "options": [
+            "Null values",
+            "No duplicates",
+            "Sorting",
+            "Referencing"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Default sorting order in SQL?",
+        "options": [
+            "Descending",
+            "Random",
+            "Ascending",
+            "None"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Example of aggregate function?",
+        "options": [
+            "SELECT",
+            "WHERE",
+            "SUM()",
+            "INSERT"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Foreign key references?",
+        "options": [
+            "Unique key",
+            "Primary key",
+            "Check constraint",
+            "Index"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Database designed using?",
+        "options": [
+            "Flowchart",
+            "ER model",
+            "UML",
+            "DFD"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Relationship defines?",
+        "options": [
+            "Data types",
+            "Table connection",
+            "Constraints",
+            "Keys"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Redundancy causes?",
+        "options": [
+            "Efficiency",
+            "Wasted space",
+            "Security",
+            "Speed"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "DBMS improves?",
+        "options": [
+            "Complexity",
+            "Data consistency",
+            "Redundancy",
+            "Errors"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Backup protects against?",
+        "options": [
+            "Hackers",
+            "Data loss",
+            "Viruses",
+            "Spam"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Index stored using?",
+        "options": [
+            "Stack",
+            "Queue",
+            "B-tree",
+            "Linked List"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Trigger fires when?",
+        "options": [
+            "User logins",
+            "Event occurs",
+            "System restarts",
+            "Query fails"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "SQL keyword to remove table?",
+        "options": [
+            "DELETE",
+            "REMOVE",
+            "DROP",
+            "ERASE"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Constraint ensures?",
+        "options": [
+            "Fast queries",
+            "Valid data",
+            "Security",
+            "Backup"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "ER diagram used for?",
+        "options": [
+            "Coding",
+            "Testing",
+            "Design",
+            "Deployment"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Transaction ensures?",
+        "options": [
+            "Speed",
+            "Integrity",
+            "Security",
+            "Space"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Log used for?",
+        "options": [
+            "Security",
+            "Recovery",
+            "Performance",
+            "access"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Data independence means?",
+        "options": [
+            "No data",
+            "Structure changes without affecting apps",
+            "Isolated data",
+            "Remote data"
+        ],
+        "answerIndex": 1
+    }
+]
