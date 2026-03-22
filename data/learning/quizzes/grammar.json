@@ -1,0 +1,412 @@
+[
+    {
+        "question": "Noun means?",
+        "options": [
+            "Action",
+            "Name of person/place",
+            "Quality",
+            "Comparison"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Verb means?",
+        "options": [
+            "Name",
+            "Action/Doing word",
+            "Description",
+            "Location"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Adjective describes?",
+        "options": [
+            "Verb",
+            "Noun",
+            "Conjunction",
+            "Preposition"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Past tense of 'Go'?",
+        "options": [
+            "Goed",
+            "Gone",
+            "Went",
+            "Going"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Synonym of 'Fast'?",
+        "options": [
+            "Slow",
+            "Quick",
+            "Heavy",
+            "Late"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Antonym of 'Big'?",
+        "options": [
+            "Large",
+            "Huge",
+            "Small",
+            "Tall"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "She ___ playing.",
+        "options": [
+            "are",
+            "is",
+            "am",
+            "were"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Article before 'Apple'?",
+        "options": [
+            "A",
+            "The",
+            "An",
+            "None"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Plural of 'Child'?",
+        "options": [
+            "Childs",
+            "Children",
+            "Childrens",
+            "Kid"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Opposite of 'Success'?",
+        "options": [
+            "Win",
+            "Defeat",
+            "Failure",
+            "Loss"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "He ___ running.",
+        "options": [
+            "are",
+            "is",
+            "were",
+            "have"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Adverb modifies?",
+        "options": [
+            "Noun",
+            "Pronoun",
+            "Verb",
+            "Conjunction"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Synonym of 'Help'?",
+        "options": [
+            "Hinder",
+            "Assist",
+            "Stop",
+            "Ignore"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Antonym of 'Accept'?",
+        "options": [
+            "Take",
+            "Receive",
+            "Reject",
+            "Keep"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "They ___ gone.",
+        "options": [
+            "is",
+            "has",
+            "have",
+            "was"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Comparative of 'Good'?",
+        "options": [
+            "Goodest",
+            "Better",
+            "Best",
+            "Bad"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Superlative of 'Tall'?",
+        "options": [
+            "Taller",
+            "Tallest",
+            "More Tall",
+            "Most Tall"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Fear of heights?",
+        "options": [
+            "Hydrophobia",
+            "Acrophobia",
+            "Claustrophobia",
+            "Xenophobia"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Biography means?",
+        "options": [
+            "Life story written by self",
+            "Life story written by another",
+            "Fiction",
+            "Poem"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Correct tense: I ___ finished.",
+        "options": [
+            "has",
+            "have",
+            "is",
+            "am"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Synonym of 'Happy'?",
+        "options": [
+            "Sad",
+            "Joyful",
+            "Angry",
+            "Tired"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Antonym of 'Tall'?",
+        "options": [
+            "High",
+            "Small",
+            "Short",
+            "Big"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Verb expresses?",
+        "options": [
+            "Name",
+            "Action",
+            "Quality",
+            "Time"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Noun names?",
+        "options": [
+            "Action",
+            "Property",
+            "Person/Place/Thing",
+            "Time"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Past of 'Eat'?",
+        "options": [
+            "Eaten",
+            "Ate",
+            "Eating",
+            "Eats"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Plural of 'Man'?",
+        "options": [
+            "Mans",
+            "Men",
+            "Mens",
+            "Manes"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "She ___ writing.",
+        "options": [
+            "are",
+            "is",
+            "were",
+            "have"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Article before 'Hour'?",
+        "options": [
+            "A",
+            "The",
+            "An",
+            "None"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Opposite of 'Dark'?",
+        "options": [
+            "Black",
+            "Night",
+            "Light",
+            "Shadow"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Comparative of 'Small'?",
+        "options": [
+            "Smaller",
+            "Smallest",
+            "Tiny",
+            "Short"
+        ],
+        "answerIndex": 0
+    },
+    {
+        "question": "Synonym of 'Quick'?",
+        "options": [
+            "Slow",
+            "Fast",
+            "Hard",
+            "Easy"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Antonym of 'Rich'?",
+        "options": [
+            "Wealthy",
+            "Poor",
+            "Kind",
+            "Happy"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Correct: They ___ playing.",
+        "options": [
+            "is",
+            "am",
+            "are",
+            "was"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Past tense of 'See'?",
+        "options": [
+            "Seen",
+            "Saw",
+            "Seeing",
+            "Sees"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "One-word for life story?",
+        "options": [
+            "Biology",
+            "Biography",
+            "History",
+            "Physics"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Opposite of 'Early'?",
+        "options": [
+            "First",
+            "Late",
+            "Start",
+            "Morning"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Correct spelling?",
+        "options": [
+            "Knoledge",
+            "Knowledge",
+            "Nowledge",
+            "Knowlege"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Synonym of 'Begin'?",
+        "options": [
+            "End",
+            "Start",
+            "Finish",
+            "Stop"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Synonym of 'Bright'?",
+        "options": [
+            "Dull",
+            "Intelligent",
+            "Dark",
+            "Sad"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Plural of 'Mouse'?",
+        "options": [
+            "Mouses",
+            "Mice",
+            "Rat",
+            "Mouse"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "She ___ reading.",
+        "options": [
+            "is",
+            "are",
+            "were",
+            "has"
+        ],
+        "answerIndex": 0
+    }
+]
