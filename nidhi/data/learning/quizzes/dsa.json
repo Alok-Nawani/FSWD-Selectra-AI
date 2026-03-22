@@ -1,0 +1,402 @@
+[
+    {
+        "question": "Which data structure follows LIFO?",
+        "options": [
+            "Queue",
+            "Stack",
+            "Linked List",
+            "Tree"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Binary search requires?",
+        "options": [
+            "Unsorted array",
+            "Sorted array",
+            "Stack",
+            "Queue"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Time complexity of merge sort?",
+        "options": [
+            "O(n)",
+            "O(n^2)",
+            "O(n log n)",
+            "O(1)"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Queue deletion happens at?",
+        "options": [
+            "Rear",
+            "Front",
+            "Middle",
+            "Anywhere"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Heap is used for?",
+        "options": [
+            "Stack",
+            "Queue",
+            "Priority Queue",
+            "Linked List"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "DFS uses which data structure?",
+        "options": [
+            "Queue",
+            "Stack",
+            "Array",
+            "Linked List"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "BFS uses which data structure?",
+        "options": [
+            "Stack",
+            "Queue",
+            "Tree",
+            "Graph"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Worst-case BST search complexity?",
+        "options": [
+            "O(log n)",
+            "O(n)",
+            "O(1)",
+            "O(n log n)"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Balanced BST height?",
+        "options": [
+            "O(n)",
+            "O(log n)",
+            "O(1)",
+            "O(n^2)"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Graph cycle detection uses?",
+        "options": [
+            "BFS",
+            "DFS",
+            "Dijkstra",
+            "Prim"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Array access time complexity?",
+        "options": [
+            "O(n)",
+            "O(log n)",
+            "O(1)",
+            "O(n^2)"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Advantage of linked list insertion?",
+        "options": [
+            "Fast access",
+            "No shifting needed",
+            "Binary search",
+            "Less memory"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Tree with N nodes has how many edges?",
+        "options": [
+            "N",
+            "N+1",
+            "N-1",
+            "N/2"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Hash table average search time?",
+        "options": [
+            "O(n)",
+            "O(log n)",
+            "O(1)",
+            "O(n^2)"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "AVL tree is a?",
+        "options": [
+            "Binary Tree",
+            "Self-balancing BST",
+            "Heap",
+            "Graph"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Topological sort applies to?",
+        "options": [
+            "Undirected Graph",
+            "Cyclic Graph",
+            "DAG",
+            "Tree"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Stack overflow occurs when?",
+        "options": [
+            "Stack is empty",
+            "Memory is full",
+            "Queue is full",
+            "Heap is full"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Circular queue solves which problem?",
+        "options": [
+            "Slow access",
+            "Wasted space",
+            "Complexity",
+            "Recursion"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Algorithm for Minimal Spanning Tree?",
+        "options": [
+            "Dijkstra",
+            "Prim/Kruskal",
+            "BFS",
+            "DFS"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Adjacency list is best for?",
+        "options": [
+            "Dense graphs",
+            "Sparse graphs",
+            "Trees",
+            "Arrays"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "What is a full binary tree?",
+        "options": [
+            "Every node has 1 child",
+            "Every node has 0 or 2 children",
+            "Every node has 2 children",
+            "Leaf nodes are at same level"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Which traversal visits root first?",
+        "options": [
+            "Inorder",
+            "Postorder",
+            "Preorder",
+            "Level order"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Searching in balanced BST takes?",
+        "options": [
+            "O(n)",
+            "O(log n)",
+            "O(1)",
+            "O(n^2)"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Which DS is used in recursion internally?",
+        "options": [
+            "Queue",
+            "Stack",
+            "Tree",
+            "Graph"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "A graph with V vertices has max edges?",
+        "options": [
+            "V",
+            "V^2",
+            "V(V-1)/2",
+            "V-1"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "What is collision in hashing?",
+        "options": [
+            "Data loss",
+            "Same index for two keys",
+            "Table full",
+            "Invalid key"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Which algorithm sorts by repeatedly selecting minimum?",
+        "options": [
+            "Bubble sort",
+            "Insertion sort",
+            "Selection sort",
+            "Merge sort"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Time complexity of insertion sort worst case?",
+        "options": [
+            "O(n)",
+            "O(n log n)",
+            "O(n^2)",
+            "O(1)"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Leaf node means?",
+        "options": [
+            "Root node",
+            "Node with 1 child",
+            "Node with no children",
+            "Node with 2 children"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Directed graph edges have?",
+        "options": [
+            "Weights",
+            "Capacity",
+            "Direction",
+            "Colors"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Which DS supports dynamic memory best?",
+        "options": [
+            "Array",
+            "Linked List",
+            "Stack",
+            "Queue"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Heap always satisfies?",
+        "options": [
+            "BST property",
+            "Heap property",
+            "FIFO",
+            "LIFO"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Queue implemented using arrays suffers from?",
+        "options": [
+            "Underflow",
+            "Overflow",
+            "Complexity",
+            "Speed"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Binary tree height impacts?",
+        "options": [
+            "Insertion",
+            "Deletion",
+            "Search time",
+            "Memory"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Merge sort is based on?",
+        "options": [
+            "Greedy",
+            "Dynamic Programming",
+            "Divide & Conquer",
+            "Backtracking"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Graph stored using matrix uses?",
+        "options": [
+            "Less space",
+            "More space",
+            "Less time",
+            "More time"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Stack supports which operations?",
+        "options": [
+            "Enqueue/Dequeue",
+            "Push/Pop",
+            "Insert/Delete",
+            "Add/Remove"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Circular linked list last node points to?",
+        "options": [
+            "Null",
+            "Second node",
+            "First node",
+            "Middle node"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Which algorithm finds MST?",
+        "options": [
+            "BFS",
+            "DFS",
+            "Kruskal",
+            "Bellman-Ford"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Binary search divides array into?",
+        "options": [
+            "Three parts",
+            "Two halves",
+            "Four parts",
+            "Random parts"
+        ],
+        "answerIndex": 1
+    }
+]
