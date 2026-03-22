@@ -1,0 +1,5 @@
+{
+    "id": "cn",
+    "title": "Computer Networks",
+    "content": "<h3>OSI Model</h3><p>7 Layers: Physical, Data Link, Network, Transport, Session, Presentation, Application.</p><h3>TCP/IP Model</h3><p>4 Layers: Network Interface, Internet, Transport, Application.</p><ul><li><strong>TCP vs UDP:</strong> TCP is reliable (connection-oriented), UDP is fast (connectionless).</li><li><strong>HTTP/HTTPS:</strong> HyperText Transfer Protocol. S stands for Secure (uses SSL/TLS).</li></ul>"
+}
