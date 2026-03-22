@@ -1,0 +1,5 @@
+{
+    "id": "ai",
+    "title": "AI & Machine Learning Basics",
+    "content": "<h3>Introduction</h3><p>Artificial Intelligence is the simulation of human intelligence processes by machines.</p><ul><li><strong>Machine Learning:</strong> Subset of AI where computers learn from data without being explicitly programmed.</li><li><strong>Supervised Learning:</strong> Learning with labeled data (e.g., Classification, Regression).</li><li><strong>Unsupervised Learning:</strong> Learning with unlabeled data (e.g., Clustering).</li><li><strong>Neural Networks:</strong> Computing systems inspired by the biological neural networks of animal brains.</li></ul>"
+}
