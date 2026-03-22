@@ -1,0 +1,352 @@
+[
+    {
+        "question": "OOP stands for?",
+        "options": [
+            "Object Oriented Protocol",
+            "Object Oriented Programming",
+            "Object Oriented Process",
+            "Object Open Protocol"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Class is?",
+        "options": [
+            "Variable",
+            "Function",
+            "Blueprint",
+            "Object"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Object is?",
+        "options": [
+            "Prototype",
+            "Instance of a class",
+            "Function",
+            "Variable"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Encapsulation means?",
+        "options": [
+            "Data sharing",
+            "Data hiding",
+            "Inheritance",
+            "Polymorphism"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Inheritance provides?",
+        "options": [
+            "Complexity",
+            "Reusability",
+            "Security",
+            "Speed"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Polymorphism means?",
+        "options": [
+            "Many forms",
+            "Many classes",
+            "Many objects",
+            "Many functions"
+        ],
+        "answerIndex": 0
+    },
+    {
+        "question": "Abstraction hides?",
+        "options": [
+            "Data",
+            "Complexity/Implementation",
+            "Classes",
+            "Objects"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Constructor is used for?",
+        "options": [
+            "Deletion",
+            "Initialization",
+            "Copying",
+            "Printing"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Overloading occurs at?",
+        "options": [
+            "Runtime",
+            "Compile time",
+            "Load time",
+            "Execution time"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Overriding occurs at?",
+        "options": [
+            "Compile time",
+            "Runtime",
+            "Design time",
+            "Coding time"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Interface provides?",
+        "options": [
+            "Partial abstraction",
+            "Full abstraction",
+            "Implementation",
+            "Storage"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Static keyword belongs to?",
+        "options": [
+            "Object",
+            "Class",
+            "Method",
+            "Variable"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Final keyword prevents?",
+        "options": [
+            "Inheritance",
+            "Overriding",
+            "Modification",
+            "All of the above"
+        ],
+        "answerIndex": 3
+    },
+    {
+        "question": "Private access modifier means?",
+        "options": [
+            "Public access",
+            "Restricted access (within class)",
+            "Protected access",
+            "Package access"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "HAS-A relation means?",
+        "options": [
+            "Inheritance",
+            "Composition/Aggregation",
+            "Polymorphism",
+            "Abstraction"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "IS-A relation means?",
+        "options": [
+            "Composition",
+            "Inheritance",
+            "Interface",
+            "Overloading"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Object state is stored in?",
+        "options": [
+            "Methods",
+            "Attributes/Variables",
+            "Constructor",
+            "Class"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Method defines?",
+        "options": [
+            "State",
+            "Behavior",
+            "Identity",
+            "Color"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "OOP improves?",
+        "options": [
+            "Speed",
+            "Maintainability",
+            "Graphics",
+            "Memory"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Encapsulation improves?",
+        "options": [
+            "Performance",
+            "Security",
+            "Design",
+            "Testing"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Object communicates via?",
+        "options": [
+            "Variables",
+            "Methods",
+            "Classes",
+            "Files"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Inheritance models which relationship?",
+        "options": [
+            "HAS-A",
+            "IS-A",
+            "USES-A",
+            "None"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Class variables are shared by?",
+        "options": [
+            "One object",
+            "All objects",
+            "No objects",
+            "Subclasses only"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Abstraction focuses on?",
+        "options": [
+            "Details",
+            "Essential features",
+            "Code",
+            "Data"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Interface defines?",
+        "options": [
+            "Implementation",
+            "Contract/Blueprint",
+            "Variables",
+            "Objects"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Access modifier 'public' means?",
+        "options": [
+            "Private",
+            "Protected",
+            "Accessible everywhere",
+            "Package only"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Static method can be called without?",
+        "options": [
+            "Class",
+            "Object instance",
+            "Parameters",
+            "Variables"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "OOP reduces?",
+        "options": [
+            "Flexibility",
+            "Complexity",
+            "Reusability",
+            "Security"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Attribute stores?",
+        "options": [
+            "Logic",
+            "Data",
+            "Code",
+            "Loop"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Reusability is achieved mainly using?",
+        "options": [
+            "Encapsulation",
+            "Inheritance",
+            "Polymorphism",
+            "Abstraction"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Object is created using keyword?",
+        "options": [
+            "create",
+            "new",
+            "make",
+            "build"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Abstract class cannot be?",
+        "options": [
+            "Inherited",
+            "Instantiated",
+            "Compiled",
+            "Used"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Polymorphism improves?",
+        "options": [
+            "Rigidity",
+            "Flexibility",
+            "Security",
+            "Speed"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Class acts as a?",
+        "options": [
+            "Function",
+            "Blueprint/Template",
+            "Variable",
+            "Array"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "OOP models real-world using?",
+        "options": [
+            "Functions",
+            "Objects",
+            "Pointers",
+            "Loops"
+        ],
+        "answerIndex": 1
+    }
+]
