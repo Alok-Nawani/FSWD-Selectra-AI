@@ -1,8 +1,19 @@
 import { initLearning } from './modules/learning.js';
+import { initNavigation } from './modules/navigation.js';
+import { initResume } from './modules/resume.js';
+import { ensureAuth, logout } from './modules/auth.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
-    console.log('TM3: Learning Hub Bootstrapping...');
+    console.log('Selectra AI App Bootstrapping...');
 
-    // No auth for now or keep it simple
+    const user = ensureAuth();
+    if (!user) return;
+
+    initNavigation();
     initLearning();
+    initResume();
+
+    // Logout Handler
+    const logoutBtn = document.getElementById('btn-logout');
+    if (logoutBtn) logoutBtn.addEventListener('click', logout);
 });
