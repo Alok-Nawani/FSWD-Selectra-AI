@@ -1,0 +1,402 @@
+[
+    {
+        "question": "OSI model has how many layers?",
+        "options": [
+            "5",
+            "7",
+            "4",
+            "6"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "TCP provides?",
+        "options": [
+            "Best effort",
+            "Reliable communication",
+            "Unreliable communication",
+            "No connection"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "UDP is used when?",
+        "options": [
+            "Reliability needed",
+            "Speed needed",
+            "Order needed",
+            "Security needed"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "IP address identifies?",
+        "options": [
+            "User",
+            "Device",
+            "Application",
+            "Process"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "DNS converts?",
+        "options": [
+            "IP to Domain",
+            "Domain to IP",
+            "MAC to IP",
+            "IP to MAC"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Router works at which layer?",
+        "options": [
+            "Physical",
+            "Data Link",
+            "Network",
+            "Transport"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Switch works at which layer?",
+        "options": [
+            "Physical",
+            "Data Link",
+            "Network",
+            "Application"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "HTTP is a?",
+        "options": [
+            "Stateful protocol",
+            "Stateless protocol",
+            "Secure protocol",
+            "Fast protocol"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "HTTPS adds?",
+        "options": [
+            "Speed",
+            "Encryption",
+            "Compression",
+            "Reliability"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Bandwidth measures?",
+        "options": [
+            "Speed",
+            "Capacity",
+            "Latency",
+            "Distance"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Latency means?",
+        "options": [
+            "Capacity",
+            "Delay",
+            "Loss",
+            "Throughput"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "SMTP is used for?",
+        "options": [
+            "File transfer",
+            "Email",
+            "Web browsing",
+            "Chatting"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "FTP is used for?",
+        "options": [
+            "Email",
+            "File transfer",
+            "Streaming",
+            "Calling"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "ARP resolves?",
+        "options": [
+            "Domain to IP",
+            "IP to MAC",
+            "MAC to IP",
+            "IP to Port"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Firewall provides?",
+        "options": [
+            "Speed",
+            "Security",
+            "Storage",
+            "Connectivity"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "LAN covers?",
+        "options": [
+            "Large area",
+            "Small area",
+            "Internet",
+            "Everything"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "WAN covers?",
+        "options": [
+            "Link",
+            "Room",
+            "City/Country",
+            "Single Building"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "ICMP is used for?",
+        "options": [
+            "Transfer",
+            "Ping",
+            "Routing",
+            "Email"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Port identifies?",
+        "options": [
+            "Host",
+            "Application/Service",
+            "Network",
+            "Router"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Packet switching is used in?",
+        "options": [
+            "Telephone",
+            "Internet",
+            "Radio",
+            "TV"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Data transmitted in units called?",
+        "options": [
+            "Bytes",
+            "Packets",
+            "Files",
+            "Bits"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Protocol defines?",
+        "options": [
+            "Hardware",
+            "Software",
+            "Rules",
+            "Users"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "LAN speed is usually?",
+        "options": [
+            "Low",
+            "High",
+            "Variable",
+            "Unknown"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "WAN connects?",
+        "options": [
+            "Devices",
+            "Rooms",
+            "Cities/Countries",
+            "Building"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "MAC address is?",
+        "options": [
+            "Logical address",
+            "Physical address",
+            "Virtual address",
+            "Temporary address"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Router selects path using?",
+        "options": [
+            "ARP table",
+            "Routing table",
+            "MAC table",
+            "DNS table"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "TCP ensures?",
+        "options": [
+            "Speed",
+            "Delivery",
+            "Security",
+            "Privacy"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "UDP provides?",
+        "options": [
+            "Reliability",
+            "Fast transfer",
+            "Checking",
+            "Ordering"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "DNS is hierarchical because?",
+        "options": [
+            "It is fast",
+            "It is distributed",
+            "It is secure",
+            "It is simple"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "HTTP works on which layer?",
+        "options": [
+            "Network",
+            "Transport",
+            "Application",
+            "Data Link"
+        ],
+        "answerIndex": 2
+    },
+    {
+        "question": "Encryption ensures?",
+        "options": [
+            "Speed",
+            "Confidentiality",
+            "Efficiency",
+            "Availability"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Switch forwards based on?",
+        "options": [
+            "IP address",
+            "MAC address",
+            "Port",
+            "Protocol"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Gateway connects?",
+        "options": [
+            "Same networks",
+            "Different networks",
+            "Universities",
+            "Computers"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Network topology example?",
+        "options": [
+            "Circle",
+            "Star",
+            "Square",
+            "Triangle"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Bandwidth unit?",
+        "options": [
+            "Hz",
+            "Mbps",
+            "Sec",
+            "Meters"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "IP uniquely identifies?",
+        "options": [
+            "User",
+            "Device",
+            "Location",
+            "Time"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Email protocol example?",
+        "options": [
+            "HTTP",
+            "SMTP",
+            "FTP",
+            "SSH"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Secure protocol?",
+        "options": [
+            "HTTP",
+            "HTTPS",
+            "FTP",
+            "Telnet"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Packet loss affects?",
+        "options": [
+            "Nothing",
+            "Reliability",
+            "Cost",
+            "Security"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Network interface connects?",
+        "options": [
+            "User to App",
+            "Device to network",
+            "Disk to RAM",
+            "Mouse to PC"
+        ],
+        "answerIndex": 1
+    }
+]
