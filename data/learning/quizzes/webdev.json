@@ -1,0 +1,502 @@
+[
+    {
+        "question": "HTML stands for?",
+        "options": [
+            "Hyper Text Markup Language",
+            "Home Tool Markup Language",
+            "Hyperlinks and Text Markup Language",
+            "High Text Machine Language"
+        ],
+        "answerIndex": 0
+    },
+    {
+        "question": "CSS is used for?",
+        "options": [
+            "Styling",
+            "Structure",
+            "Programming",
+            "Data"
+        ],
+        "answerIndex": 0
+    },
+    {
+        "question": "JS is used for?",
+        "options": [
+            "Database",
+            "Interactivity/Logic",
+            "Styling",
+            "Documentation"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Browser renders?",
+        "options": [
+            "Server code",
+            "HTML/CSS/JS",
+            "Database",
+            "Images only"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "DOM stands for?",
+        "options": [
+            "Document Object Model",
+            "Data Object Model",
+            "Disk Operating Method",
+            "Document Order Mechanism"
+        ],
+        "answerIndex": 0
+    },
+    {
+        "question": "HTTP method GET does what?",
+        "options": [
+            "Sends data",
+            "Fetches data/resource",
+            "Deletes data",
+            "Updates data"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Who runs the Frontend?",
+        "options": [
+            "Server",
+            "Browser/Client",
+            "Database",
+            "Network"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Who runs the Backend?",
+        "options": [
+            "User",
+            "Server",
+            "Browser",
+            "Design tool"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Status 404 means?",
+        "options": [
+            "Success",
+            "Not Found",
+            "Server Error",
+            "Unauthorized"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "JSON format is?",
+        "options": [
+            "Binary code",
+            "Key-value pair text",
+            "HTML tags",
+            "SQL query"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "REST is a?",
+        "options": [
+            "Protocol",
+            "Architectural style",
+            "Language",
+            "Software"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Responsive design uses?",
+        "options": [
+            "JavaScript",
+            "Media Queries",
+            "HTML Only",
+            "Databases"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "LocalStorage stores data in?",
+        "options": [
+            "Server",
+            "Browser/Client",
+            "Cloud",
+            "Hard Drive only"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "React is a?",
+        "options": [
+            "Backend framework",
+            "Frontend Library",
+            "Database",
+            "Language"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Node.js is?",
+        "options": [
+            "Language",
+            "JavaScript Runtime",
+            "Database",
+            "Framework"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Express is used for?",
+        "options": [
+            "Frontend",
+            "Backend APIs",
+            "Database",
+            "Testing"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "HTML tag for link?",
+        "options": [
+            "<link>",
+            "<a>",
+            "<href>",
+            "<url>"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Image tag?",
+        "options": [
+            "<img>",
+            "<image>",
+            "<pic>",
+            "<photo>"
+        ],
+        "answerIndex": 0
+    },
+    {
+        "question": "CSS Flexbox is used for?",
+        "options": [
+            "Animation",
+            "Layout (1D)",
+            "Database",
+            "Logic"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Grid is used for?",
+        "options": [
+            "1D Layout",
+            "2D Layout",
+            "Text styling",
+            "Colors"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "AJAX allows?",
+        "options": [
+            "Sync requests",
+            "Async requests/updates",
+            "Page reload",
+            "Offline access"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Fetch API replaces?",
+        "options": [
+            "HTML",
+            "XMLHttpRequest (XHR)",
+            "CSS",
+            "Node.js"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Status 200 means?",
+        "options": [
+            "Error",
+            "Success/OK",
+            "Redirect",
+            "Forbidden"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Status 500 means?",
+        "options": [
+            "Not Found",
+            "Server Error",
+            "Success",
+            "Created"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "SessionStorage lasts for?",
+        "options": [
+            "Always",
+            "Current Session/Tab",
+            "1 year",
+            "1 day"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Authentication is?",
+        "options": [
+            "Checking permissions",
+            "Verifying identity",
+            "Encrypting data",
+            "Sending email"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Authorization is?",
+        "options": [
+            "Checking identity",
+            "Checking access rights/permissions",
+            "Logging in",
+            "Signing up"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "MVC stands for?",
+        "options": [
+            "Model View Controller",
+            "Main View Code",
+            "Model Variable Class",
+            "Make View Create"
+        ],
+        "answerIndex": 0
+    },
+    {
+        "question": "Git is used for?",
+        "options": [
+            "Coding",
+            "Version Control",
+            "Hosting",
+            "Testing"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Git commit does what?",
+        "options": [
+            "Deletes code",
+            "Saves snapshot",
+            "Uploads code",
+            "Downloads code"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Git push does what?",
+        "options": [
+            "Saves locally",
+            "Uploads changes to remote",
+            "Deletes remote",
+            "Merges code"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Hosting means?",
+        "options": [
+            "Writing code",
+            "Making app available online",
+            "Testing app",
+            "Deleting app"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "CORS handles?",
+        "options": [
+            "Security",
+            "Cross-Origin Requests",
+            "Database connection",
+            "Routing"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "SPA stands for?",
+        "options": [
+            "Single Page Application",
+            "Simple Page App",
+            "Secure Protocol App",
+            "Standard Process App"
+        ],
+        "answerIndex": 0
+    },
+    {
+        "question": "Component in React is?",
+        "options": [
+            "Variable",
+            "Reusable UI block",
+            "Database table",
+            "Server function"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "State in React manages?",
+        "options": [
+            "Static content",
+            "Dynamic data",
+            "CSS",
+            "Files"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Props are used to?",
+        "options": [
+            "Style components",
+            "Pass data to components",
+            "Store state",
+            "Delete data"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "JWS stands for?",
+        "options": [
+            "Java Web System",
+            "JSON Web Token",
+            "JavaScript Web Standard",
+            "Just Web Socket"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Full-stack developer knows?",
+        "options": [
+            "Only CSS",
+            "Frontend + Backend",
+            "Only SQL",
+            "Only Design"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Minification reduces?",
+        "options": [
+            "Code quality",
+            "File size",
+            "Features",
+            "Security"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "SEO improves?",
+        "options": [
+            "Code speed",
+            "Search Engine Visibility",
+            "Database speed",
+            "Server security"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Lazy loading improves?",
+        "options": [
+            "Development speed",
+            "Initial load performance",
+            "Code readability",
+            "Security"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "WebSocket enables?",
+        "options": [
+            "Static pages",
+            "Real-time communication",
+            "Database queries",
+            "Styling"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Accessibility ensures?",
+        "options": [
+            "Site is fast",
+            "Site is usable by everyone",
+            "Site is secure",
+            "Site is colorful"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Jest is a?",
+        "options": [
+            "Database",
+            "Testing Framework",
+            "Language",
+            "Editor"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "NPM stands for?",
+        "options": [
+            "Nice Package Manager",
+            "Node Package Manager",
+            "New Project Model",
+            "Node Project Maker"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Semantic HTML improves?",
+        "options": [
+            "Speed",
+            "SEO & Accessibility",
+            "Colors",
+            "Logic"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Z-index controls?",
+        "options": [
+            "Width",
+            "Stacking order",
+            "Height",
+            "Transparency"
+        ],
+        "answerIndex": 1
+    },
+    {
+        "question": "Box Model components?",
+        "options": [
+            "Content, Padding, Border, Margin",
+            "Header, Footer, Body",
+            "HTML, CSS, JS",
+            "Color, Font, Size"
+        ],
+        "answerIndex": 0
+    },
+    {
+        "question": "Bootstrap is a?",
+        "options": [
+            "Language",
+            "CSS Framework",
+            "Database",
+            "Browser"
+        ],
+        "answerIndex": 1
+    }
+]

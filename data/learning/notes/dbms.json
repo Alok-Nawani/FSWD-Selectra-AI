@@ -1,0 +1,5 @@
+{
+    "id": "dbms",
+    "title": "Database Management Systems",
+    "content": "<h3>Core Concepts</h3><p>A DBMS stores, retrieves, and manages data.</p><ul><li><strong>ACID Properties:</strong> Atomicity, Consistency, Isolation, Durability. crucial for transactions.</li><li><strong>Normalization:</strong> Process to reduce redundancy. 1NF, 2NF, 3NF, BCNF.</li><li><strong>SQL vs NoSQL:</strong> Relational vs Non-relational databases.</li></ul><h3>SQL Basics</h3><pre>SELECT * FROM Users WHERE Age > 18;</pre>"
+}
