@@ -188,8 +188,7 @@ async function startSession() {
     try {
         let allQuestions = await fetchData(url);
         if (!allQuestions || allQuestions.length === 0) {
-            alert('No questions found for this selection.');
-            return;
+            throw new Error("No questions found fallback");
         }
 
         // remove existing intro questions if present to avoid redundancy
@@ -284,42 +283,63 @@ async function startRecording() {
         document.getElementById('start-answer-btn').disabled = true;
         document.getElementById('stop-answer-btn').disabled = false;
 
-        // Initialize Deepgram WebSocket
-        const deepgramUrl = `wss://api.deepgram.com/v1/listen?smart_format=true&model=nova-2&language=en-US`;
-        socket = new WebSocket(deepgramUrl, ['token', CONFIG.DEEPGRAM_KEY]);
+        // Initialize Deepgram WebSocket conditionally
+        if (CONFIG.DEEPGRAM_KEY) {
+            const deepgramUrl = `wss://api.deepgram.com/v1/listen?smart_format=true&model=nova-2&language=en-US`;
+            socket = new WebSocket(deepgramUrl, ['token', CONFIG.DEEPGRAM_KEY]);
 
-        socket.onopen = () => {
-            console.log('Deepgram Connected');
+            socket.onopen = () => {
+                console.log('Deepgram Connected');
 
-            // Start MediaRecorder
-            mediaRecorder = new MediaRecorder(stream, { mimeType: 'audio/webm' });
-            mediaRecorder.addEventListener('dataavailable', event => {
-                if (event.data.size > 0 && socket.readyState === 1) {
-                    socket.send(event.data);
-                }
-            });
-            mediaRecorder.start(250); // Send chunks every 250ms
-        };
+                // Start MediaRecorder
+                mediaRecorder = new MediaRecorder(stream, { mimeType: 'audio/webm' });
+                mediaRecorder.addEventListener('dataavailable', event => {
+                    if (event.data.size > 0 && socket.readyState === 1) {
+                        socket.send(event.data);
+                    }
+                });
+                mediaRecorder.start(250); // Send chunks every 250ms
+            };
 
-        socket.onmessage = (message) => {
-            const received = JSON.parse(message.data);
-            if (received.channel && received.channel.alternatives && received.channel.alternatives[0]) {
-                const transcript = received.channel.alternatives[0].transcript;
-                if (transcript) {
-                    const el = document.getElementById('live-transcript');
-                    if (received.is_final) {
-                        el.innerText = (el.innerText === "Click Answer when ready..." ? "" : el.innerText + " ") + transcript;
-                        // Store answer
-                        if (!userAnswers[currentQuestionIndex]) userAnswers[currentQuestionIndex] = "";
-                        userAnswers[currentQuestionIndex] += transcript + " ";
+            socket.onmessage = (message) => {
+                const received = JSON.parse(message.data);
+                if (received.channel && received.channel.alternatives && received.channel.alternatives[0]) {
+                    const transcript = received.channel.alternatives[0].transcript;
+                    if (transcript) {
+                        const el = document.getElementById('live-transcript');
+                        if (received.is_final) {
+                            el.innerText = (el.innerText === "Click Answer when ready..." ? "" : el.innerText + " ") + transcript;
+                            // Store answer
+                            if (!userAnswers[currentQuestionIndex]) userAnswers[currentQuestionIndex] = "";
+                            userAnswers[currentQuestionIndex] += transcript + " ";
+                        }
                     }
                 }
-            }
-        };
+            };
 
-        socket.onclose = () => {
-            console.log('Deepgram Disconnected');
-        };
+            socket.onclose = () => {
+                console.log('Deepgram Disconnected');
+            };
+        }
+
+        // Fallback Mock for Demo without API Key
+        if (!CONFIG.DEEPGRAM_KEY) {
+            console.warn("No Deepgram key. Simulating transcription...");
+            let dummyText = "I have exactly the right skills you are looking for. I am proficient in problem solving, algorithms, and system design.";
+            let i = 0;
+            const el = document.getElementById('live-transcript');
+            el.innerText = "";
+            window.demoInterval = setInterval(() => {
+                if(i < dummyText.length) {
+                    el.innerText += dummyText[i];
+                    if (!userAnswers[currentQuestionIndex]) userAnswers[currentQuestionIndex] = "";
+                    userAnswers[currentQuestionIndex] = el.innerText;
+                    i++;
+                } else {
+                    clearInterval(window.demoInterval);
+                }
+            }, 60);
+        }
 
     } catch (error) {
         console.error('Error starting recording:', error);
@@ -348,7 +368,7 @@ function moveToNextQuestion() {
     }
 }
 
-function stopRecording() {
+function stopRecording(skipNext = false) {
     if (!isListening) return;
     isListening = false;
 
@@ -366,15 +386,16 @@ function stopRecording() {
         mediaRecorder.stop();
     }
     // Close Socket
-    if (socket) {
+    if (socket && socket.readyState === 1) {
         socket.close();
     }
+    if (window.demoInterval) clearInterval(window.demoInterval);
 
     const answer = userAnswers[currentQuestionIndex] || "";
     const question = questions[currentQuestionIndex];
 
     if (!question) {
-        moveToNextQuestion();
+        if (!skipNext) moveToNextQuestion();
         return;
     }
 
@@ -394,7 +415,7 @@ function stopRecording() {
 
         const explanation = `No problem. The ideal answer would be: ${question.ideal_answer || "unavailable"}. Let's move specifically to the next one.`;
         speak(explanation, () => {
-            moveToNextQuestion();
+            if (!skipNext) moveToNextQuestion();
         });
         return; // No score for this
     }
@@ -412,7 +433,7 @@ function stopRecording() {
         score += (ratio * 100);
     }
 
-    moveToNextQuestion();
+    if (!skipNext) moveToNextQuestion();
 }
 
 async function endInterview() {
@@ -420,7 +441,7 @@ async function endInterview() {
 
     speak("Thank you for your time. The interview is complete. I am analyzing your responses now.");
 
-    if (isListening) stopRecording();
+    if (isListening) stopRecording(true);
 
     // Hide Active, Show Feedback
     document.getElementById('interview-active').classList.add('hidden');

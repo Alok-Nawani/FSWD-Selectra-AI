@@ -1,4 +1,5 @@
 import { fetchData } from '../utils.js';
+import { getProgress, saveProgress as saveAuthProgress } from './auth.js';
 
 let currentModuleId = null;
 let currentQuiz = [];
@@ -24,7 +25,6 @@ export function initLearning() {
         }
     });
 
-    setupEvents();
     setupEvents();
     window.openModule = openModule; // Keep for backup
     window.startQuiz = startQuiz;
@@ -94,8 +94,6 @@ function setupEvents() {
         });
     }
 }
-
-import { getProgress, saveProgress as saveAuthProgress } from './auth.js';
 
 // User Progress (Fetched from Auth Module)
 let userProgress = {};
@@ -443,7 +441,7 @@ async function startQuiz() {
     if (!currentModuleId) return;
 
     try {
-        const data = await fetchData(`../data/learning/quizzes/${currentModuleId}.json`);
+        const data = await fetchData(`data/learning/quizzes/${currentModuleId}.json`);
         if (!data || data.length === 0) {
             alert("No quiz available for this module.");
             return;
