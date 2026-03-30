@@ -76,31 +76,57 @@ function loadQuestion(index) {
         return;
     }
 
-    const q = questions[index];
-    const qEl = document.getElementById('ai-question');
-    qEl.innerText = q.question;
+    // Clear any stuck processing indicators immediately
+    const statusEl = document.getElementById('interview-status');
+    if (statusEl) {
+        statusEl.innerText = "Sarah is thinking...";
+        statusEl.classList.remove('visible');
+    }
 
-    document.getElementById('live-transcript').innerHTML = '<p class="placeholder-text">Click Answer when ready...</p>';
+    const q = questions[index];
+    if (!q) {
+        console.warn(`No question at index ${index}! Ending interview.`);
+        endInterview();
+        return;
+    }
+
+    console.log(`Loading Question ${index}: ${q.question.substring(0, 30)}...`);
+
+    const qEl = document.getElementById('ai-question');
+    if (qEl) qEl.innerText = q.question;
+
+    const transcriptEl = document.getElementById('live-transcript');
+    if (transcriptEl) transcriptEl.innerHTML = '<p class="placeholder-text">Click Answer when ready...</p>';
+    
     if (interviewCM) interviewCM.setValue("// Write code here if asked...");
 
     // Determine Text to Speak
     let textToSpeak = q.question;
 
-    // Add Transitions (skip for first question which handles intro separately)
+    // Add Transitions (skip for first question)
     if (index > 0) {
+        // Use the feedback passed from the previous answer or a random transition
+        const feedback = window._nextFeedback || "Okay.";
+        window._nextFeedback = null; // Clear it
+
         const phrases = [
-            "Thank you. Let's move to the next question.",
-            "Noted. Moving forward,",
-            "Okay. Next question.",
-            "Interesting. Now,",
+            "Next question.",
+            "Moving forward,",
+            "Now tell me,",
             "Great. Moving on,",
             "Thanks for that. Now tell me,"
         ];
         const phrase = phrases[Math.floor(Math.random() * phrases.length)];
-        textToSpeak = `${phrase} ${q.question}`;
+        textToSpeak = `${feedback} ${phrase} ${q.question}`;
     }
 
-    speak(textToSpeak);
+    // Explicitly update the question text in UI
+    qEl.innerText = q.question;
+
+    // Determination of Text to Speak and delayed invocation to avoid race conditions
+    setTimeout(() => {
+        speak(textToSpeak);
+    }, 200);
 }
 
 // Text to Speech with Avatar Animation
@@ -109,6 +135,7 @@ function speak(text, callback) {
         window.speechSynthesis.cancel();
 
         const utterance = new SpeechSynthesisUtterance(text);
+        window._utterance = utterance; // <--- Prevents Chrome Garbage Collection Bug causing onend to not fire!
         utterance.rate = 1;
         utterance.pitch = 1;
 
@@ -124,17 +151,31 @@ function speak(text, callback) {
             }
         };
 
+        // Safety Timeout - Force end after 15 seconds if browser hangs
+        const safetyTimeout = setTimeout(() => {
+            console.warn('Speech synthesis onend hang detected. Forcing cleanup.');
+            if (avatar) avatar.classList.remove('speaking');
+            if (status) status.classList.remove('visible');
+            if (callback) callback();
+        }, 15000);
+
         utterance.onend = () => {
+            clearTimeout(safetyTimeout);
             if (avatar) avatar.classList.remove('speaking');
             if (status) {
                 status.innerText = "Waiting for answer...";
                 status.classList.remove('visible');
+                status.style.color = ""; // Reset from red
             }
             if (callback) callback();
         };
 
-        utterance.onerror = () => {
+        utterance.onerror = (e) => {
+            console.error('Speech Synthesis Error:', e);
+            clearTimeout(safetyTimeout);
             if (avatar) avatar.classList.remove('speaking');
+            if (status) status.classList.remove('visible');
+            if (callback) callback();
         }
 
         window.speechSynthesis.speak(utterance);
@@ -197,8 +238,8 @@ async function startSession() {
             !q.question.toLowerCase().includes("tell me about yourself")
         );
 
-        // Shuffle and limit to 60 (leaving 1 for intro)
-        const shuffled = allQuestions.sort(() => 0.5 - Math.random()).slice(0, 60);
+        // Shuffle and limit to 10 (leaving 1 for intro)
+        const shuffled = allQuestions.sort(() => 0.5 - Math.random()).slice(0, 10);
 
         // Fixed First Question
         // Human-like Greeting
@@ -283,57 +324,61 @@ async function startRecording() {
         document.getElementById('start-answer-btn').disabled = true;
         document.getElementById('stop-answer-btn').disabled = false;
 
-        // Initialize Deepgram WebSocket conditionally
-        if (CONFIG.DEEPGRAM_KEY) {
-            const deepgramUrl = `wss://api.deepgram.com/v1/listen?smart_format=true&model=nova-2&language=en-US`;
-            socket = new WebSocket(deepgramUrl, ['token', CONFIG.DEEPGRAM_KEY]);
-
-            socket.onopen = () => {
-                console.log('Deepgram Connected');
-
-                // Start MediaRecorder
-                mediaRecorder = new MediaRecorder(stream, { mimeType: 'audio/webm' });
-                mediaRecorder.addEventListener('dataavailable', event => {
-                    if (event.data.size > 0 && socket.readyState === 1) {
-                        socket.send(event.data);
-                    }
-                });
-                mediaRecorder.start(250); // Send chunks every 250ms
-            };
-
-            socket.onmessage = (message) => {
-                const received = JSON.parse(message.data);
-                if (received.channel && received.channel.alternatives && received.channel.alternatives[0]) {
-                    const transcript = received.channel.alternatives[0].transcript;
-                    if (transcript) {
-                        const el = document.getElementById('live-transcript');
-                        if (received.is_final) {
-                            el.innerText = (el.innerText === "Click Answer when ready..." ? "" : el.innerText + " ") + transcript;
-                            // Store answer
-                            if (!userAnswers[currentQuestionIndex]) userAnswers[currentQuestionIndex] = "";
-                            userAnswers[currentQuestionIndex] += transcript + " ";
-                        }
+        // Use Web Speech API for rock-solid local transcription (No API keys needed)
+        const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        if (SpeechRecognition) {
+            document.getElementById('interview-status').innerText = "Listening...";
+            
+            window.recognition = new SpeechRecognition();
+            window.recognition.continuous = true;
+            window.recognition.interimResults = true;
+            
+            let currentFinal = userAnswers[currentQuestionIndex] || "";
+            
+            window.recognition.onresult = (event) => {
+                let interimTranscript = '';
+                let newFinal = '';
+                for (let i = event.resultIndex; i < event.results.length; ++i) {
+                    if (event.results[i].isFinal) {
+                        newFinal += event.results[i][0].transcript;
+                    } else {
+                        interimTranscript += event.results[i][0].transcript;
                     }
                 }
+                
+                if (newFinal) {
+                    currentFinal += newFinal + " ";
+                    userAnswers[currentQuestionIndex] = currentFinal;
+                }
+                
+                const el = document.getElementById('live-transcript');
+                el.innerHTML = `<span class="final-text">${currentFinal}</span> <span class="interim-text" style="opacity: 0.6; font-style: italic;">${interimTranscript}</span>`.trim();
             };
-
-            socket.onclose = () => {
-                console.log('Deepgram Disconnected');
+            
+            window.recognition.onend = () => {
+                if (isListening) {
+                    try { window.recognition.start(); } catch(e) {}
+                }
             };
-        }
-
-        // Fallback Mock for Demo without API Key
-        if (!CONFIG.DEEPGRAM_KEY) {
-            console.warn("No Deepgram key. Simulating transcription...");
-            let dummyText = "I have exactly the right skills you are looking for. I am proficient in problem solving, algorithms, and system design.";
+            window.recognition.start();
+            
+            // Dummy recorder to keep visualizer active
+            if (MediaRecorder.isTypeSupported('audio/webm')) {
+                mediaRecorder = new MediaRecorder(stream, { mimeType: 'audio/webm' });
+                mediaRecorder.start(250);
+            }
+        } else {
+            console.warn("No speech recognition support. Simulating...");
+            let dummyText = "I have exactly the right skills you are looking for. I am proficient in problem solving.";
             let i = 0;
             const el = document.getElementById('live-transcript');
             el.innerText = "";
+            let currentFinal = userAnswers[currentQuestionIndex] || "";
             window.demoInterval = setInterval(() => {
                 if(i < dummyText.length) {
-                    el.innerText += dummyText[i];
-                    if (!userAnswers[currentQuestionIndex]) userAnswers[currentQuestionIndex] = "";
-                    userAnswers[currentQuestionIndex] = el.innerText;
+                    currentFinal += dummyText[i];
+                    el.innerText = currentFinal;
+                    userAnswers[currentQuestionIndex] = currentFinal;
                     i++;
                 } else {
                     clearInterval(window.demoInterval);
@@ -351,20 +396,15 @@ async function startRecording() {
 
 function moveToNextQuestion() {
     currentQuestionIndex++;
+    console.log(`Moving to index: ${currentQuestionIndex} / ${questions.length}`);
+    
     if (currentQuestionIndex < questions.length) {
         setTimeout(() => {
             loadQuestion(currentQuestionIndex);
-        }, 1000);
+        }, 800);
     } else {
-        // Check if we should add more questions (Interview < 15 mins)
-        const elapsed = (Date.now() - startTime) / 1000;
-        if (elapsed < 900) { // 15 mins
-            console.log("Interview too short, extending...");
-            // logic to extend could be complex, for now just end it to avoid bugs
-            endInterview();
-        } else {
-            endInterview();
-        }
+        console.log("No more questions. Ending session.");
+        endInterview();
     }
 }
 
@@ -385,7 +425,12 @@ function stopRecording(skipNext = false) {
     if (mediaRecorder && mediaRecorder.state !== 'inactive') {
         mediaRecorder.stop();
     }
-    // Close Socket
+    // Cleanup Web Speech API
+    if (window.recognition) {
+        window.recognition.onend = null; // Prevent restart
+        window.recognition.stop();
+    }
+    // Close Socket (legacy)
     if (socket && socket.readyState === 1) {
         socket.close();
     }
@@ -407,32 +452,38 @@ function stopRecording(skipNext = false) {
         normalize.includes("skip") ||
         normalize.length < 5; // Silence or very short
 
+    // Show brief feedback and next step
+    const el = document.getElementById('live-transcript');
+    if (question.ideal_answer && el) {
+        el.innerHTML += `<div class="feedback-hint" style="margin-top: 10px; padding: 10px; background: rgba(34, 197, 94, 0.1); border-radius: 6px; border-left: 3px solid var(--color-success); font-size: 0.85rem;">
+            <strong style="color: var(--color-success);">Sarah's Tip:</strong> ${question.ideal_answer.substring(0, 100)}...
+        </div>`;
+    }
+
     if (isDontKnow) {
         if (statusEl) {
-            statusEl.innerText = "Explaining answer...";
+            statusEl.innerText = "Processing...";
             statusEl.classList.add('visible');
         }
+        window._nextFeedback = "Got it.";
+    } else {
+        window._nextFeedback = "Interesting answer.";
 
-        const explanation = `No problem. The ideal answer would be: ${question.ideal_answer || "unavailable"}. Let's move specifically to the next one.`;
-        speak(explanation, () => {
-            if (!skipNext) moveToNextQuestion();
-        });
-        return; // No score for this
+        // Real Scoring Logic for when they DO know
+        let matchCount = 0;
+        if (question.keywords) {
+            question.keywords.forEach(kw => {
+                if (normalize.includes(kw.toLowerCase())) {
+                    matchCount++;
+                }
+            });
+            // Simple linear scoring
+            const ratio = matchCount / question.keywords.length;
+            score += (ratio * 100);
+        }
     }
 
-    // Scoring Logic
-    let matchCount = 0;
-    if (question.keywords) {
-        question.keywords.forEach(kw => {
-            if (normalize.includes(kw.toLowerCase())) {
-                matchCount++;
-            }
-        });
-        // Simple linear scoring
-        const ratio = matchCount / question.keywords.length;
-        score += (ratio * 100);
-    }
-
+    // Move to next question immediately - UI stays ahead of voice for responsiveness
     if (!skipNext) moveToNextQuestion();
 }
 

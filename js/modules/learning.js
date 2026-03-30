@@ -72,27 +72,25 @@ function updateHubCards() {
 }
 
 function setupEvents() {
-    const generateNotesBtn = document.getElementById('generate-assignment-btn');
-    const takeQuizBtn = document.getElementById('take-quiz-btn');
-    const quitQuizBtn = document.getElementById('quit-quiz');
-    const nextQBtn = document.getElementById('next-question');
+    // Using delegation to handle dynamic content
+    document.body.addEventListener('click', (e) => {
+        const target = e.target.closest('button, a');
+        if (!target) return;
 
-    if (generateNotesBtn) generateNotesBtn.addEventListener('click', generateNotes);
-    if (takeQuizBtn) takeQuizBtn.addEventListener('click', startQuiz);
-    if (quitQuizBtn) quitQuizBtn.addEventListener('click', quitQuiz);
-    if (nextQBtn) nextQBtn.addEventListener('click', nextQuestion);
-
-    // Module Back button
-    const backHub = document.getElementById('back-to-hub');
-    if (backHub) {
-        backHub.addEventListener('click', () => {
+        const id = target.id;
+        if (id === 'generate-assignment-btn') generateNotes();
+        if (id === 'take-quiz-btn') startQuiz();
+        if (id === 'quit-quiz') quitQuiz();
+        if (id === 'next-question') nextQuestion();
+        if (id === 'prev-question') prevQuestion();
+        if (id === 'back-to-hub') {
             document.getElementById('module-detail').classList.add('hidden');
+            document.getElementById('quiz-interface').classList.add('hidden');
             document.getElementById('learning').classList.remove('hidden');
-            // reset video
             const v = document.getElementById('module-video');
             if (v) v.src = "";
-        });
-    }
+        }
+    });
 }
 
 // User Progress (Fetched from Auth Module)
@@ -195,12 +193,6 @@ function loadSection(moduleId, section) {
             <button class="btn-secondary" id="take-quiz-btn"><i class="fa-solid fa-bolt"></i> Take Quiz</button>
         </div>
     `;
-
-    // Re-bind
-    const noteBtn = document.getElementById('generate-assignment-btn');
-    const quizBtn = document.getElementById('take-quiz-btn');
-    if (noteBtn) noteBtn.onclick = generateNotes;
-    if (quizBtn) quizBtn.onclick = startQuiz;
 }
 
 function startWatchTimer(moduleId) {
@@ -506,11 +498,6 @@ async function startQuiz() {
             </div>
         `;
 
-        // Re-bind events
-        document.getElementById('quit-quiz').addEventListener('click', quitQuiz);
-        document.getElementById('next-question').addEventListener('click', nextQuestion);
-        document.getElementById('prev-question').addEventListener('click', prevQuestion);
-
         loadQuizQuestion(0);
 
     } catch (e) {
@@ -729,7 +716,7 @@ function finishQuiz() {
                 <button onclick="window.startQuiz()" class="btn-primary" style="padding: 0.8rem 2rem; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);">
                     <i class="fa-solid fa-rotate-right"></i> Retry Quiz
                 </button>
-                <button onclick="document.getElementById('back-to-hub').click()" class="btn-secondary" style="padding: 0.8rem 2rem; font-size: 1.1rem; background: rgba(255,255,255,0.05); color: white; border-color: rgba(255,255,255,0.2);">
+                <button onclick="document.getElementById('quiz-interface').classList.add('hidden'); document.getElementById('module-detail').classList.remove('hidden'); window.scrollTo(0,0);" class="btn-secondary" style="padding: 0.8rem 2rem; font-size: 1.1rem; background: rgba(255,255,255,0.05); color: white; border-color: rgba(255,255,255,0.2);">
                     <i class="fa-solid fa-arrow-left"></i> Back to Module
                 </button>
             </div>
@@ -748,7 +735,10 @@ function finishQuiz() {
 
 function quitQuiz() {
     if (confirm("Are you sure you want to quit? Progress will be lost.")) {
-        document.getElementById('quiz-interface').classList.add('hidden');
-        document.getElementById('module-detail').classList.remove('hidden');
+        const quizUI = document.getElementById('quiz-interface');
+        const detailUI = document.getElementById('module-detail');
+        if (quizUI) quizUI.classList.add('hidden');
+        if (detailUI) detailUI.classList.remove('hidden');
+        window.scrollTo(0, 0);
     }
 }

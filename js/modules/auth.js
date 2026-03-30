@@ -1,29 +1,53 @@
-export function login(name, email) {
-    if (!name || !email) return;
+import CONFIG from '../config.js';
+
+export async function login(name, email, password) {
+    if (!name || !email || !password) return false;
 
     const cleanEmail = email.trim().toLowerCase();
-    const user = {
-        name: name.trim(),
-        email: cleanEmail,
-        joinedAt: new Date().toISOString()
-    };
 
-    // Store current user session
-    localStorage.setItem('currentUser', JSON.stringify(user));
+    // Verify credentials with backend
+    try {
+        const response = await fetch(`${CONFIG.API_URL}/api/login`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ name: name.trim(), email: cleanEmail, password: password })
+        });
+        
+        const data = await response.json();
+        
+        if (!data.success) {
+            return false; // Authentication completely failed
+        }
 
-    const userKey = `progress_${cleanEmail}`;
-    if (!localStorage.getItem(userKey)) {
-        const initialProgress = {
-            interviews: [],
-            totalScore: 0,
-            modulesCompleted: 0,
-            level: 1,
-            xp: 0,
-            streak: 0,
-            lastActivity: new Date().toISOString(),
-            courseProgress: {} // { moduleId: videoIndex }
+        const user = {
+            name: name.trim(),
+            email: cleanEmail,
+            token: data.token || 'simulated-token',
+            joinedAt: new Date().toISOString()
         };
-        localStorage.setItem(userKey, JSON.stringify(initialProgress));
+
+        // Store current user session securely locally
+        localStorage.setItem('currentUser', JSON.stringify(user));
+
+        const userKey = `progress_${cleanEmail}`;
+        if (!localStorage.getItem(userKey)) {
+            const initialProgress = {
+                interviews: [],
+                totalScore: 0,
+                modulesCompleted: 0,
+                level: 1,
+                xp: 0,
+                streak: 0,
+                lastActivity: new Date().toISOString(),
+                courseProgress: {} // { moduleId: videoIndex }
+            };
+            localStorage.setItem(userKey, JSON.stringify(initialProgress));
+        }
+
+        return true;
+    } catch (err) {
+        console.error("Login verification failed due to network error:", err);
+        throw err; // Form handler will alert user of server block
     }
 }
 
