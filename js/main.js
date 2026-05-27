@@ -34,15 +34,26 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Set Initial Theme Context
     const firstActiveSection = document.querySelector('main section:not(.hidden)');
     if (firstActiveSection) document.body.dataset.page = firstActiveSection.id;
-    initDashboard();
-    initLearning();
-    initInterview();
-    initArena();
-    initResume();
-    initWellness();
-    initMockTest();
-    initPlanner();
-    initLeaderboard();
+    const modules = [
+        { name: 'Dashboard', init: initDashboard },
+        { name: 'Learning', init: initLearning },
+        { name: 'Interview', init: initInterview },
+        { name: 'Arena', init: initArena },
+        { name: 'Resume', init: initResume },
+        { name: 'Wellness', init: initWellness },
+        { name: 'MockTest', init: initMockTest },
+        { name: 'Planner', init: initPlanner },
+        { name: 'Leaderboard', init: initLeaderboard }
+    ];
+
+    modules.forEach(m => {
+        try {
+            m.init();
+            console.log(`Initialized module: ${m.name}`);
+        } catch (err) {
+            console.error(`Failed to initialize module ${m.name}:`, err);
+        }
+    });
 
     // Theme Toggle Logic
     const themeToggle = document.querySelector('.theme-toggle');

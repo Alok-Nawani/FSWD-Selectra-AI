@@ -1056,34 +1056,101 @@
             <section id="study-planner" class="hidden">
                 <div class="section-header">
                     <h2>📅 Study Planner & Goal Tracker</h2>
-                    <p>Track your daily goals, build your streak, and never miss a target.</p>
+                    <p>Complete today's server-verified daily challenge to advance and build your streak!</p>
                 </div>
                 <div class="dashboard-grid" style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem;">
-                    <!-- Goal Tracker -->
-                        <div class="card" id="daily-goals-card" style="background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255,255,255,0.05); border-radius: 20px; padding: 2.5rem;">
-                        <h3 style="color: white; font-size: 1.3rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem;"><i class="fa-solid fa-flag-checkered" style="color: #38bdf8;"></i> Active Objectives</h3>
-                        <ul class="module-topic-list" id="goals-list" style="margin-top: 1rem; list-style: none; padding: 0;">
-                            <!-- Injected by JS: Modern Checklist -->
-                        </ul>
+                    <!-- Daily Challenge Area -->
+                    <div class="card" id="daily-challenge-card" style="background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255,255,255,0.05); border-radius: 20px; padding: 2.5rem; display: flex; flex-direction: column; gap: 1.5rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 1rem;">
+                            <h3 style="color: white; font-size: 1.3rem; margin: 0; display: flex; align-items: center; gap: 0.75rem;">
+                                <i class="fa-solid fa-calendar-day" style="color: var(--accent-cyan);"></i> Today's Challenge
+                            </h3>
+                            <span id="challenge-status-badge" class="badge" style="background: rgba(239, 68, 68, 0.1); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.2); padding: 0.4rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.8rem;">
+                                <i class="fa-solid fa-clock"></i> Pending
+                            </span>
+                        </div>
+                        
+                        <div id="challenge-info-loader" style="text-align: center; padding: 3rem 0;">
+                            <i class="fa-solid fa-circle-notch fa-spin" style="font-size: 2.5rem; color: var(--accent-cyan); margin-bottom: 1rem;"></i>
+                            <p style="color: #64748b;">Loading today's challenge...</p>
+                        </div>
+                        
+                        <div id="challenge-details-wrapper" class="hidden" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;">
+                                <span id="challenge-type-badge" class="badge" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); font-weight: 800;">CODING</span>
+                                <span id="challenge-topic-badge" class="badge" style="background: rgba(139, 92, 246, 0.15); color: #8b5cf6; border: 1px solid rgba(139, 92, 246, 0.3); font-weight: 800;">RECURSION</span>
+                                <span id="challenge-diff-badge" class="badge" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); font-weight: 800;">EASY</span>
+                                <span id="challenge-xp-badge" class="badge" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); font-weight: 900; margin-left: auto;">+30 XP</span>
+                            </div>
+                            
+                            <div>
+                                <h4 id="challenge-title" style="color: white; font-size: 1.25rem; margin-bottom: 0.5rem;">Challenge Title</h4>
+                                <div id="challenge-description" style="color: #94a3b8; font-size: 0.95rem; line-height: 1.6; background: rgba(15, 23, 42, 0.3); padding: 1.2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.02); max-height: 250px; overflow-y: auto;">
+                                    Challenge description text goes here...
+                                </div>
+                            </div>
+                            
+                            <!-- Editor Content (for Coding Problem) -->
+                            <div id="challenge-editor-section" class="hidden" style="display: flex; flex-direction: column; gap: 1rem;">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <label style="color: #94a3b8; font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">Write Code:</label>
+                                    <select id="planner-lang-select" style="background: #0f172a; color: white; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 0.4rem 1.2rem; font-size: 0.85rem; cursor: pointer; outline: none;">
+                                        <option value="javascript">JavaScript</option>
+                                        <option value="python">Python</option>
+                                    </select>
+                                </div>
+                                <div id="planner-code-editor" style="border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); font-size: 0.95rem;"></div>
+                            </div>
+                            
+                            <!-- Answer Box (for Interview Question) -->
+                            <div id="challenge-answer-section" class="hidden" style="display: flex; flex-direction: column; gap: 0.75rem;">
+                                <label style="color: #94a3b8; font-size: 0.85rem; font-weight: 700; text-transform: uppercase;">Your Response:</label>
+                                <textarea id="planner-answer-textarea" placeholder="Explain your answer clearly here (minimum 20 characters)..." style="width: 100%; height: 180px; background: #0f172a; color: white; border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1rem; font-family: inherit; font-size: 0.95rem; line-height: 1.5; resize: none; outline: none; transition: border-color 0.2s;" oninput="document.getElementById('char-count').innerText = this.value.length"></textarea>
+                                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; color: #64748b;">
+                                    <span>Provide a complete, detailed answer.</span>
+                                    <span>Characters: <span id="char-count" style="font-weight: 700; color: #38bdf8;">0</span> (min 20)</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Submit Button -->
+                            <div>
+                                <button class="btn-primary" id="planner-submit-btn" style="width: 100%; border-radius: 12px; padding: 1rem; font-weight: 700; font-size: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.75rem; box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);">
+                                    <span>Submit Completion</span> <i class="fa-solid fa-paper-plane"></i>
+                                </button>
+                            </div>
+                            
+                            <!-- Results display -->
+                            <div id="planner-result-box" class="hidden" style="border-radius: 12px; padding: 1.5rem; font-size: 0.9rem; line-height: 1.6; border: 1px solid transparent;">
+                                <!-- Injected by JS -->
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Streak & Growth -->
                     <div style="display: flex; flex-direction: column; gap: 2rem;">
-                         <div class="card" style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(135deg, #fb923c 0%, #f97316 100%); border: none; border-radius: 24px; padding: 3rem; color: white;">
-                             <i class="fa-solid fa-fire-flame-curved" style="font-size: 3rem; margin-bottom: 1rem; filter: drop-shadow(0 0 10px rgba(255,255,255,0.4));"></i>
-                            <h3 style="color: white; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; font-size: 1rem;">Daily Streak</h3>
-                            <div style="font-size: 6rem; font-weight: 900; line-height: 1;" id="streak-display">1</div>
-                            <p style="opacity: 0.8; font-size: 0.9rem; margin-top: 1rem;">Keep the fire burning!</p>
+                         <div class="card" style="text-align: center; display: flex; flex-direction: column; justify-content: center; align-items: center; background: linear-gradient(135deg, #fb923c 0%, #f97316 100%); border: none; border-radius: 24px; padding: 2.5rem; color: white;">
+                            <i class="fa-solid fa-fire-flame-curved" style="font-size: 3rem; margin-bottom: 0.5rem; filter: drop-shadow(0 0 10px rgba(255,255,255,0.4));"></i>
+                            <h3 style="color: white; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem;">Daily Streak</h3>
+                            <div style="font-size: 5rem; font-weight: 900; line-height: 1;" id="streak-display">0</div>
+                            <p style="opacity: 0.9; font-size: 0.85rem; margin-top: 0.5rem; font-weight: 600;">Max Streak: <span id="max-streak-display">0</span> days</p>
+                        </div>
+
+                        <!-- 7-Day Activity Heatmap -->
+                        <div class="card" style="padding: 2rem; background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255,255,255,0.05); border-radius: 20px;">
+                            <h3 style="color: white; font-size: 1rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;"><i class="fa-solid fa-calendar-check" style="color: #10b981;"></i> Weekly Activity</h3>
+                            <div id="weekly-heatmap-strip" style="display: flex; justify-content: space-between; gap: 0.5rem;">
+                                <!-- Injected by JS: 7 dots/circles for daily completions -->
+                            </div>
                         </div>
 
                         <div class="card" style="padding: 2rem; background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255,255,255,0.05); border-radius: 20px;">
                             <h4 style="font-size: 0.8rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;">Personal Growth</h4>
                             <div style="height: 12px; background: #0f172a; border-radius: 10px; position: relative; overflow: hidden; margin-bottom: 0.5rem;">
-                                <div id="planner-overall-progress" style="position: absolute; left: 0; top: 0; height: 100%; width: 33%; background: linear-gradient(90deg, #38bdf8, #818cf8); transition: width 1s cubic-bezier(0.1, 0.8, 0.2, 1); border-radius: 10px; box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);"></div>
+                                <div id="planner-overall-progress" style="position: absolute; left: 0; top: 0; height: 100%; width: 0%; background: linear-gradient(90deg, #38bdf8, #818cf8); transition: width 1s cubic-bezier(0.1, 0.8, 0.2, 1); border-radius: 10px; box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);"></div>
                             </div>
                             <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #64748b;">
                                 <span>Level Progress</span>
-                                <span id="planner-progress-percent">33%</span>
+                                <span id="planner-progress-percent">0%</span>
                             </div>
                         </div>
                     </div>
@@ -1109,12 +1176,14 @@
                             <table class="styled-table" style="width: 100%; border-collapse: separate; border-spacing: 0 0.5rem;">
                                 <thead style="background: rgba(255,255,255,0.02);">
                                     <tr>
-                                        <th style="padding: 1rem; border-radius: 8px 0 0 8px;">Rank</th>
-                                    <th>Student</th>
-                                    <th>XP</th>
-                                    <th>Title</th>
-                                </tr>
-                            </thead>
+                                        <th style="padding: 1.2rem; border-radius: 8px 0 0 8px;">Rank</th>
+                                        <th style="padding: 1.2rem;">Student</th>
+                                        <th style="padding: 1.2rem;">XP</th>
+                                        <th style="padding: 1.2rem;">Streak</th>
+                                        <th style="padding: 1.2rem;">Challenges</th>
+                                        <th style="padding: 1.2rem; border-radius: 0 8px 8px 0;">Title</th>
+                                    </tr>
+                                </thead>
                             <tbody id="leaderboard-body">
                                 <!-- Injected by JS -->
                             </tbody>

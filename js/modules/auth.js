@@ -3,11 +3,24 @@ const API_URL = `${CONFIG.API_URL}/api/auth`;
 const API_USER_URL = `${CONFIG.API_URL}/api/user/progress`;
 const API_NOTES_URL = `${CONFIG.API_URL}/api/user/notes`;
 
-export async function register(name, email, password) {
-    const res = await fetch(`${API_URL}/register`, {
+// Step 1: Send OTP to email
+export async function sendOtp(name, email, password) {
+    const res = await fetch(`${API_URL}/send-otp`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, password })
+    });
+    const data = await res.json();
+    if (!data.success) throw new Error(data.message);
+    return data; // may contain devOtp in dev mode
+}
+
+// Step 2: Verify OTP and complete registration
+export async function verifyOtp(email, otp) {
+    const res = await fetch(`${API_URL}/verify-otp`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, otp })
     });
     const data = await res.json();
     if (!data.success) throw new Error(data.message);
@@ -17,6 +30,11 @@ export async function register(name, email, password) {
     
     initLocalProgress(data.user);
     return data.user;
+}
+
+// Legacy register (now redirects through OTP)
+export async function register(name, email, password) {
+    return sendOtp(name, email, password);
 }
 
 export async function login(email, password) {
@@ -82,17 +100,18 @@ export async function ensureAuth() {
 
 function initLocalProgress(user) {
     const userKey = `progress_${user.email.trim().toLowerCase()}`;
-    // Always sync the server state to local on load
     const initialProgress = {
         interviews: [],
         totalScore: Math.floor(user.progress ? (user.progress.dsa + user.progress.dbms + user.progress.os) : 0),
         modulesCompleted: user.completedTopics ? user.completedTopics.length : 0,
         level: 1,
         xp: user.xp || 0,
-        streak: user.streak || 1,
+        streak: user.currentStreak || user.streak || 0,
+        currentStreak: user.currentStreak || 0,
+        maxStreak: user.maxStreak || 0,
         lastActivity: new Date().toISOString(),
         courseProgress: {
-            dsa: user.progress ? Math.floor(user.progress.dsa / 10) : 0, // Mock 10 points per completion 
+            dsa: user.progress ? Math.floor(user.progress.dsa / 10) : 0,
             dbms: user.progress ? Math.floor(user.progress.dbms / 10) : 0,
             os: user.progress ? Math.floor(user.progress.os / 10) : 0
         }
@@ -145,7 +164,6 @@ export function saveProgress(newData) {
                 dsa: updated.courseProgress && updated.courseProgress.dsa ? updated.courseProgress.dsa * 10 : 0,
                 dbms: updated.courseProgress && updated.courseProgress.dbms ? updated.courseProgress.dbms * 10 : 0,
                 os: updated.courseProgress && updated.courseProgress.os ? updated.courseProgress.os * 10 : 0,
-                streak: updated.streak,
                 xp: updated.xp
             })
         }).catch(err => console.error("Cloud sync failed", err));

@@ -41,7 +41,7 @@
             padding: 3rem;
             border-radius: 16px;
             width: 100%;
-            max-width: 400px;
+            max-width: 420px;
             text-align: center;
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
         }
@@ -100,11 +100,17 @@
             font-weight: 600;
             font-size: 1rem;
             cursor: pointer;
-            transition: transform 0.2s;
+            transition: transform 0.2s, opacity 0.2s;
         }
 
         button:hover {
             transform: translateY(-2px);
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
         }
 
         .divider {
@@ -116,6 +122,90 @@
         .footer-text {
             font-size: 0.85rem;
             color: #64748b;
+        }
+
+        /* OTP Input Styling */
+        .otp-container {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+
+        .otp-input {
+            width: 48px;
+            height: 56px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            font-family: monospace;
+            background: rgba(56, 189, 248, 0.1);
+            border: 2px solid rgba(56, 189, 248, 0.3);
+            border-radius: 12px;
+            color: #38bdf8;
+            transition: all 0.3s;
+        }
+
+        .otp-input:focus {
+            border-color: #38bdf8;
+            background: rgba(56, 189, 248, 0.2);
+            box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+            outline: none;
+        }
+
+        .otp-header {
+            margin-bottom: 0.5rem;
+        }
+
+        .otp-header i {
+            font-size: 2.5rem;
+            color: #38bdf8;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .otp-header h3 {
+            font-size: 1.2rem;
+            color: white;
+            margin-bottom: 0.25rem;
+        }
+
+        .otp-header p {
+            color: #94a3b8;
+            font-size: 0.85rem;
+        }
+
+        .otp-email {
+            color: #38bdf8;
+            font-weight: 600;
+        }
+
+        .resend-link {
+            color: #64748b;
+            font-size: 0.8rem;
+            margin-top: 1rem;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .resend-link:hover {
+            color: #38bdf8;
+        }
+
+        .success-msg {
+            color: #22c55e;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+
+        .shake {
+            animation: shake 0.3s ease-in-out;
         }
     </style>
 </head>
@@ -142,7 +232,7 @@
             <p class="footer-text">Don't have an account? <a href="#" id="show-signup" style="color: var(--accent-cyan); text-decoration: none;">Sign Up</a></p>
         </form>
 
-        <!-- Signup Form (Hidden initially) -->
+        <!-- Signup Form -->
         <form id="signup-form" style="display: none;">
             <div class="input-group">
                 <label for="signup-name">Full Name</label>
@@ -154,33 +244,75 @@
             </div>
             <div class="input-group">
                 <label for="signup-password">Password</label>
-                <input type="password" id="signup-password" placeholder="Create password" required>
+                <input type="password" id="signup-password" placeholder="Create password (min 6 chars)" required minlength="6">
             </div>
             <p id="signup-error" style="color: #ef4444; font-size: 0.85rem; margin-bottom: 1rem; display: none;"></p>
-            <button type="submit">Create Account</button>
+            <p id="signup-success" class="success-msg" style="display: none;"></p>
+            <button type="submit" id="signup-btn">Create Account</button>
             <div class="divider"></div>
             <p class="footer-text">Already have an account? <a href="#" id="show-login" style="color: var(--accent-cyan); text-decoration: none;">Log In</a></p>
         </form>
+
+        <!-- OTP Verification Form (Hidden initially) -->
+        <div id="otp-form" style="display: none;">
+            <div class="otp-header">
+                <i class="fa-solid fa-envelope-circle-check"></i>
+                <h3>Verify Your Email</h3>
+                <p>We've sent a 6-digit code to<br><span class="otp-email" id="otp-target-email"></span></p>
+            </div>
+
+            <div class="otp-container" id="otp-inputs">
+                <input type="text" maxlength="1" class="otp-input" data-idx="0" inputmode="numeric" autocomplete="one-time-code">
+                <input type="text" maxlength="1" class="otp-input" data-idx="1" inputmode="numeric">
+                <input type="text" maxlength="1" class="otp-input" data-idx="2" inputmode="numeric">
+                <input type="text" maxlength="1" class="otp-input" data-idx="3" inputmode="numeric">
+                <input type="text" maxlength="1" class="otp-input" data-idx="4" inputmode="numeric">
+                <input type="text" maxlength="1" class="otp-input" data-idx="5" inputmode="numeric">
+            </div>
+
+            <p id="otp-error" style="color: #ef4444; font-size: 0.85rem; margin-bottom: 1rem; display: none;"></p>
+            <p id="otp-dev-hint" style="color: #f59e0b; font-size: 0.8rem; margin-bottom: 1rem; display: none;"></p>
+
+            <button id="verify-otp-btn" disabled>Verify & Create Account</button>
+
+            <p class="resend-link" id="resend-otp">Didn't receive it? <span style="color: var(--accent-cyan); text-decoration: underline;">Resend OTP</span></p>
+
+            <div class="divider"></div>
+            <p class="footer-text"><a href="#" id="back-to-signup" style="color: var(--accent-cyan); text-decoration: none;"><i class="fa-solid fa-arrow-left"></i> Back to Sign Up</a></p>
+        </div>
     </div>
 
     <script type="module">
-        import { login, register } from './js/modules/auth.js';
+        import { login, sendOtp, verifyOtp } from './js/modules/auth.js';
 
         const loginForm = document.getElementById('login-form');
         const signupForm = document.getElementById('signup-form');
+        const otpForm = document.getElementById('otp-form');
 
+        let pendingEmail = '';
+
+        // Toggle forms
         document.getElementById('show-signup').addEventListener('click', (e) => {
             e.preventDefault();
             loginForm.style.display = 'none';
+            otpForm.style.display = 'none';
             signupForm.style.display = 'block';
         });
 
         document.getElementById('show-login').addEventListener('click', (e) => {
             e.preventDefault();
             signupForm.style.display = 'none';
+            otpForm.style.display = 'none';
             loginForm.style.display = 'block';
         });
 
+        document.getElementById('back-to-signup').addEventListener('click', (e) => {
+            e.preventDefault();
+            otpForm.style.display = 'none';
+            signupForm.style.display = 'block';
+        });
+
+        // Login
         loginForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const email = document.getElementById('login-email').value;
@@ -197,20 +329,124 @@
             }
         });
 
+        // Signup → Send OTP
         signupForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const name = document.getElementById('signup-name').value;
             const email = document.getElementById('signup-email').value;
             const password = document.getElementById('signup-password').value;
             const errElem = document.getElementById('signup-error');
+            const btn = document.getElementById('signup-btn');
 
             errElem.style.display = 'none';
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending OTP...';
+
             try {
-                await register(name, email, password);
+                const result = await sendOtp(name, email, password);
+                pendingEmail = email;
+
+                // Show OTP form
+                signupForm.style.display = 'none';
+                otpForm.style.display = 'block';
+                document.getElementById('otp-target-email').textContent = email;
+
+                // Focus first OTP input
+                document.querySelector('.otp-input[data-idx="0"]').focus();
+
+                // Show dev OTP hint if available
+                if (result.devOtp) {
+                    const devHint = document.getElementById('otp-dev-hint');
+                    devHint.textContent = `Dev Mode — OTP: ${result.devOtp}`;
+                    devHint.style.display = 'block';
+                }
+            } catch (err) {
+                errElem.textContent = err.message;
+                errElem.style.display = 'block';
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = 'Create Account';
+            }
+        });
+
+        // OTP Input Logic (auto-focus next, paste support)
+        const otpInputs = document.querySelectorAll('.otp-input');
+        
+        otpInputs.forEach((input, idx) => {
+            input.addEventListener('input', (e) => {
+                const val = e.target.value;
+                if (val && idx < 5) {
+                    otpInputs[idx + 1].focus();
+                }
+                checkOtpComplete();
+            });
+
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Backspace' && !e.target.value && idx > 0) {
+                    otpInputs[idx - 1].focus();
+                }
+            });
+
+            // Handle paste
+            input.addEventListener('paste', (e) => {
+                e.preventDefault();
+                const pasted = (e.clipboardData.getData('text') || '').trim();
+                if (pasted.length === 6 && /^\d+$/.test(pasted)) {
+                    otpInputs.forEach((inp, i) => {
+                        inp.value = pasted[i] || '';
+                    });
+                    otpInputs[5].focus();
+                    checkOtpComplete();
+                }
+            });
+        });
+
+        function checkOtpComplete() {
+            const otp = Array.from(otpInputs).map(i => i.value).join('');
+            document.getElementById('verify-otp-btn').disabled = otp.length !== 6;
+        }
+
+        // Verify OTP
+        document.getElementById('verify-otp-btn').addEventListener('click', async () => {
+            const otp = Array.from(otpInputs).map(i => i.value).join('');
+            const errElem = document.getElementById('otp-error');
+            const btn = document.getElementById('verify-otp-btn');
+
+            errElem.style.display = 'none';
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Verifying...';
+
+            try {
+                await verifyOtp(pendingEmail, otp);
                 window.location.href = 'app.html';
             } catch (err) {
                 errElem.textContent = err.message;
                 errElem.style.display = 'block';
+                // Shake the OTP inputs
+                document.getElementById('otp-inputs').classList.add('shake');
+                setTimeout(() => document.getElementById('otp-inputs').classList.remove('shake'), 300);
+                btn.disabled = false;
+                btn.innerHTML = 'Verify & Create Account';
+            }
+        });
+
+        // Resend OTP
+        document.getElementById('resend-otp').addEventListener('click', async () => {
+            const name = document.getElementById('signup-name').value;
+            const password = document.getElementById('signup-password').value;
+            try {
+                const result = await sendOtp(name, pendingEmail, password);
+                const devHint = document.getElementById('otp-dev-hint');
+                if (result.devOtp) {
+                    devHint.textContent = `Dev Mode — New OTP: ${result.devOtp}`;
+                    devHint.style.display = 'block';
+                }
+                // Clear old inputs
+                otpInputs.forEach(i => i.value = '');
+                otpInputs[0].focus();
+            } catch (err) {
+                document.getElementById('otp-error').textContent = err.message;
+                document.getElementById('otp-error').style.display = 'block';
             }
         });
     </script>

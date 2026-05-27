@@ -6,6 +6,8 @@ const fs = require('fs');
 const { exec, execSync } = require('child_process');
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
+const nodemailer = require('nodemailer');
+const { getDailyChallenge, getTodayIST } = require('./dailyChallenge');
 
 const tempExecDir = process.env.VERCEL ? '/tmp/temp_execution' : path.join(__dirname, 'temp_execution');
 if (!fs.existsSync(tempExecDir)) {
@@ -69,6 +71,42 @@ app.use(async (req, res, next) => {
 
 const JWT_SECRET = process.env.JWT_SECRET || 'supersecretselectra2026';
 
+// ========== EMAIL OTP SYSTEM ==========
+const otpStore = new Map(); // email -> { otp, name, password(hashed), expiresAt }
+
+// Configure email transporter
+const emailTransporter = nodemailer.createTransport({
+    service: process.env.EMAIL_SERVICE || 'gmail',
+    auth: {
+        user: process.env.EMAIL_USER || '',
+        pass: process.env.EMAIL_PASS || ''
+    }
+});
+
+function generateOTP() {
+    return Math.floor(100000 + Math.random() * 900000).toString();
+}
+
+async function sendOTPEmail(email, otp, name) {
+    const mailOptions = {
+        from: `"Selectra AI" <${process.env.EMAIL_USER || 'noreply@selectra.ai'}>`,
+        to: email,
+        subject: '🔐 Selectra AI — Verify Your Email',
+        html: `
+            <div style="font-family: 'Segoe UI', sans-serif; max-width: 480px; margin: 0 auto; background: #0f172a; color: white; padding: 2rem; border-radius: 16px;">
+                <h1 style="text-align: center; color: #38bdf8;">🎓 Selectra AI</h1>
+                <p style="color: #94a3b8; text-align: center;">Welcome, ${name}!</p>
+                <div style="background: rgba(56,189,248,0.1); border: 1px solid rgba(56,189,248,0.3); border-radius: 12px; padding: 2rem; text-align: center; margin: 1.5rem 0;">
+                    <p style="color: #94a3b8; margin-bottom: 0.5rem; font-size: 0.9rem;">Your verification code is:</p>
+                    <h2 style="font-size: 2.5rem; letter-spacing: 8px; color: #38bdf8; margin: 0; font-family: monospace;">${otp}</h2>
+                </div>
+                <p style="color: #64748b; text-align: center; font-size: 0.85rem;">This code expires in 5 minutes. Do not share it with anyone.</p>
+            </div>
+        `
+    };
+    return emailTransporter.sendMail(mailOptions);
+}
+
 // Auth Middleware
 const authMiddleware = (req, res, next) => {
     const token = req.header('Authorization');
@@ -85,6 +123,18 @@ const authMiddleware = (req, res, next) => {
 // Middleware
 app.use(cors());
 app.use(express.json({ limit: '10mb' }));
+
+// Serve static frontend files when running locally
+app.use(express.static(path.join(__dirname, '..')));
+
+// Mimic Vercel routes for login and dashboard/app in local dev
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'login.html'));
+});
+
+app.get('/dashboard', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'app.html'));
+});
 
 // Initialize Gemini API Keys & Rotation Logic
 if (!process.env.GEMINI_API_KEYS) {
@@ -103,13 +153,15 @@ function getGenAIClient() {
 
 // Helper: Robust AI Call with automatic key rotation and retries
 // Helper: Robust AI Call with automatic key rotation and model fallbacks
-async function callGemini(prompt, preferredModel = "gemini-1.5-flash") {
+async function callGemini(prompt, preferredModel = "gemini-flash-latest") {
     const modelsToTry = [
         preferredModel,
+        "gemini-flash-latest",
+        "gemini-2.5-flash",
+        "gemini-3.5-flash",
         "gemini-1.5-flash",
-        "gemini-2.0-flash-exp",
-        "gemini-pro"
-    ].filter(m => m !== "gemini-2.5-flash"); // Avoid the non-existent model name
+        "gemini-2.0-flash"
+    ];
 
     // Deduplicate
     const uniqueModels = [...new Set(modelsToTry)];
@@ -200,7 +252,7 @@ function analyzeInterviewRuleBased(transcript, type, company) {
 }
 
 // Basic Route
-app.get('/', (req, res) => {
+app.get('/api/health', (req, res) => {
     res.send('Selectra AI Backend is running 🚀');
 });
 
@@ -627,24 +679,104 @@ app.post('/api/generate-feedback', async (req, res) => {
 // AUTH & PROGRESS ROUTES
 // =======================
 
-// Register
-app.post('/api/auth/register', async (req, res) => {
+// Step 1: Send OTP to email
+app.post('/api/auth/send-otp', async (req, res) => {
     try {
         const { name, email, password } = req.body;
-        let user = await User.findOne({ email });
-        if (user) return res.status(400).json({ success: false, message: 'User already exists' });
+        if (!name || !email || !password) {
+            return res.status(400).json({ success: false, message: 'Name, email, and password are required' });
+        }
+
+        let existingUser = await User.findOne({ email });
+        if (existingUser) return res.status(400).json({ success: false, message: 'User already exists' });
 
         const salt = await bcrypt.genSalt(10);
         const hashedPassword = await bcrypt.hash(password, salt);
+        const otp = generateOTP();
 
-        user = new User({ name, email, password: hashedPassword });
+        // Store OTP with 5-min expiry
+        otpStore.set(email, {
+            otp,
+            name,
+            password: hashedPassword,
+            expiresAt: Date.now() + 5 * 60 * 1000
+        });
+
+        // Clean up expired OTPs periodically
+        for (const [key, val] of otpStore.entries()) {
+            if (val.expiresAt < Date.now()) otpStore.delete(key);
+        }
+
+        // Try to send email
+        try {
+            await sendOTPEmail(email, otp, name);
+            console.log(`OTP sent to ${email}: ${otp}`);
+            res.json({ success: true, message: 'OTP sent to your email' });
+        } catch (emailErr) {
+            console.error('Email send failed:', emailErr.message);
+            // In development, still allow registration but log the OTP
+            console.log(`📧 DEV MODE — OTP for ${email}: ${otp}`);
+            res.json({ success: true, message: 'OTP generated (check server console in dev mode)', devOtp: process.env.NODE_ENV !== 'production' ? otp : undefined });
+        }
+    } catch (err) {
+        console.error('Send OTP Error:', err);
+        res.status(500).json({ success: false, message: 'Server error: ' + err.message });
+    }
+});
+
+// Step 2: Verify OTP and create account
+app.post('/api/auth/verify-otp', async (req, res) => {
+    try {
+        const { email, otp } = req.body;
+        if (!email || !otp) {
+            return res.status(400).json({ success: false, message: 'Email and OTP are required' });
+        }
+
+        const pending = otpStore.get(email);
+        if (!pending) {
+            return res.status(400).json({ success: false, message: 'No OTP found. Please request a new one.' });
+        }
+
+        if (Date.now() > pending.expiresAt) {
+            otpStore.delete(email);
+            return res.status(400).json({ success: false, message: 'OTP has expired. Please request a new one.' });
+        }
+
+        if (pending.otp !== otp.toString()) {
+            return res.status(400).json({ success: false, message: 'Invalid OTP. Please try again.' });
+        }
+
+        // OTP valid — create user
+        let user = await User.findOne({ email });
+        if (user) {
+            otpStore.delete(email);
+            return res.status(400).json({ success: false, message: 'User already exists' });
+        }
+
+        user = new User({
+            name: pending.name,
+            email,
+            password: pending.password,
+            isVerified: true
+        });
         await user.save();
+        otpStore.delete(email);
 
         const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: '7d' });
-        res.json({ success: true, token, user: { name: user.name, email: user.email, _id: user._id, progress: user.progress, notes: user.notes } });
+        res.json({
+            success: true,
+            token,
+            user: { name: user.name, email: user.email, _id: user._id, progress: user.progress, xp: user.xp, currentStreak: user.currentStreak, maxStreak: user.maxStreak, notes: user.notes }
+        });
     } catch (err) {
-        res.status(500).json({ success: false, message: 'Server error' });
+        console.error('Verify OTP Error:', err);
+        res.status(500).json({ success: false, message: 'Server error: ' + err.message });
     }
+});
+
+// Legacy Register (kept as fallback but now requires OTP)
+app.post('/api/auth/register', async (req, res) => {
+    res.status(400).json({ success: false, message: 'Please use the OTP verification flow. Send OTP first via /api/auth/send-otp' });
 });
 
 // Login
@@ -658,12 +790,188 @@ app.post('/api/auth/login', async (req, res) => {
         if (!isMatch) return res.status(400).json({ success: false, message: 'Invalid credentials' });
 
         const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: '7d' });
-        res.json({ success: true, token, user: { name: user.name, email: user.email, _id: user._id, progress: user.progress, notes: user.notes } });
+        res.json({
+            success: true,
+            token,
+            user: { name: user.name, email: user.email, _id: user._id, progress: user.progress, xp: user.xp, currentStreak: user.currentStreak, maxStreak: user.maxStreak, notes: user.notes }
+        });
     } catch (err) {
         console.error("Login Error:", err);
         res.status(500).json({ success: false, message: 'Server error: ' + err.message });
     }
 });
+
+// ========================================
+// DAILY CHALLENGE & VERIFIED STREAK
+// ========================================
+
+// Get today's daily challenge
+app.get('/api/daily-challenge', (req, res) => {
+    try {
+        const challenge = getDailyChallenge();
+        res.json({ success: true, ...challenge });
+    } catch (err) {
+        console.error('Daily Challenge Error:', err);
+        res.status(500).json({ success: false, message: 'Failed to get daily challenge' });
+    }
+});
+
+// Submit daily challenge (server-verified)
+app.post('/api/daily-challenge/submit', authMiddleware, async (req, res) => {
+    try {
+        const { answer, challengeType } = req.body;
+        const user = await User.findById(req.user.id);
+        if (!user) return res.status(404).json({ success: false, message: 'User not found' });
+
+        const today = getTodayIST();
+        const dailyChallenge = getDailyChallenge(today);
+
+        // Check if already completed today
+        const alreadyDone = user.dailyChallengeCompletions.find(c => c.date === today);
+        if (alreadyDone) {
+            return res.json({ success: true, message: 'Already completed today\'s challenge!', alreadyCompleted: true, currentStreak: user.currentStreak, maxStreak: user.maxStreak });
+        }
+
+        // Validate answer
+        if (!answer || answer.trim().length < 20) {
+            return res.status(400).json({ success: false, message: 'Your answer is too short. Please provide a detailed response (at least 20 characters).' });
+        }
+
+        // Award XP based on challenge
+        const xpEarned = dailyChallenge.challenge.points || 30;
+
+        // Update streak logic (server-side, anti-cheat)
+        const yesterday = new Date(new Date(today).getTime() - 86400000).toISOString().split('T')[0];
+
+        if (user.lastActivityDate === yesterday) {
+            // Consecutive day — increment streak
+            user.currentStreak = (user.currentStreak || 0) + 1;
+        } else if (user.lastActivityDate === today) {
+            // Same day — no change (shouldn't reach here due to alreadyDone check)
+        } else {
+            // Streak broken — reset to 1
+            user.currentStreak = 1;
+        }
+
+        user.maxStreak = Math.max(user.maxStreak || 0, user.currentStreak);
+        user.streak = user.currentStreak; // Keep backward compat
+        user.lastActivityDate = today;
+        user.xp = (user.xp || 0) + xpEarned;
+
+        // Record completion
+        user.dailyChallengeCompletions.push({
+            date: today,
+            challengeType: dailyChallenge.challengeType,
+            challengeId: dailyChallenge.challenge.id,
+            xpEarned
+        });
+
+        // Add to daily activity
+        if (!user.dailyActivity.includes(today)) {
+            user.dailyActivity.push(today);
+        }
+
+        await user.save();
+
+        res.json({
+            success: true,
+            message: `Challenge completed! +${xpEarned} XP`,
+            xpEarned,
+            totalXp: user.xp,
+            currentStreak: user.currentStreak,
+            maxStreak: user.maxStreak
+        });
+    } catch (err) {
+        console.error('Daily Challenge Submit Error:', err);
+        res.status(500).json({ success: false, message: 'Server error: ' + err.message });
+    }
+});
+
+// Get user's challenge status for today
+app.get('/api/daily-challenge/status', authMiddleware, async (req, res) => {
+    try {
+        const user = await User.findById(req.user.id).select('dailyChallengeCompletions currentStreak maxStreak xp dailyActivity lastActivityDate');
+        if (!user) return res.status(404).json({ success: false, message: 'User not found' });
+
+        const today = getTodayIST();
+        const completedToday = user.dailyChallengeCompletions.find(c => c.date === today);
+
+        // Get last 7 days activity
+        const last7Days = [];
+        for (let i = 6; i >= 0; i--) {
+            const d = new Date(new Date(today).getTime() - i * 86400000).toISOString().split('T')[0];
+            last7Days.push({
+                date: d,
+                completed: user.dailyActivity.includes(d)
+            });
+        }
+
+        res.json({
+            success: true,
+            completedToday: !!completedToday,
+            currentStreak: user.currentStreak || 0,
+            maxStreak: user.maxStreak || 0,
+            xp: user.xp || 0,
+            last7Days
+        });
+    } catch (err) {
+        console.error('Challenge Status Error:', err);
+        res.status(500).json({ success: false, message: 'Server error' });
+    }
+});
+
+// ========================================
+// REAL LEADERBOARD
+// ========================================
+
+app.get('/api/leaderboard', async (req, res) => {
+    try {
+        const users = await User.find({ isVerified: true })
+            .select('name xp currentStreak maxStreak dailyChallengeCompletions')
+            .sort({ xp: -1 })
+            .limit(50);
+
+        // Also include non-verified users who have xp (legacy users)
+        const legacyUsers = await User.find({ isVerified: { $ne: true }, xp: { $gt: 0 } })
+            .select('name xp currentStreak maxStreak dailyChallengeCompletions')
+            .sort({ xp: -1 })
+            .limit(20);
+
+        const allUsers = [...users, ...legacyUsers]
+            .sort((a, b) => (b.xp || 0) - (a.xp || 0))
+            .slice(0, 50);
+
+        const leaderboard = allUsers.map((u, idx) => {
+            const xp = u.xp || 0;
+            let title = 'Beginner';
+            if (xp >= 1500) title = '🥇 DSA Master';
+            else if (xp >= 1000) title = '🧠 Logic Wizard';
+            else if (xp >= 500) title = '💻 Code Warrior';
+            else if (xp >= 200) title = '📚 Scholar';
+            else if (xp >= 50) title = '🌱 Contender';
+
+            return {
+                rank: idx + 1,
+                name: u.name,
+                xp,
+                currentStreak: u.currentStreak || 0,
+                maxStreak: u.maxStreak || 0,
+                challengesCompleted: u.dailyChallengeCompletions ? u.dailyChallengeCompletions.length : 0,
+                title,
+                _id: u._id
+            };
+        });
+
+        res.json({ success: true, leaderboard });
+    } catch (err) {
+        console.error('Leaderboard Error:', err);
+        res.status(500).json({ success: false, message: 'Server error' });
+    }
+});
+
+// ========================================
+// USER NOTES & PROGRESS (EXISTING)
+// ========================================
 
 // Get User Notes
 app.get('/api/user/notes', authMiddleware, async (req, res) => {
@@ -703,17 +1011,15 @@ app.get('/api/user/progress', authMiddleware, async (req, res) => {
 // Update User Progress
 app.put('/api/user/progress', authMiddleware, async (req, res) => {
     try {
-        const { dsa, dbms, os, completedTopics, streak, xp } = req.body;
+        const { dsa, dbms, os, completedTopics, xp } = req.body;
         const user = await User.findById(req.user.id);
         
         if (dsa !== undefined) user.progress.dsa = dsa;
         if (dbms !== undefined) user.progress.dbms = dbms;
         if (os !== undefined) user.progress.os = os;
-        if (streak !== undefined) user.streak = streak;
         if (xp !== undefined) user.xp = xp;
         
         if (completedTopics) {
-            // Append only unique topics
             completedTopics.forEach(t => {
                 if (!user.completedTopics.includes(t)) user.completedTopics.push(t);
             });
